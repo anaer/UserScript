@@ -4,6 +4,7 @@
 // @version      1.0
 // @description  Converts image links to <img> tags on webpages
 // @description:zh-CN 转换页面上的图片链接为img标签进行展示
+// @author       anaer
 // @match        https://www.v2ex.com/t/*
 // @grant        none
 // ==/UserScript==
