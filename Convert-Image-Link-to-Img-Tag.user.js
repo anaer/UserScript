@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         转换图片链接为图片标签
 // @namespace    https://github.com/anaer/UserScript
-// @version      1.0
+// @version      1.1
 // @description  Converts image links to <img> tags on webpages
 // @description:zh-CN 转换页面上的图片链接为img标签进行展示
 // @author       anaer
@@ -17,6 +17,10 @@
 
     // 遍历每个图片链接
     imageLinks.forEach(function(link) {
+        // 如果a标签下已包含img标签进行展示, 则跳过处理
+        if(link.querySelectorAll('img')){
+          return
+        }
         // 创建 <img> 标签元素
         var img = document.createElement('img');
 
