@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         将页面上的base64编码进行转码
 // @namespace    https://github.com/anaer/UserScript
-// @version      1.0
+// @version      1.1
 // @description  Decode Base64 encoded content on web pages
 // @author       anaer
 // @match        https://www.v2ex.com/t/*
@@ -45,7 +45,7 @@
                     span.textContent = decodedData
                     span.href = decodedData
                     // 添加样式
-                    span.style.color = 'red';
+                    span.style.color = '#0052cc';
                     span.style.fontSize = '16px';
 
                     var br = document.createElement('br');
