@@ -41,16 +41,19 @@
 
                     console.log('Decoded Base64 content:', decodedData);
 
-                    var span = document.createElement('a');
-                    span.textContent = decodedData
-                    span.href = decodedData
-                    // 添加样式
-                    span.style.color = '#0052cc';
-                    span.style.fontSize = '16px';
+                    // 处理链接, 添加a标签
+                    if(decodedData.startsWith('http')) {
+                      var span = document.createElement('a');
+                      span.textContent = decodedData
+                      span.href = decodedData
+                      // 添加样式
+                      span.style.color = '#0052cc';
+                      span.style.fontSize = '16px';
 
-                    var br = document.createElement('br');
+                      var br = document.createElement('br');
 
-                    content.appendChild(span).appendChild(br)
+                      content.appendChild(span).appendChild(br)
+                    }
                   }
                 }catch(err){}
             }
