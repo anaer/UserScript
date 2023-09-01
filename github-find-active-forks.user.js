@@ -24,7 +24,7 @@
                   if (repositoryLinkNode != null) {
                     var repositoryLink = repositoryLinkNode.content;
                     console.log(repositoryLink)
-                      tempNode.innerHTML = '<details class="details-reset details-overlay f5 position-relative"><summary id="active-forks-button-repo" class="btn btn-sm"><svg class="octicon octicon-graph UnderlineNav-octicon d-none d-sm-inline" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 1.75a.75.75 0 00-1.5 0v12.5c0 .414.336.75.75.75h14.5a.75.75 0 000-1.5H1.5V1.75zm14.28 2.53a.75.75 0 00-1.06-1.06L10 7.94 7.53 5.47a.75.75 0 00-1.06 0L3.22 8.72a.75.75 0 001.06 1.06L7 7.06l2.47 2.47a.75.75 0 001.06 0l5.25-5.25z"></path></svg><font><a href="https://anaer.github.io/active-forks/index.html#'+ repositoryLink +'?sort=7" target="_blank">Active Forks</a></font></summary></details>';
+                      tempNode.innerHTML = '<details class="details-reset details-overlay f5 position-relative"><summary id="active-forks-button-repo" class="btn btn-sm"><svg class="octicon octicon-graph UnderlineNav-octicon d-none d-sm-inline" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 1.75a.75.75 0 00-1.5 0v12.5c0 .414.336.75.75.75h14.5a.75.75 0 000-1.5H1.5V1.75zm14.28 2.53a.75.75 0 00-1.06-1.06L10 7.94 7.53 5.47a.75.75 0 00-1.06 0L3.22 8.72a.75.75 0 001.06 1.06L7 7.06l2.47 2.47a.75.75 0 001.06 0l5.25-5.25z"></path></svg><font><a href="https://anaer.github.io/active-forks/index.html#'+ repositoryLink +'?sort=7" target="_blank"> Active Forks </a></font></summary></details>';
                       pageheadaction.appendChild(tempNode);
                   }
 
