@@ -20,12 +20,25 @@
         var originalUrl = avatar.src;
 
         // 判断是否是V2EX默认头像
-        if (originalUrl.includes('cdn.v2ex.com/avatar/')) {
-            // 替换CDN地址
-            var newUrl = originalUrl.replace('cdn.v2ex.com/avatar/', 'gravatar.loli.net/avatar/');
+        if (/cdn\.v2ex\.com\/(gravatar|avatar)\//.test(originalUrl)) {
+            // 创建新的图片元素
+            var newAvatar = new Image();
 
-            // 替换头像图片URL
-            avatar.src = newUrl;
+            // 监听加载成功事件
+            newAvatar.onload = function() {
+                // 加载成功，替换头像图片元素
+                avatar.src = newAvatar.src;
+            };
+
+            // 监听加载失败事件
+            newAvatar.onerror = function() {
+                // 加载失败，替换CDN地址
+                var newUrl = originalUrl.replace(/cdn\.v2ex\.com\/(gravatar|avatar)\//, 'gravatar.loli.net/avatar/');
+                avatar.src = newUrl;
+            };
+
+            // 设置新的图片元素的src属性，开始加载头像
+            newAvatar.src = originalUrl;
         }
     });
 })();
