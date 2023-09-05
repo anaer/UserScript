@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         显示网页中的图片链接
 // @namespace    https://github.com/anaer/UserScript
-// @version      1.3
+// @version      1.4
 // @description  Converts image links to <img> tags on webpages
 // @description:zh-CN 转换页面上的图片链接为img标签进行展示
 // @author       anaer
@@ -33,7 +33,7 @@
 
         // 添加 CSS 样式，使图片自适应大小
         img.style.maxWidth = "100%";
-        img.style.height = "auto";
+        img.style.maxHeight = "100%";
 
         // 替换图片链接为 <img> 标签
         link.parentNode.replaceChild(img, link);
@@ -57,7 +57,7 @@
 
         // 添加 CSS 样式，使图片自适应大小
         img.style.maxWidth = "100%";
-        img.style.height = "auto";
+        img.style.maxHeight = "100%";
 
         // 替换图片链接为 <img> 标签
         link.parentNode.replaceChild(img, link);
