@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         显示网页中的图片链接
+// @name         🐭 显示网页中的图片链接
 // @namespace    https://github.com/anaer/UserScript
-// @version      1.5
+// @version      1.6
 // @description  Converts image links to <img> tags on webpages
 // @description:zh-CN 转换页面上的图片链接为img标签进行展示
 // @author       anaer
@@ -20,7 +20,7 @@
         // console.log('处理图片链接:', link.outerHTML)
 
         // 检查<a>元素的子节点是否包含<img>标签
-        const hasImgTag = Array.from(link.childNodes).some(node => node.nodeName === "img");
+        const hasImgTag = Array.from(link.childNodes).some(node => node.nodeName.toUpperCase() === "IMG");
         if(hasImgTag){
           // console.log('包含img标签跳过', link.href)
           return
