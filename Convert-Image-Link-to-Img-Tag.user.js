@@ -22,7 +22,7 @@
         // 检查<a>元素的子节点是否包含<img>标签
         const hasImgTag = Array.from(link.childNodes).some(node => node.nodeName.toUpperCase() === "IMG");
         if(hasImgTag){
-          // console.log('包含img标签跳过', link.href)
+          console.log('包含img标签跳过', link.href)
           return
         }
         // 创建 <img> 标签元素
