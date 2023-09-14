@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         🐭 V2EX 图片链接处理
 // @namespace    https://github.com/anaer/UserScript
-// @version      1.9
+// @version      1.10
 // @description  Converts image links to <img> tags on webpages
 // @description:zh-CN 转换页面上的图片链接为img标签进行展示
 // @author       anaer
@@ -70,8 +70,11 @@
     // 遍历每个图片链接
     imgUrls.forEach(function(img) {
         img.addEventListener('error', function () {
-            if (img.src.toLowerCase().indexOf('.webp') === -1) {
-                img.src = img.src.replace(/\.(png|jpe?g|gif)$/i, '_d.webp?maxwidth=760&fidelity=grand');
+            // if (img.src.toLowerCase().indexOf('.webp') === -1) {
+            //     img.src = img.src.replace(/\.(png|jpe?g|gif)$/i, '_d.webp?maxwidth=760&fidelity=grand');
+            // }
+            if (img.src.toLowerCase().indexOf('images.weserv.nl') === -1) {
+                img.src = 'https://images.weserv.nl/?url='+img.src;
             }
         });
     });
