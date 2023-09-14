@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         🐭 V2EX 图片链接处理
 // @namespace    https://github.com/anaer/UserScript
-// @version      1.8
+// @version      1.9
 // @description  Converts image links to <img> tags on webpages
 // @description:zh-CN 转换页面上的图片链接为img标签进行展示
 // @author       anaer
@@ -65,12 +65,14 @@
 
     // 处理imgur图片链接 偶尔访问过多时 会返回429状态码, 这种情况替换下链接
     // 测试页面: https://www.v2ex.com/t/972998
-    var imgUrls = document.querySelectorAll('img[src^="https://i.imgur.com/"][src$=".jpg"]');
+    var imgUrls = document.querySelectorAll('img[src^="https://i.imgur.com/"]');
 
     // 遍历每个图片链接
     imgUrls.forEach(function(img) {
         img.addEventListener('error', function () {
-            img.src = img.src.replace(/\.(png|jpe?g|gif)$/i, '_d.webp?maxwidth=760&fidelity=grand');
+            if (img.src.toLowerCase().indexOf('.webp') === -1) {
+                img.src = img.src.replace(/\.(png|jpe?g|gif)$/i, '_d.webp?maxwidth=760&fidelity=grand');
+            }
         });
     });
 })();
