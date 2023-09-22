@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name              anti-redirect
+// @name              🐯 anti-redirect
 // @author            Axetroy
 // @description       去除重定向, 支持谷歌/百度/搜狗/360/知乎/贴吧/简书/豆瓣/微博...
 // @version           2.19.6

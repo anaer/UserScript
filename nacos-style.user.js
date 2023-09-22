@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name Nacos页面优化
+// @name         🐑 Nacos页面优化
 // @namespace    https://github.com/anaer/UserScript
 // @version 1.0.1
 // @description Nacos配置详情页配置内容编辑框 高度调整

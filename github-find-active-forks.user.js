@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name                Github Find Active Forks
-// @name:zh-CN          Github查找活跃的Forks列表
+// @name                🐍 Github Find Active Forks
+// @name:zh-CN          🐍 Github查找活跃的Forks列表
 // @namespace           https://github.com/anaer/UserScript
 // @version             1.0.1
 // @description         allows you to find the most active forks of a repository.

@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         RSS+ : Show Site All RSS
-// @name:zh      RSS+ : 显示当前网站所有的 RSS
-// @name:zh-CN   RSS+ : 显示当前网站所有的 RSS
-// @name:zh-TW   RSS+ : 顯示當前網站所有的 RSS
+// @name         🐒 RSS+ : Show Site All RSS
+// @name:zh      🐒 RSS+ : 显示当前网站所有的 RSS
+// @name:zh-CN   🐒 RSS+ : 显示当前网站所有的 RSS
+// @name:zh-TW   🐒 RSS+ : 顯示當前網站所有的 RSS
 // @name:ja      RSS+ : 現在のサイトのRSSを表示
 // @name:ko      RSS+ : 현재 사이트의 RSS 표시
 // @description         Show All RSS Of The Site (If Any)

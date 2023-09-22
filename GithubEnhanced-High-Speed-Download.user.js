@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Github 增强 - 高速下载
-// @name:zh-CN   Github 增强 - 高速下载
-// @name:zh-TW   Github 增强 - 高速下载
-// @name:en      Github Enhancement - High Speed Download
+// @name         🐮 Github 增强 - 高速下载
+// @name:zh-CN   🐮 Github 增强 - 高速下载
+// @name:zh-TW   🐮 Github 增强 - 高速下载
+// @name:en      🐮 Github Enhancement - High Speed Download
 // @version      2.2.2.2
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
