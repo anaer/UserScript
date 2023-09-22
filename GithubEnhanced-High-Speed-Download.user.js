@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      2.2.2
+// @version      2.2.2.1
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -24,6 +24,8 @@
 // @supportURL   https://github.com/XIU2/UserScript
 // @homepageURL  https://github.com/XIU2/UserScript
 // ==/UserScript==
+
+// 2023.09.22 Release页 增加复制aria2链接按钮
 
 (function() {
     'use strict';
@@ -182,15 +184,22 @@
                 let href = _this.href.split(location.host),
                     url = '', _html = `<div class="XIU2-RS" style="${divDisplay}">`;
 
+                let aria2 = 'aria2c '
                 for (let i=0;i<new_download_url.length;i++) {
                     if (new_download_url[i][3] !== undefined && url.indexOf('/archive/') !== -1) {
                         url = new_download_url[i][3] + href[1]
                     } else {
                         url = new_download_url[i][0] + href[1]
                     }
+
                     if (location.host !== 'github.com') url = url.replace(location.host,'github.com')
+
+                    aria2 = aria2 + ' ' + url;
                     _html += `<a style="${style[0]}" class="btn" href="${url}" title="${new_download_url[i][2]}" rel="noreferrer noopener nofollow">${new_download_url[i][1]}</a>`
                 }
+
+                _html += `<clipboard-copy value="${aria2}" aria-label="Copy to clipboard" class="btn btn-sm js-clipboard-copy tooltipped-no-delay ClipboardButton" tabindex="0" role="button">复制aria2链接</clipboard-copy>`
+
                 _this.parentElement.nextElementSibling.insertAdjacentHTML('beforeend', _html + '</div>');
             });
         }
