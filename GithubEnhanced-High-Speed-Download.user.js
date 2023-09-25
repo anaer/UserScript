@@ -3,7 +3,7 @@
 // @name:zh-CN   🐮 Github 增强 - 高速下载
 // @name:zh-TW   🐮 Github 增强 - 高速下载
 // @name:en      🐮 Github Enhancement - High Speed Download
-// @version      2.2.2.3
+// @version      2.2.2.4
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -30,6 +30,7 @@
 (function() {
     'use strict';
     var backColor = '#ffffff', fontColor = '#888888', menu_raw_fast = GM_getValue('xiu2_menu_raw_fast'), menu_menu_raw_fast_ID, menu_feedBack_ID;
+    var aria2c = 'aria2c -x 5 -j 5 -s 25 -c --connect-timeout=10 --timeout=10 '
     const download_url_us = [
         ['https://gh.ddlc.top/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@mtr-static-official] 提供'], // 2023-01-14
         ['https://gh2.yanqishui.work/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@HongjieCN] 提供'],
@@ -184,7 +185,7 @@
                 let href = _this.href.split(location.host),
                     url = '', _html = `<div class="XIU2-RS" style="${divDisplay}">`;
 
-                let aria2 = 'aria2c -s 5 '
+                let aria2 = aria2c
                 for (let i=0;i<new_download_url.length;i++) {
                     if (new_download_url[i][3] !== undefined && url.indexOf('/archive/') !== -1) {
                         url = new_download_url[i][3] + href[1]
@@ -269,8 +270,8 @@
         let href = location.href.replace(`https://${location.host}`,''),
             href2 = href.replace('/blob/','/'),
             url = '', _html = '';
-        
-        let aria2 = 'aria2c -s 5 '
+
+        let aria2 = aria2c
         for (let i=1;i<raw_url.length;i++) {
             if ((raw_url[i][0].indexOf('/gh') + 3 === raw_url[i][0].length) && raw_url[i][0].indexOf('cdn.staticaly.com') === -1) {
                 url = raw_url[i][0] + href.replace('/blob/','@');
@@ -279,7 +280,7 @@
             }
             aria2 = aria2 + ' ' + url;
         }
-        
+
         _html += `<clipboard-copy value="${aria2}" aria-label="Copy to clipboard" class="btn btn-sm js-clipboard-copy tooltipped-no-delay ClipboardButton XIU2-RF" tabindex="0" role="button">复制aria2链接</clipboard-copy>`
         html.insertAdjacentHTML('afterend', _html);
     }
