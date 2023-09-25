@@ -280,7 +280,7 @@
             aria2 = aria2 + ' ' + url;
         }
         
-        _html += `<clipboard-copy value="${aria2}" aria-label="Copy to clipboard" class="btn btn-sm js-clipboard-copy tooltipped-no-delay ClipboardButton" tabindex="0" role="button">复制aria2链接</clipboard-copy>`
+        _html += `<clipboard-copy value="${aria2}" aria-label="Copy to clipboard" class="btn btn-sm js-clipboard-copy tooltipped-no-delay ClipboardButton XIU2-RF" tabindex="0" role="button">复制aria2链接</clipboard-copy>`
         html.insertAdjacentHTML('afterend', _html);
     }
 
