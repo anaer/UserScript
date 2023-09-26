@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         🐰 V2EX base64自动解码
 // @namespace    https://github.com/anaer/UserScript
-// @version      1.3
+// @version      1.4
 // @description  Decode Base64 encoded content on web pages
 // @author       anaer
 // @match        https://www.v2ex.com/t/*
@@ -15,7 +15,7 @@
   var base64Regex = /(?<!@)([A-Za-z0-9+/=]{10,})/g;
 
   // 获取页面上所有的回复内容
-  var replyContents = document.querySelectorAll('div.reply_content');
+  var replyContents = document.querySelectorAll('div.reply_content, div.topic_content');
 
   // 例外如 120G 返回true
   function isBase64(str) {
