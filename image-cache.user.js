@@ -4,8 +4,7 @@
 // @version      1.10
 // @description  为图片添加error事件
 // @author       anaer
-// @match        http://*
-// @match        https://*
+// @match        *://*/*
 // @run-at       document-start
 // @grant        none
 // ==/UserScript==
