@@ -14,7 +14,7 @@
 | ----------------------------- | --------------------------------------------------------- |
 | Github 查找活跃的 Forks 列表  | [安装][github-find-active-forks]                          |
 | Nacos 编辑框样式调整          | [安装][nacos-style]                                       |
-| V2EX POLISH 插件补丁          | [安装][v2ex-polish-patch]                                 |
+| 🐻 V2EX POLISH 插件补丁       | [安装][v2ex-polish-patch]                                 |
 | V2EX base64 自动解码          | [安装][Base64-Decode-In-V2ex]                             |
 | V2EX 头像 CDN 替换            | [安装][v2ex-avatar-cdn-replace]                           |
 | 🐭 V2EX 图片链接处理          | [安装][Convert-Image-Link-to-Img-Tag]                     |
