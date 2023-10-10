@@ -24,6 +24,7 @@
 | Github 增强 - 高速下载        | [安装][GithubEnhanced-High-Speed-Download]                |
 | 😄 图片缓存处理               | [安装][image-cache]                                       |
 | 文本替换                      | [安装][TextReplacer]                                      |
+| GitHub Old Feed               | [安装][github-old-feed]                                   |
 
 [说明: 以下为引用, 在页面上不展示]: https://github.com/anaer/UserScript
 [Base64-Decode-In-V2ex]: https://github.com/anaer/UserScript/raw/main/Base64-Decode-In-V2ex.user.js
@@ -38,3 +39,4 @@
 [v2ex-polish-patch]: https://github.com/anaer/UserScript/raw/main/v2ex-polish-patch.user.js
 [image-cache]: https://github.com/anaer/UserScript/raw/main/image-cache.user.js
 [TextReplacer]: https://github.com/anaer/UserScript/raw/main/TextReplacer.user.js
+[github-old-feed]: https://github.com/anaer/UserScript/raw/main/github-old-feed.user.js
