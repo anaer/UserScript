@@ -28,17 +28,17 @@
 | 网页翻译                      | [安装][webpage-translate]                                 |
 
 [说明: 以下为引用, 在页面上不展示]: https://github.com/anaer/UserScript
-[Base64-Decode-In-V2ex]: https://github.com/anaer/UserScript/raw/main/Base64-Decode-In-V2ex.user.js
-[Convert-Image-Link-to-Img-Tag]: https://github.com/anaer/UserScript/raw/main/Convert-Image-Link-to-Img-Tag.user.js
-[GithubEnhanced-High-Speed-Download]: https://github.com/anaer/UserScript/raw/main/GithubEnhanced-High-Speed-Download.user.js
-[Switch-Traditional-Chinese-and-Simplified-Chinese]: https://github.com/anaer/UserScript/raw/main/Switch-Traditional-Chinese-and-Simplified-Chinese.user.js
-[anti-redirect]: https://github.com/anaer/UserScript/raw/main/anti-redirect.user.js
-[github-find-active-forks]: https://github.com/anaer/UserScript/raw/main/github-find-active-forks.user.js
-[nacos-style]: https://github.com/anaer/UserScript/raw/main/nacos-style.user.js
-[rss-show-site-all-rss]: https://github.com/anaer/UserScript/raw/main/rss-show-site-all-rss.user.js
-[v2ex-avatar-cdn-replace]: https://github.com/anaer/UserScript/raw/main/v2ex-avatar-cdn-replace.user.js
-[v2ex-polish-patch]: https://github.com/anaer/UserScript/raw/main/v2ex-polish-patch.user.js
-[image-cache]: https://github.com/anaer/UserScript/raw/main/image-cache.user.js
-[TextReplacer]: https://github.com/anaer/UserScript/raw/main/TextReplacer.user.js
-[github-old-feed]: https://github.com/anaer/UserScript/raw/main/github-old-feed.user.js
-[webpage-translate]: https://github.com/anaer/UserScript/raw/main/webpage-translate.user.js
+[Base64-Decode-In-V2ex]: https://github.com/anaer/UserScript/raw/main/user.js/Base64-Decode-In-V2ex.user.js
+[Convert-Image-Link-to-Img-Tag]: https://github.com/anaer/UserScript/raw/main/user.js/Convert-Image-Link-to-Img-Tag.user.js
+[GithubEnhanced-High-Speed-Download]: https://github.com/anaer/UserScript/raw/main/user.js/GithubEnhanced-High-Speed-Download.user.js
+[Switch-Traditional-Chinese-and-Simplified-Chinese]: https://github.com/anaer/UserScript/raw/main/user.js/Switch-Traditional-Chinese-and-Simplified-Chinese.user.js
+[anti-redirect]: https://github.com/anaer/UserScript/raw/main/user.js/anti-redirect.user.js
+[github-find-active-forks]: https://github.com/anaer/UserScript/raw/main/user.js/github-find-active-forks.user.js
+[nacos-style]: https://github.com/anaer/UserScript/raw/main/user.js/nacos-style.user.js
+[rss-show-site-all-rss]: https://github.com/anaer/UserScript/raw/main/user.js/rss-show-site-all-rss.user.js
+[v2ex-avatar-cdn-replace]: https://github.com/anaer/UserScript/raw/main/user.js/v2ex-avatar-cdn-replace.user.js
+[v2ex-polish-patch]: https://github.com/anaer/UserScript/raw/main/user.js/v2ex-polish-patch.user.js
+[image-cache]: https://github.com/anaer/UserScript/raw/main/user.js/image-cache.user.js
+[TextReplacer]: https://github.com/anaer/UserScript/raw/main/user.js/TextReplacer.user.js
+[github-old-feed]: https://github.com/anaer/UserScript/raw/main/user.js/github-old-feed.user.js
+[webpage-translate]: https://github.com/anaer/UserScript/raw/main/user.js/webpage-translate.user.js
