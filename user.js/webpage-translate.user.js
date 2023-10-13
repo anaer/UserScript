@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name        网页自动翻译
 // @namespace    https://github.com/anaer/UserScript
-// @match       *://**/*
+// @match       https://news.ycombinator.com/*
 // @grant       none
-// @version     1.0
+// @version     1.0.1
 // @author      anaer
 // @description 2023/10/12 13:17:02
 // ==/UserScript==

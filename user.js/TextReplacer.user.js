@@ -3,15 +3,16 @@
 // @description
 // @author       anaer
 // @namespace    https://github.com/anaer/UserScript
-// @version      1.0.0
-// @match        *://**/*
+// @version      1.0.1
+// @match        https://www.v2ex.com/t/*
 // ==/UserScript==
 'use strict'
 
 // 定义要查询和替换的文本
 const replacements = {
   '反炸郭安': '反诈国安',
-  '大便菊': '大变局'
+  '大便菊': '大变局',
+  '郭嘉': '国家'
 };
 
 
