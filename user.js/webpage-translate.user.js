@@ -2,8 +2,9 @@
 // @name        网页自动翻译
 // @namespace    https://github.com/anaer/UserScript
 // @match       https://news.ycombinator.com/*
+// @match       https://www.cell.com/*
 // @grant       none
-// @version     1.0.1
+// @version     1.0.2
 // @author      anaer
 // @description 2023/10/12 13:17:02
 // ==/UserScript==
