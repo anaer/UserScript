@@ -3,8 +3,8 @@
 // @description
 // @author       anaer
 // @namespace    https://github.com/anaer/UserScript
-// @version      1.0.1
-// @match        https://www.v2ex.com/t/*
+// @version      1.0.2
+// @match        https://www.v2ex.com/*
 // ==/UserScript==
 'use strict'
 
@@ -12,7 +12,8 @@
 const replacements = {
   '反炸郭安': '反诈国安',
   '大便菊': '大变局',
-  '郭嘉': '国家'
+  '郭嘉': '国家',
+  '尊嘟假嘟': '真的假的',
 };
 
 
