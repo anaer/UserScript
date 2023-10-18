@@ -4,8 +4,9 @@
 // @match       https://news.ycombinator.com/*
 // @match       https://www.cell.com/*
 // @match       https://zed.dev/*
+// @match       https://betterdev.link/*
 // @grant       none
-// @version     1.0.2
+// @version     1.0.3
 // @author      anaer
 // @description 2023/10/12 13:17:02
 // ==/UserScript==
