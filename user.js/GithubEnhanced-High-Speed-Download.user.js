@@ -3,7 +3,7 @@
 // @name:zh-CN   🐮 Github 增强 - 高速下载
 // @name:zh-TW   🐮 Github 增强 - 高速下载
 // @name:en      🐮 Github Enhancement - High Speed Download
-// @version      2.2.2.6
+// @version      2.2.2.7
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -27,16 +27,36 @@
 
 // 2023.09.22 Release页 增加复制aria2链接按钮
 
-(function() {
+(function () {
     'use strict';
     var backColor = '#ffffff', fontColor = '#888888', menu_raw_fast = GM_getValue('xiu2_menu_raw_fast'), menu_menu_raw_fast_ID, menu_feedBack_ID;
     var aria2c = 'aria2c -x 5 -j 5 -s 25 -c --connect-timeout=10 --timeout=10 --lowest-speed-limit=1K '
     const download_url = [
         ['https://ghproxy.com/https://github.com', '韩国', '[韩国 首尔] - 该公益加速源由 [ghproxy] 提供，有不同地区的服务器，不过国内一般分配为韩国'],
+        ['https://download.fastgit.org', '德国', '[德国] - 该公益加速源由 [FastGit] 提供&#10;&#10;提示：如果速度可以接受，希望大家尽量多使用前面的美国节点（每次随机 4 个来负载均衡），&#10;避免流量都集中到亚洲公益节点，减少成本压力才能运营更持久~', 'https://archive.fastgit.org'],
+        ['https://gh.h233.eu.org/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@X.I.U/XIU2] 提供'],
+        ['https://gh.ddlc.top/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@mtr-static-official] 提供'],
+        ['https://slink.ltd/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [知了小站] 提供'],
+        ['https://git.xfj0.cn/https://github.com', '美国', '[美国 Cloudflare CDN]'],
+        ['https://gh.con.sh/https://github.com', '美国', '[美国 Cloudflare CDN]'],
         ['https://ghps.cc/https://github.com', '美国', '[美国 Cloudflare CDN]'],
         ['https://cors.isteed.cc/github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [Lufs\'s] 提供'],
-        ['https://download.yzuu.cf', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [LibraryCloud] 提供'],
-        ['https://download.nuaa.cf', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [LibraryCloud] 提供'],
+        ['https://hub.gitmirror.com/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [GitMirror] 提供'],
+        //['https://kgithub.com', '新加坡', '[新加坡] - 该公益加速源由 [KGitHub] 提供&#10;&#10;提示：如果速度可以接受，希望大家尽量多使用前面的美国节点（每次随机 4 个来负载均衡），&#10;避免流量都集中到亚洲公益节点，减少成本压力才能运营更持久~'] // 超时
+        // ['https://ghps.cc/https://github.com', '美国', '[美国 Cloudflare CDN]'],
+        // ['https://cors.isteed.cc/github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [Lufs\'s] 提供'],
+        //['https://gh.api.99988866.xyz/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [hunshcn/gh-proxy] 提供'], // 官方演示站用的人太多了
+        //['https://gh2.yanqishui.work/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@HongjieCN] 提供'], // Error 1101
+        //['https://ghdl.feizhuqwq.cf/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [feizhuqwq.com] 提供'], // 域名无解析
+        //['https://gh-proxy-misakano7545.koyeb.app/https://github.com', '美国', '[美国 Cloudflare CDN]'], // 404
+        //['https://gh.flyinbug.top/gh/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [Mintimate] 提供'], // 域名无解析
+        //['https://github.91chi.fun/https://github.com', '美国', '[美国 Cloudflare CDN]'], // 连接超时
+        //['https://js.xxooo.ml/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [饭太硬] 提供'],
+        //['https://proxy.freecdn.ml/?url=https://github.com', '美国', '[美国 Cloudflare CDN]'],
+        //['https://cdn.githubjs.cf', '美国', '[美国 Cloudflare CDN]'], // 域名无解析
+        // ['https://download.njuu.cf', '美国', '[美国 拉斯维加斯] - 该公益加速源由 [LibraryCloud] 提供'],
+        // ['https://download.yzuu.cf', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [LibraryCloud] 提供'],
+        // ['https://download.nuaa.cf', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [LibraryCloud] 提供'],
     ], clone_url = [
         ['https://ghproxy.com/https://github.com', '韩国', '[韩国 首尔] - 该公益加速源由 [ghproxy] 提供，有不同地区的服务器，不过国内一般分配为韩国'],
     ], clone_ssh_url = [
@@ -51,7 +71,7 @@
         '<svg class="octicon octicon-cloud-download" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M9 12h2l-3 3-3-3h2V7h2v5zm3-8c0-.44-.91-3-4.5-3C5.08 1 3 2.92 3 5 1.02 5 0 6.52 0 8c0 1.53 1 3 3 3h3V9.7H3C1.38 9.7 1.3 8.28 1.3 8c0-.17.05-1.7 1.7-1.7h1.3V5c0-1.39 1.56-2.7 3.2-2.7 2.55 0 3.13 1.55 3.2 1.8v1.2H12c.81 0 2.7.22 2.7 2.2 0 2.09-2.25 2.2-2.7 2.2h-2V11h2c2.08 0 4-1.16 4-3.5C16 5.06 14.08 4 12 4z"></path></svg>'
     ], style = ['padding:0 6px; margin-right: -1px; border-radius: 2px; background-color: var(--XIU2-back-Color); border-color: rgba(27, 31, 35, 0.1); font-size: 11px; color: var(--XIU2-font-Color);'];
 
-    if (menu_raw_fast == null){menu_raw_fast = 1; GM_setValue('xiu2_menu_raw_fast', 1)};
+    if (menu_raw_fast == null) { menu_raw_fast = 1; GM_setValue('xiu2_menu_raw_fast', 1) };
     registerMenuCommand();
     // 注册脚本菜单
     function registerMenuCommand() {
@@ -64,23 +84,23 @@
             menu_raw_fast = 0
         }
         menu_menu_raw_fast_ID = GM_registerMenuCommand(`${menu_num(menu_raw_fast)} [ ${raw_url[menu_raw_fast][1]} ] 加速源 (☁) - 点击切换`, menu_toggle_raw_fast);
-        menu_feedBack_ID = GM_registerMenuCommand('💬 反馈 & 建议 [Github]', function () {window.GM_openInTab('https://github.com/XIU2/UserScript', {active: true,insert: true,setParent: true});window.GM_openInTab('https://greasyfork.org/zh-CN/scripts/412245/feedback', {active: true,insert: true,setParent: true});});
+        menu_feedBack_ID = GM_registerMenuCommand('💬 反馈 & 建议 [Github]', function () { window.GM_openInTab('https://github.com/XIU2/UserScript', { active: true, insert: true, setParent: true }); window.GM_openInTab('https://greasyfork.org/zh-CN/scripts/412245/feedback', { active: true, insert: true, setParent: true }); });
     }
 
     // 切换加速源
     function menu_toggle_raw_fast() {
         // 如果当前加速源位置大于等于加速源总数，则改为第一个加速源，反之递增下一个加速源
-        if (menu_raw_fast >= raw_url.length - 1) {menu_raw_fast = 0;} else {menu_raw_fast += 1;}
+        if (menu_raw_fast >= raw_url.length - 1) { menu_raw_fast = 0; } else { menu_raw_fast += 1; }
         GM_setValue('xiu2_menu_raw_fast', menu_raw_fast);
         delRawDownLink(); // 删除旧加速源
         addRawDownLink(); // 添加新加速源
-        GM_notification({text: "已切换加速源为：" + raw_url[menu_raw_fast][1], timeout: 3000}); // 提示消息
+        GM_notification({ text: "已切换加速源为：" + raw_url[menu_raw_fast][1], timeout: 3000 }); // 提示消息
         registerMenuCommand(); // 重新注册脚本菜单
     };
 
     // 菜单数字图标
     function menu_num(num) {
-        return ['0️⃣','1️⃣','2️⃣','3️⃣','4️⃣','5️⃣','6️⃣','7️⃣','8️⃣','9️⃣','🔟'][num]
+        return ['0️⃣', '1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣', '9️⃣', '🔟'][num]
     }
 
     colorMode(); // 适配白天/夜间主题模式
@@ -93,7 +113,7 @@
 
     // Tampermonkey v4.11 版本添加的 onurlchange 事件 grant，可以监控 pjax 等网页的 URL 变化
     if (window.onurlchange === undefined) addUrlChangeEvent();
-    window.addEventListener('urlchange', function() {
+    window.addEventListener('urlchange', function () {
         colorMode(); // 适配白天/夜间主题模式
         if (location.pathname.indexOf('/releases')) addRelease(); // Release 加速
         setTimeout(addDownloadZIP, 2000); // Download ZIP 加速
@@ -122,7 +142,7 @@
     function addRelease() {
         let html = document.querySelectorAll('.Box-footer'); if (html.length == 0 || location.pathname.indexOf('/releases') == -1) return
         let divDisplay = 'margin-left: -90px;';
-        if (document.documentElement.clientWidth > 755) {divDisplay = 'margin-top: -3px;margin-left: 8px;display: inherit;';}; // 调整小屏幕时的样式
+        if (document.documentElement.clientWidth > 755) { divDisplay = 'margin-top: -3px;margin-left: 8px;display: inherit;'; }; // 调整小屏幕时的样式
         for (const current of html) {
             if (current.querySelector('.XIU2-RS')) continue
             current.querySelectorAll('li.Box-row a').forEach(function (_this) {
@@ -130,17 +150,20 @@
                     url = '', _html = `<div class="XIU2-RS" style="${divDisplay}">`;
 
                 let aria2 = aria2c
-                for (let i=0;i<download_url.length;i++) {
+                for (let i = 0; i < download_url.length; i++) {
                     if (download_url[i][3] !== undefined && url.indexOf('/archive/') !== -1) {
                         url = download_url[i][3] + href[1]
                     } else {
                         url = download_url[i][0] + href[1]
                     }
 
-                    if (location.host !== 'github.com') url = url.replace(location.host,'github.com')
+                    if (location.host !== 'github.com') url = url.replace(location.host, 'github.com')
 
                     aria2 = aria2 + ' ' + url;
-                    _html += `<a style="${style[0]}" class="btn" href="${url}" title="${download_url[i][2]}" rel="noreferrer noopener nofollow">${download_url[i][1]}</a>`
+
+                    if (i < 4) {
+                        _html += `<a style="${style[0]}" class="btn" href="${url}" title="${download_url[i][2]}" rel="noreferrer noopener nofollow">${download_url[i][1]}</a>`
+                    }
                 }
 
                 _html += `<clipboard-copy value="${aria2}" aria-label="Copy to clipboard" class="btn btn-sm js-clipboard-copy tooltipped-no-delay ClipboardButton" tabindex="0" role="button">复制aria2链接</clipboard-copy>`
@@ -154,10 +177,10 @@
     // Download ZIP
     function addDownloadZIP() {
         if (document.querySelector('.XIU2-DZ')) return
-        let html = document.querySelector('#local-panel ul li:last-child');if (!html) return
+        let html = document.querySelector('#local-panel ul li:last-child'); if (!html) return
         let href = html.getElementsByTagName('a')[0].href,
             url = '', _html = '';
-        for (let i=0;i<download_url.length;i++) {
+        for (let i = 0; i < download_url.length && i < 4; i++) {
             if (download_url[i][3] === '') continue
 
             if (download_url[i][3] !== undefined) {
@@ -165,7 +188,8 @@
             } else {
                 url = download_url[i][0] + href.split(location.host)[1]
             }
-            if (location.host !== 'github.com') url = url.replace(location.host,'github.com')
+            if (location.host !== 'github.com') url = url.replace(location.host, 'github.com')
+
             _html += `<li class="Box-row Box-row--hover-gray p-3 mt-0 XIU2-DZ"><a class="d-flex flex-items-center color-fg-default text-bold no-underline" rel="noreferrer noopener nofollow" href="${url}" title="${download_url[i][2]}">${svg[0]}Download ZIP ${download_url[i][1]}</a></li>`
         }
         html.insertAdjacentHTML('afterend', _html);
@@ -175,11 +199,11 @@
     // Git Clone
     function addGitClone() {
         if (document.querySelector('.XIU2-GC')) return
-        let html = document.querySelector('[role="tabpanel"]:nth-child(2) div.input-group');if (!html) return
+        let html = document.querySelector('[role="tabpanel"]:nth-child(2) div.input-group'); if (!html) return
         let href_split = html.getElementsByTagName('input')[0].getAttribute('value').split(location.host),
             url = '', _html = '';
 
-        for (let i=0;i<clone_url.length;i++) {
+        for (let i = 0; i < clone_url.length; i++) {
             if (clone_url[i][0] === 'https://gitclone.com') {
                 url = clone_url[i][0] + '/github.com' + href_split[1]
             } else {
@@ -194,13 +218,13 @@
     // Git Clone SSH
     function addGitCloneSSH() {
         if (document.querySelector('.XIU2-GCS')) return
-        let html = document.querySelector('[role="tabpanel"]:nth-child(3) div.input-group');if (!html) return
+        let html = document.querySelector('[role="tabpanel"]:nth-child(3) div.input-group'); if (!html) return
         let href_split = html.getElementsByTagName('input')[0].getAttribute('value').split(':'),
             _html = '';
 
         if (href_split[0] != 'git@github.com') return
 
-        for (let i=0;i<clone_ssh_url.length;i++) {
+        for (let i = 0; i < clone_ssh_url.length; i++) {
             _html += `<div class="input-group XIU2-GCS" style="margin-top: 4px;" title="加速源：${clone_ssh_url[i][1]} （点击可直接复制）"><input value="${clone_ssh_url[i][0] + ':' + href_split[1]}" aria-label="${clone_ssh_url[i][0] + ':' + href_split[1]}" title="${clone_ssh_url[i][2]}" type="text" class="form-control input-monospace input-sm color-bg-subtle" data-autoselect="" readonly=""><div class="input-group-button"><clipboard-copy value="${clone_ssh_url[i][0] + ':' + href_split[1]}" aria-label="Copy to clipboard" class="btn btn-sm js-clipboard-copy tooltipped-no-delay ClipboardButton" tabindex="0" role="button">${svg[1]}</clipboard-copy></div></div>`
         }
         html.insertAdjacentHTML('afterend', _html);
@@ -210,15 +234,15 @@
     // Raw
     function addRawFile() {
         if (document.querySelector('.XIU2-RF')) return
-        let html = document.querySelector('#raw-url, a[data-testid="raw-button"]');if (!html) return
-        let href = location.href.replace(`https://${location.host}`,''),
-            href2 = href.replace('/blob/','/'),
+        let html = document.querySelector('#raw-url, a[data-testid="raw-button"]'); if (!html) return
+        let href = location.href.replace(`https://${location.host}`, ''),
+            href2 = href.replace('/blob/', '/'),
             url = '', _html = '';
 
         let aria2 = aria2c
-        for (let i=1;i<raw_url.length;i++) {
+        for (let i = 1; i < raw_url.length; i++) {
             if ((raw_url[i][0].indexOf('/gh') + 3 === raw_url[i][0].length) && raw_url[i][0].indexOf('cdn.staticaly.com') === -1) {
-                url = raw_url[i][0] + href.replace('/blob/','@');
+                url = raw_url[i][0] + href.replace('/blob/', '@');
             } else {
                 url = raw_url[i][0] + href2;
             }
@@ -233,37 +257,37 @@
     // Raw 单文件快捷下载（☁）
     function addRawDownLink() {
         // 如果不是项目文件页面，就返回，如果网页有 Raw 下载链接（☁）就返回
-        let files = document.querySelectorAll('div.Box-row svg.octicon.octicon-file');if(files.length === 0) return;if (location.pathname.indexOf('/tags') > -1) return
-        let files1 = document.querySelectorAll('a.fileDownLink');if(files1.length > 0) return;
+        let files = document.querySelectorAll('div.Box-row svg.octicon.octicon-file'); if (files.length === 0) return; if (location.pathname.indexOf('/tags') > -1) return
+        let files1 = document.querySelectorAll('a.fileDownLink'); if (files1.length > 0) return;
 
         // 鼠标指向则显示
-        var mouseOverHandler = function(evt) {
+        var mouseOverHandler = function (evt) {
             let elem = evt.currentTarget,
                 aElm_new = elem.querySelectorAll('.fileDownLink'),
                 aElm_now = elem.querySelectorAll('svg.octicon.octicon-file');
-            aElm_new.forEach(el=>{el.style.cssText = 'display: inline'});
-            aElm_now.forEach(el=>{el.style.cssText = 'display: none'});
+            aElm_new.forEach(el => { el.style.cssText = 'display: inline' });
+            aElm_now.forEach(el => { el.style.cssText = 'display: none' });
         };
 
         // 鼠标离开则隐藏
-        var mouseOutHandler = function(evt) {
+        var mouseOutHandler = function (evt) {
             let elem = evt.currentTarget,
                 aElm_new = elem.querySelectorAll('.fileDownLink'),
                 aElm_now = elem.querySelectorAll('svg.octicon.octicon-file');
-            aElm_new.forEach(el=>{el.style.cssText = 'display: none'});
-            aElm_now.forEach(el=>{el.style.cssText = 'display: inline'});
+            aElm_new.forEach(el => { el.style.cssText = 'display: none' });
+            aElm_now.forEach(el => { el.style.cssText = 'display: inline' });
         };
 
         // 循环添加
-        files.forEach(function(fileElm, i) {
+        files.forEach(function (fileElm, i) {
             let trElm = fileElm.parentNode.parentNode,
                 cntElm_a = trElm.querySelector('[role="rowheader"] > .css-truncate.css-truncate-target.d-block.width-fit > a'),
                 cntElm_svg = trElm.querySelector('.mr-3.flex-shrink-0 svg.octicon.octicon-file'),
                 Name = cntElm_a.innerText,
                 href = cntElm_a.getAttribute('href'),
-                href2 = href.replace('/blob/','/'), url, url_name, url_tip = '';
+                href2 = href.replace('/blob/', '/'), url, url_name, url_tip = '';
             if ((raw_url[menu_raw_fast][0].indexOf('/gh') + 3 === raw_url[menu_raw_fast][0].length) && raw_url[menu_raw_fast][0].indexOf('cdn.staticaly.com') === -1) {
-                url = raw_url[menu_raw_fast][0] + href.replace('/blob/','@');
+                url = raw_url[menu_raw_fast][0] + href.replace('/blob/', '@');
             } else {
                 url = raw_url[menu_raw_fast][0] + href2;
             }
@@ -279,37 +303,37 @@
 
     // 移除 Raw 单文件快捷下载（☁）
     function delRawDownLink() {
-        let aElm = document.querySelectorAll('.fileDownLink');if(aElm.length === 0) return;
-        aElm.forEach(function(fileElm) {fileElm.remove();})
+        let aElm = document.querySelectorAll('.fileDownLink'); if (aElm.length === 0) return;
+        aElm.forEach(function (fileElm) { fileElm.remove(); })
     }
 
 
     // 在浏览器返回/前进时重新添加 Raw 单文件快捷下载（☁）鼠标事件
     function addRawDownLink_() {
         // 如果不是项目文件页面，就返回，如果网页没有 Raw 下载链接（☁）就返回
-        let files = document.querySelectorAll('div.Box-row svg.octicon.octicon-file');if(files.length === 0) return;
-        let files1 = document.querySelectorAll('a.fileDownLink');if(files1.length === 0) return;
+        let files = document.querySelectorAll('div.Box-row svg.octicon.octicon-file'); if (files.length === 0) return;
+        let files1 = document.querySelectorAll('a.fileDownLink'); if (files1.length === 0) return;
 
         // 鼠标指向则显示
-        var mouseOverHandler = function(evt) {
+        var mouseOverHandler = function (evt) {
             let elem = evt.currentTarget,
                 aElm_new = elem.querySelectorAll('.fileDownLink'),
                 aElm_now = elem.querySelectorAll('svg.octicon.octicon-file');
-            aElm_new.forEach(el=>{el.style.cssText = 'display: inline'});
-            aElm_now.forEach(el=>{el.style.cssText = 'display: none'});
+            aElm_new.forEach(el => { el.style.cssText = 'display: inline' });
+            aElm_now.forEach(el => { el.style.cssText = 'display: none' });
         };
 
         // 鼠标离开则隐藏
-        var mouseOutHandler = function(evt) {
+        var mouseOutHandler = function (evt) {
             let elem = evt.currentTarget,
                 aElm_new = elem.querySelectorAll('.fileDownLink'),
                 aElm_now = elem.querySelectorAll('svg.octicon.octicon-file');
-            aElm_new.forEach(el=>{el.style.cssText = 'display: none'});
-            aElm_now.forEach(el=>{el.style.cssText = 'display: inline'});
+            aElm_new.forEach(el => { el.style.cssText = 'display: none' });
+            aElm_now.forEach(el => { el.style.cssText = 'display: inline' });
         };
 
         // 循环添加
-        files.forEach(function(fileElm, i) {
+        files.forEach(function (fileElm, i) {
             let trElm = fileElm.parentNode.parentNode;
             // 绑定鼠标事件
             trElm.onmouseover = mouseOverHandler;
@@ -321,7 +345,7 @@
     // 适配白天/夜间主题模式
     function colorMode() {
         let style_Add;
-        if (document.getElementById('XIU2-Github')) {style_Add = document.getElementById('XIU2-Github')} else {style_Add = document.createElement('style'); style_Add.id = 'XIU2-Github'; style_Add.type = 'text/css';}
+        if (document.getElementById('XIU2-Github')) { style_Add = document.getElementById('XIU2-Github') } else { style_Add = document.createElement('style'); style_Add.id = 'XIU2-Github'; style_Add.type = 'text/css'; }
         backColor = '#ffffff'; fontColor = '#888888';
 
         if (document.getElementsByTagName('html')[0].getAttribute('data-color-mode') === 'dark') { // 如果是夜间模式
@@ -346,21 +370,21 @@
 
     // 自定义 urlchange 事件（用来监听 URL 变化），针对非 Tampermonkey 油猴管理器
     function addUrlChangeEvent() {
-        history.pushState = ( f => function pushState(){
+        history.pushState = (f => function pushState() {
             var ret = f.apply(this, arguments);
             window.dispatchEvent(new Event('pushstate'));
             window.dispatchEvent(new Event('urlchange'));
             return ret;
         })(history.pushState);
 
-        history.replaceState = ( f => function replaceState(){
+        history.replaceState = (f => function replaceState() {
             var ret = f.apply(this, arguments);
             window.dispatchEvent(new Event('replacestate'));
             window.dispatchEvent(new Event('urlchange'));
             return ret;
         })(history.replaceState);
 
-        window.addEventListener('popstate',()=>{
+        window.addEventListener('popstate', () => {
             window.dispatchEvent(new Event('urlchange'))
         });
     }
