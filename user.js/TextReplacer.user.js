@@ -3,7 +3,7 @@
 // @description
 // @author       anaer
 // @namespace    https://github.com/anaer/UserScript
-// @version      1.0.3
+// @version      1.0.4
 // @match        https://www.v2ex.com/*
 // ==/UserScript==
 'use strict'
@@ -16,6 +16,7 @@ const replacements = {
   '尊嘟假嘟': '真的假的',
   'fa 歪之地': '法外之地',
   '不李姐': '不理解',
+  '谠和正府': '党和政府',
 };
 
 
