@@ -3,7 +3,7 @@
 // @description
 // @author       anaer
 // @namespace    https://github.com/anaer/UserScript
-// @version      1.0.4
+// @version      1.0.5
 // @match        https://www.v2ex.com/*
 // ==/UserScript==
 'use strict'
@@ -37,13 +37,16 @@ while ((node = walker.nextNode())) {
     const regex = new RegExp(search, 'g');
     const oldValue = node.nodeValue
     node.nodeValue = node.nodeValue.replace(regex, replace);
-    if(node.nodeValue != oldValue){
+
+    const elements = node.parentNode.querySelectorAll('span.replace-icon'); // 对于同一段文本 存在多个替换词时, 只展示一次替换标识
+    if (elements.length === 0 && node.nodeValue != oldValue) {
       node.parentNode.setAttribute('title', oldValue); // 修改节点的title属性为源文本
 
       const iconElement = document.createElement('span');
       iconElement.innerHTML = '&#x2714;';
       iconElement.className = 'replace-icon';
       iconElement.style.color = 'red';
+      // iconElement.setAttribute('title', oldValue); // 红勾上显式原文tip
       node.parentNode.appendChild(iconElement);
     }
   }
