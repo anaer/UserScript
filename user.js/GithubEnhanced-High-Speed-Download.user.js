@@ -29,7 +29,7 @@
 (function () {
     'use strict';
     var backColor = '#ffffff', fontColor = '#888888', menu_raw_fast = GM_getValue('xiu2_menu_raw_fast'), menu_menu_raw_fast_ID, menu_feedBack_ID;
-    var aria2c = 'aria2c -k -x 5 -j 5 -s 25 -c --connect-timeout=10 --timeout=10 --lowest-speed-limit=1K '
+    var aria2c = 'aria2c -x 5 -j 5 -s 25 -c --connect-timeout=10 --timeout=10 --lowest-speed-limit=1K '
     const download_url = [
         ['https://gh-proxy.com/https://github.com', '韩国', '[韩国 首尔] - 该公益加速源由 [ghproxy] 提供，有不同地区的服务器，不过国内一般分配为韩国'],
         ['https://ghproxy.com/https://github.com', '韩国', '[韩国 首尔] - 该公益加速源由 [ghproxy] 提供，有不同地区的服务器，不过国内一般分配为韩国'],
