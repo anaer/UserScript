@@ -266,7 +266,7 @@
             url = '', _html = '';
 
         let aria2 = aria2c
-        for (let i = 0; i < raw_url.length; i++) {
+        for (let i = 1; i < raw_url.length; i++) {
             if ((raw_url[i][0].indexOf('/gh') + 3 === raw_url[i][0].length) && raw_url[i][0].indexOf('cdn.staticaly.com') === -1) {
                 url = raw_url[i][0] + href.replace('/blob/', '@');
             } else {
