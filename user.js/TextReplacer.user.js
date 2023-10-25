@@ -3,13 +3,14 @@
 // @description
 // @author       anaer
 // @namespace    https://github.com/anaer/UserScript
-// @version      1.0.5
+// @version      1.0.6
 // @match        https://www.v2ex.com/*
 // ==/UserScript==
 'use strict'
 
 // 定义要查询和替换的文本
 const replacements = {
+  '雀食': '确实',
   '反炸郭安': '反诈国安',
   '大便菊': '大变局',
   '郭嘉': '国家',
