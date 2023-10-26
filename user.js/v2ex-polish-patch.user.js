@@ -1,13 +1,15 @@
 // ==UserScript==
-// @name 🐻 V2EX Polish Patch
+// @name V2EX Polish Patch
 // @description V2EX Polish插件补丁
 // @author anaer
-// @version 1.0.2
+// @version 1.0.3
 // @grant none
 // @noframes
 // @run-at       document-start
 // @include https://www.v2ex.com/*
 // @include https://www.v2ex.com/t/*
+// @include https://v2ex.com/*
+// @include https://v2ex.com/t/*
 // @icon https://www.v2ex.com/favicon.ico
 // @downloadURL https://github.com/anaer/UserScript/raw/main/v2ex-polish-patch.user.js
 // ==/UserScript==

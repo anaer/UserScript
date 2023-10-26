@@ -3,8 +3,9 @@
 // @description
 // @author       anaer
 // @namespace    https://github.com/anaer/UserScript
-// @version      1.0.6
+// @version      1.0.7
 // @match        https://www.v2ex.com/*
+// @match        https://v2ex.com/*
 // ==/UserScript==
 'use strict'
 
