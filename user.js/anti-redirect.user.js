@@ -49,7 +49,6 @@
 // @contributionURL   troy450409405@gmail.com|alipay.com
 // @namespace         https://greasyfork.org/zh-CN/users/3400-axetroy
 // @license           Anti 996 License; https://github.com/axetroy/anti-redirect/blob/master/LICENSE
-// @downloadURL       https://fastly.jsdelivr.net/gh/anaer/Sub@main/userJs/anti-redirect.user.js
 // ==/UserScript==
 
 // Github源码: https://github.com/axetroy/anti-redirect

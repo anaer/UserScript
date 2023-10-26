@@ -11,7 +11,6 @@
 // @include https://v2ex.com/*
 // @include https://v2ex.com/t/*
 // @icon https://www.v2ex.com/favicon.ico
-// @downloadURL https://github.com/anaer/UserScript/raw/main/v2ex-polish-patch.user.js
 // ==/UserScript==
 /*jshint multistr: true */
 
