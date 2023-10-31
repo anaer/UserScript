@@ -2,7 +2,7 @@
 // @name V2EX Polish Patch
 // @description V2EX Polish插件补丁
 // @author anaer
-// @version 1.0.3
+// @version 1.0.4
 // @grant none
 // @noframes
 // @run-at       document-start
@@ -33,10 +33,11 @@ display: none !important;
     max-width: 85% !important;
 }
 
-/* 调整右侧栏顺序 移到左边 */
+/* 调整右侧栏顺序 移到左边; 用的不多 还是隐藏吧 */
 body #Rightbar {
     order: 1;
     float: none;
+    display: none !important;
 }
 `
 
