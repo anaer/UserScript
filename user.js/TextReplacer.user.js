@@ -6,6 +6,7 @@
 // @version      1.0.7
 // @match        https://www.v2ex.com/*
 // @match        https://v2ex.com/*
+// @match        https://www.oschina.net/comment/*
 // ==/UserScript==
 'use strict'
 
@@ -26,6 +27,7 @@ const replacements = {
   '并夕夕': '拼多多',
   '拼夕夕': '拼多多',
   'PDD': '拼多多',
+  'pdd': '拼多多',
 };
 
 
