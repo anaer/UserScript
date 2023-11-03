@@ -21,6 +21,7 @@
 | V2EX base64 自动解码          | [安装][Base64-Decode-In-V2ex]                             |
 | V2EX 图片链接处理             | [安装][Convert-Image-Link-to-Img-Tag]                     |
 | V2EX 头像 CDN 替换            | [安装][v2ex-avatar-cdn-replace]                           |
+| V2EX 导航栏添加flamewar       | [安装][v2ex-flamewar]                                     |
 | 去除重定向                    | [安装][anti-redirect]                                     |
 | 图片缓存处理                  | [安装][image-cache]                                       |
 | 文本替换                      | [安装][TextReplacer]                                      |
@@ -42,3 +43,4 @@
 [v2ex-avatar-cdn-replace]: https://github.com/anaer/UserScript/raw/main/user.js/v2ex-avatar-cdn-replace.user.js
 [v2ex-polish-patch]: https://github.com/anaer/UserScript/raw/main/user.js/v2ex-polish-patch.user.js
 [webpage-translate]: https://github.com/anaer/UserScript/raw/main/user.js/webpage-translate.user.js
+[v2ex-flamewar]: https://github.com/anaer/UserScript/raw/main/user.js/v2ex-flamewar.user.js
