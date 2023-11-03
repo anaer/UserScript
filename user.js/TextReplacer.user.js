@@ -3,7 +3,7 @@
 // @description
 // @author       anaer
 // @namespace    https://github.com/anaer/UserScript
-// @version      1.0.7
+// @version      1.0.8
 // @match        https://www.v2ex.com/*
 // @match        https://v2ex.com/*
 // @match        https://www.oschina.net/comment/*
@@ -35,7 +35,14 @@ const replacements = {
 const walker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_TEXT,
-  null,
+  {
+    acceptNode: function (node) {
+      // 过滤a标签中的文本
+      return node.parentNode.nodeName.toLowerCase() === "a"
+        ? NodeFilter.FILTER_REJECT
+        : NodeFilter.FILTER_ACCEPT;
+    },
+  },
   false
 );
 
