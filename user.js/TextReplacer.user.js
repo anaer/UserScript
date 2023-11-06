@@ -3,7 +3,7 @@
 // @description
 // @author       anaer
 // @namespace    https://github.com/anaer/UserScript
-// @version      1.0.8
+// @version      1.0.9
 // @match        https://www.v2ex.com/*
 // @match        https://v2ex.com/*
 // @match        https://www.oschina.net/comment/*
@@ -12,6 +12,7 @@
 
 // 定义要查询和替换的文本
 const replacements = {
+  '依托答辩': '一坨大便',
   '某乎': '知乎',
   '雀食': '确实',
   '反炸郭安': '反诈国安',
