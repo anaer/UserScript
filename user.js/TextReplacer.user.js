@@ -3,7 +3,7 @@
 // @description
 // @author       anaer
 // @namespace    https://github.com/anaer/UserScript
-// @version      1.0.9
+// @version      1.0.10
 // @match        https://www.v2ex.com/*
 // @match        https://v2ex.com/*
 // @match        https://www.oschina.net/comment/*
@@ -27,23 +27,14 @@ const replacements = {
   '肛需': '刚需',
   '并夕夕': '拼多多',
   '拼夕夕': '拼多多',
-  'PDD': '拼多多',
-  'pdd': '拼多多',
+  '(?<![A-Za-z0-9])[Pp][Dd][Dd](?![A-Za-z0-9])': '拼多多',
 };
-
 
 // 遍历所有文本节点进行替换
 const walker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_TEXT,
-  {
-    acceptNode: function (node) {
-      // 过滤a标签中的文本
-      return node.parentNode.nodeName.toLowerCase() === "a"
-        ? NodeFilter.FILTER_REJECT
-        : NodeFilter.FILTER_ACCEPT;
-    },
-  },
+  null,
   false
 );
 
