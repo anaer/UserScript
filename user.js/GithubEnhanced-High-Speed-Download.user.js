@@ -32,6 +32,8 @@
     var aria2c = 'aria2c --check-certificate=false -x 5 -j 5 -s 25 -c --connect-timeout=10 --timeout=10 --lowest-speed-limit=1K '
     const download_url = [
         ['https://gh-proxy.com/https://github.com', '韩国', '[韩国 首尔] - 该公益加速源由 [ghproxy] 提供，有不同地区的服务器，不过国内一般分配为韩国'],
+        ['https://dl.ghpig.top/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [feizhuqwq.com] 提供'],
+        ['https://dl-slb.ghpig.top/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [feizhuqwq.com] 提供'],        
         ['https://999740.xyz/https://github.com', '网络', '仅支持200MB以下的文件'],
         ['https://download.fastgit.org', '德国', '[德国] - 该公益加速源由 [FastGit] 提供&#10;&#10;提示：如果速度可以接受，希望大家尽量多使用前面的美国节点（每次随机 4 个来负载均衡），&#10;避免流量都集中到亚洲公益节点，减少成本压力才能运营更持久~', 'https://archive.fastgit.org'],
         ['https://gh.ddlc.top/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@mtr-static-official] 提供'],
