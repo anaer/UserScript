@@ -33,7 +33,7 @@
     const download_url = [
         ['https://dl.ghpig.top/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [feizhuqwq.com] 提供'],
         ['https://dl-slb.ghpig.top/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [feizhuqwq.com] 提供'],        
-        ['https:///mirror.ghproxy.com/https://github.com', '韩国', '主域名 ghproxy.com 已喜提 GFW，已启用镜像站 mirror.ghproxy.com'],
+        ['https://mirror.ghproxy.com/https://github.com', '韩国', '主域名 ghproxy.com 已喜提 GFW，已启用镜像站 mirror.ghproxy.com'],
         ['https://ghproxy.liuzhicong.com/https://github.com', '网络', ''],
         ['https://cwb0207.online/https://github.com', '网络', ''],
         ['https://999740.xyz/https://github.com', '网络', '仅支持200MB以下的文件'],
