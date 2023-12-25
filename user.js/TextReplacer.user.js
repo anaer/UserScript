@@ -3,7 +3,7 @@
 // @description
 // @author       anaer
 // @namespace    https://github.com/anaer/UserScript
-// @version      1.0.11
+// @version      1.0.12
 // @match        https://www.v2ex.com/*
 // @match        https://v2ex.com/*
 // @match        https://www.oschina.net/comment/*
@@ -12,6 +12,7 @@
 
 // 定义要查询和替换的文本
 const replacements = {
+  '(?<![A-Za-z0-9])[Dd][Yy](?![A-Za-z0-9])': '抖音',
   '(?<![A-Za-z0-9])[Xx][Dd][Mm](?![A-Za-z0-9])': '兄弟们',
   '(?<![A-Za-z0-9])[Ll][Jj](?![A-Za-z0-9])': '垃圾',
   '(?<![A-Za-z0-9])[Ss][Bb](?![A-Za-z0-9])': '傻逼',
