@@ -1138,7 +1138,7 @@ I18N.zh["page-dashboard"] = { // 已登录的首页 - 仪表板（含组织）
             "You don’t belong to any teams yet!": "您还不属于任何团队！",
         "Find a team…": "搜索团队…",
         "Recent activity": "近期活动",
-            "When you take actions across GitHub, we’ll provide links to that activity here.": "当您在 GitHub 上采取行动时，我们会在这里提供该活动的链接。", // 组织
+            "When you take actions across GitHub, we’ll provide links to that activity here.": "当您在 GitHub 上活跃时，我们会在这里提供活动链接。", // 组织
 
         // 中间栏
         "The home for all developers — including you.": "所有开发者的家园--包括您。",
@@ -1335,7 +1335,7 @@ I18N.zh["page-dashboard"] = { // 已登录的首页 - 仪表板（含组织）
         [/(\d+) comments?/, "$1 条评论"],
         [/(\d+) commits? to/, "$1 个提交到"],
         [/(\d+) more commits? »/, "$1 个更多提交到"],
-        [/(\d+) issues? needs? help/, "$1 个议题需要帮助"],
+        [/(\d+) issues? needs? help/, "$1 个议题待处理"],
         // [/Updated/, "更新于"],
         [/You’re an owner of the ([^ ]+) organization!/, "您是 $1 组织的所有者！"], // 组织
         [/Create a repository for ([^ ]+)/, "为 $1 创建仓库"], // 组织
@@ -1718,7 +1718,7 @@ I18N.zh["page-profile/repositories"] = { // 个人首页 - 仓库标签卡
     "regexp": [ // 正则翻译
         [/([^ ]+) doesn’t have any repositories that match./, "$1 没有任何匹配的仓库"], // 仓库标签卡
         [/Your repository \"([^ ]+)\" was successfully deleted./, "您的仓库 “$1” 已成功删除。"],
-        [/(\d+) issues? needs? help/, "$1 个议题需要帮助"],
+        [/(\d+) issues? needs? help/, "$1 个议题待处理"],
     ],
     "selector": [ // 元素筛选器规则
         ["#type-options > summary > span:nth-child(1)", "类型"], // 个人主页 --> 仓库标签页-->类型筛选器 Type
@@ -13543,8 +13543,8 @@ I18N.zh["notifications"] = { // 通知页面
             "Available filters": "可用筛选器",
             "filter by repository": "按仓库筛选",
             "filter by status or discussion type": "按状态或评论类型筛选",
-            "filter by notification reason": "按通知原因筛选",
-            "filter by notification author": "按通知作者筛选",
+            "filter by notification reason": "按原因筛选",
+            "filter by notification author": "按作者筛选",
             "filter by organization": "按组织筛选",
         "Group by:": "分组：",
         "Group by: Date": "分组：日期",
@@ -14292,7 +14292,7 @@ I18N.zh["search"] = { // 搜索页面
     },
     "regexp": [ // 正则翻译
         [/Show ([\d,]+) more matches?/, "显示更多 $1 处匹配"],
-        [/(\d+) issues? needs? help/, "$1 个议题需要帮助"],
+        [/(\d+) issues? needs? help/, "$1 个议题待处理"],
         [/Sponsor ([^ ]+)?/, "赞助 $1"], // 赞助按钮 对话框 标题
     ],
     "selector": [ // 元素筛选器规则
