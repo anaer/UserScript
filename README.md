@@ -15,6 +15,7 @@
 | GitHub Old Feed               | [安装][github-old-feed]                                   |
 | Github 增强 - 高速下载        | [安装][GithubEnhanced-High-Speed-Download]                |
 | Github 查找活跃的 Forks 列表  | [安装][github-find-active-forks]                          |
+| Github 中文                      | [安装][github-chinese]                                 |
 | Nacos 编辑框样式调整          | [安装][nacos-style]                                       |
 | RSS+ : 显示当前网站所有的 RSS | [安装][rss-show-site-all-rss]                             |
 | V2EX POLISH 插件补丁          | [安装][v2ex-polish-patch]                                 |
@@ -44,3 +45,4 @@
 [v2ex-polish-patch]: https://github.com/anaer/UserScript/raw/main/user.js/v2ex-polish-patch.user.js
 [webpage-translate]: https://github.com/anaer/UserScript/raw/main/user.js/webpage-translate.user.js
 [v2ex-flamewar]: https://github.com/anaer/UserScript/raw/main/user.js/v2ex-flamewar.user.js
+[github-chinese]: https://github.com/anaer/UserScript/raw/main/user.js/github-chinese.user.js
