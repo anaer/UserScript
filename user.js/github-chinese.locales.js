@@ -727,7 +727,7 @@ I18N.zh["pubilc"] = { // 公共区域翻译
         "Unfollow": "取消关注",
         "Star": "星标",
         // "Unstar": "已加星标",
-        "Starred": "已加星标",
+        "Starred": "星标",
         "Fork": "复刻",
         "Save": "保存",
         "Saving…": "保存中…",
