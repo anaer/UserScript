@@ -4,7 +4,7 @@
 // @description  中文化 GitHub 界面的部分菜单及内容。原作者为楼教主(http://www.52cik.com/)。
 // @copyright    2021, 沙漠之子 (https://maboloshi.github.io/Blog)
 // @icon         https://github.githubassets.com/pinned-octocat.svg
-// @version      2024.1.2.1640
+// @version      2024.1.3.1352
 // @author       沙漠之子
 // @license      GPL-3.0
 // @match        https://github.com/*
@@ -19,6 +19,7 @@
 // @connect      www.iflyrec.com
 // @supportURL   https://github.com/maboloshi/github-chinese/issues
 // ==/UserScript==
+// 202401031353: 过滤a.Link不翻译, 见于trending仓库名为files被翻译了
 
 (function (window, document, undefined) {
     'use strict';
@@ -159,6 +160,9 @@
                 }
                 if (node.hasAttribute('data-hovercard-type')) {
                     return; // 不翻译
+                }
+                if (node.classList.contains("Link")) {
+                    return;
                 }
             } else if (node.tagName === 'DIV') {
                 // 代码编辑器内的内容不进行翻译
