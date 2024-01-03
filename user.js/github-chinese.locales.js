@@ -14790,7 +14790,7 @@ I18N.zh["trending"] = { // 热门页面
             "Filter languages": "筛选语言",
             "Unknown languages": "未知语言",
         "Date range:": "日期范围：",
-            "Adjust time span": "调整的时间跨度",
+            "Adjust time span": "选择时间范围",
                 "Today": "今天",
                 "This week": "本周",
                 "This month": "本月",
