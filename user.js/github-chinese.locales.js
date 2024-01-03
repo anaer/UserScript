@@ -1493,7 +1493,7 @@ I18N.zh["page-profile"] = { // 个人首页
             "comments": "次评论",
             "Commits": "提交",
             "Code review": "代码审查",
-            "Built by": "构建者",
+            "Built by": "贡献者",
 
             "Created their first repository": "创建了他们的第一个仓库",
             "Created an issue in": "创建一个议题在",
@@ -14775,7 +14775,7 @@ I18N.zh["trending"] = { // 热门页面
         "Developers": "开发者",
 
         "Sponsor": "赞助",
-        "Built by": "构建者",
+        "Built by": "贡献者",
 
         "Spoken Language:": "母语：",
             "Select a spoken language": "选择母语：",
