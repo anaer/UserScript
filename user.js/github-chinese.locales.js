@@ -1334,7 +1334,7 @@ I18N.zh["page-dashboard"] = { // 已登录的首页 - 仪表板（含组织）
         [/(\d+) followers?/, "$1 个关注者"],
         [/(\d+) comments?/, "$1 条评论"],
         [/(\d+) commits? to/, "$1 个提交到"],
-        [/(\d+) more commits? »/, "$1 个更多提交到"],
+        [/(\d+) more commits? »/, "$1 个更多提交"],
         [/(\d+) issues? needs? help/, "$1 个议题待处理"],
         // [/Updated/, "更新于"],
         [/You’re an owner of the ([^ ]+) organization!/, "您是 $1 组织的所有者！"], // 组织
