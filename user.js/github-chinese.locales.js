@@ -6323,9 +6323,9 @@ I18N.zh["repository/issues"] = { // 仓库 - 议题页面
                     "This pull request is waiting on your review.": "此拉取请求正在等待您的审核。",
 
                 "Assignees": "受理人",
-                    "No one assigned": "无人受理",
+                    "No one assigned": "未分配",
                     "No one—": "无人 - ",
-                    "assign yourself": " 受理自己",
+                    "assign yourself": " 分配自己",
                     // 下拉框
                     "Assign up to 10 people to this issue": "最多指定 10 人", // 议题
                     "Assign up to 10 people to this pull request": "最多指定 10 人", // 拉取请求
@@ -6763,9 +6763,9 @@ I18N.zh["repository/pull"] = { // 仓库 - 拉取请求页面
                     "This pull request is waiting on your review.": "此拉取请求正在等待您的审核。",
 
                 "Assignees": "受理人",
-                    "No one assigned": "无人受理",
+                    "No one assigned": "未分配",
                     "No one—": "无人 - ",
-                    "assign yourself": " 受理自己",
+                    "assign yourself": " 分配自己",
                     // 下拉框
                     "Assign up to 10 people to this issue": "最多指定 10 人", // 议题
                     "Assign up to 10 people to this pull request": "最多指定 10 人", // 拉取请求
@@ -7489,9 +7489,9 @@ I18N.zh["repository/compare"] = { // 仓库 - 比较并创建拉取请求
                 "This pull request is waiting on your review.": "此拉取请求正在等待您的审核。",
 
             "Assignees": "受理人",
-                "No one assigned": "无人受理",
+                "No one assigned": "未分配",
                 "No one—": "无人 - ",
-                "assign yourself": " 受理自己",
+                "assign yourself": " 分配自己",
                 "Assign up to 10 people to this issue": "最多指定 10 人", // 议题
                 "Assign up to 10 people to this pull request": "最多指定 10 人", // 拉取请求
                 "Clear assignees": "清除受理人",
@@ -17190,7 +17190,7 @@ I18N.zh["projects"] = { // 项目页面(含仓库项目)
             "Show less": "显示更少",
             "Show more": "显示更多",
             "Assignees": "受理人",
-                "No one assigned": "无人受理",
+                "No one assigned": "未分配",
             "Labels": "标签",
             "Milestone": "里程碑",
                 "No milestone": "尚无里程碑",
