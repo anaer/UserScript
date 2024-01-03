@@ -7533,7 +7533,7 @@ I18N.zh["repository/compare"] = { // 仓库 - 比较并创建拉取请求
                 "No projects": "无项目",
 
             "Milestone": "里程碑",
-                "No milestone": "无里程碑",
+                "No milestone": "暂无",
                 "Set milestone": "设置里程碑",
                     "Nothing to show": "暂无",
 
