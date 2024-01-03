@@ -1215,7 +1215,7 @@ I18N.zh["page-dashboard"] = { // 已登录的首页 - 仪表板（含组织）
         "Reload this page.": "重载此页面",
 
         // 动态 状态词
-        "starred": "星标了",
+        "starred": "加星了",
         "created": "创建了",
         "forked from": "复刻自",
         "generated from": "创建自",
@@ -1267,7 +1267,7 @@ I18N.zh["page-dashboard"] = { // 已登录的首页 - 仪表板（含组织）
         "You're seeing this because of your activity.": "您看到这个是因为您的活动。",
         "Show less activity like this": "显示较少这类活动",
         // [/You're seeing this because you collaborated with ([^ ]+)/, "您看到这个是因为您与 $1 有过合作"],
-        // [/You're seeing this because you starred ([^ ]+)/, "您看到这个，是因为您星标了 $1"],
+        // [/You're seeing this because you starred ([^ ]+)/, "您看到这个，是因为您加星了 $1"],
         "Unstar this repository": "取消星标此仓库",
         // [/You're seeing this because you follow ([^ ]+)/, "您看到这个，是因为您关注了 $1"],
         "Unfollow this user": "取消关注此用户",
@@ -1342,7 +1342,7 @@ I18N.zh["page-dashboard"] = { // 已登录的首页 - 仪表板（含组织）
         [/Edit ([^ ]+)’s settings/, "编辑 $1 的设置"], // 组织
         [/and (\d+) more/, "和另外 $1 个"],
         [/You're seeing this because you collaborated with ([^ ]+)/, "您看到这个是因为您与 $1 有过合作"],
-        [/You're seeing this because you starred ([^ ]+)/, "您看到这个，是因为您星标了 $1"],
+        [/You're seeing this because you starred ([^ ]+)/, "您看到这个，是因为您加星了 $1"],
         [/You're seeing this because you follow ([^ ]+)/, "您看到这个，是因为您关注了 $1"],
         [/(\d+) people reacted with thumbs up/, "$1 个人的的反应为点赞"],
         [/(\d+) people reacted with laugh/, "$1 个人的反应为大笑"],
