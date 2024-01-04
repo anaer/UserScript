@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      2024.1.3.1332
+// @version      2024.1.4.0956
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -68,7 +68,7 @@
     ], clone_ssh_url = [
         ['git@ssh.fastgit.org', '香港', '[中国 香港] - 该公益加速源由 [FastGit] 提供'],
     ], raw_url = [
-        ['https://slink.ltd/https://raw.github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [知了小站] 提供'],
+        ['https://slink.ltd/https://raw.githubusercontent.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [知了小站] 提供'],
         ['https://gh.con.sh/https://raw.github.com', '美国', '[美国 Cloudflare CDN]'],
         ['https://ghps.cc/https://raw.github.com', '美国', '[美国 Cloudflare CDN]'],
         ['https://git.xfj0.cn/https://raw.github.com', '美国', '[美国 Cloudflare CDN]'],
