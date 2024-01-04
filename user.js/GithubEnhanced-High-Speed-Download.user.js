@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      2024.1.4.0956
+// @version      2024.1.4.1056
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -27,7 +27,7 @@
 (function () {
     'use strict';
     var backColor = '#ffffff', fontColor = '#888888', menu_raw_fast = GM_getValue('xiu2_menu_raw_fast'), menu_menu_raw_fast_ID, menu_feedBack_ID;
-    var aria2c = 'aria2c --check-certificate=false -x 15 -j 10 -s 100 -c --connect-timeout=10 --timeout=10 --lowest-speed-limit=1K --allow-overwrite=true ';
+    var aria2c = 'aria2c --check-certificate=false --max-connection-per-server=5 --max-concurrent-downloads=10 --split=100 --min-split-size=1M --continue=true --optimize-concurrent-downloads=true --connect-timeout=10 --timeout=10 --lowest-speed-limit=1K --allow-overwrite=true ';
     const download_url = [
         ['https://git.814560.xyz/https://github.com', '网络', ''],
         ['https://dl.ghpig.top/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [feizhuqwq.com] 提供'],
