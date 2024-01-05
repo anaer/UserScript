@@ -8985,7 +8985,7 @@ I18N.zh["repository/new"] = { // 仓库 - 新建/编辑/上传/删除文件页�
             "Show Diff": "显示差异", // new code view
 
             "Commit changes": "提交更改", //  自有仓库
-            "Commit changes...": "提交更改...", //  自有仓库 // new code view
+            "Commit changes...": "提交更改", //  自有仓库 // new code view
                 "Saving...": "保存中...",
             "Propose changes": "提议更改", //  他人仓库
             "Sign off and commit changes": "签署并提交更改",
