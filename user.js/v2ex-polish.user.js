@@ -1389,7 +1389,13 @@ async function refreshMoney() {
 }
 async function thankReply(params) {
   try {
-    const res = await fetch(`/thank/reply/${params.replyId}?once=${window.once}`, {
+    const res1 = await fetch(`/poll_once`, {
+      method: "GET"
+    });
+    const once = await res1.text();
+    console.log('once', once);
+
+    const res = await fetch(`/thank/reply/${params.replyId}?once=${once}`, {
       method: "POST"
     });
     const data = await res.json();
