@@ -7398,7 +7398,7 @@ I18N.zh["repository/compare"] = { // 仓库 - 比较并创建拉取请求
             "Compare changes": "比较变更",
             "Compare changes across branches, commits, tags, and more below. If you need to, you can also": "比较跨分支，提交，标签，和更多的变更。如果您需要，也可以",
             "compare across forks": "比较复刻库和源仓库",
-            "Learn more about diff comparisons here": "在这里了解更多关于差异比较的信息",
+            "Learn more about diff comparisons here": "在这里了解有关差异比较的更多信息",
 
             // 分支选择栏
             "base repository:": "基础仓库：",
@@ -7427,7 +7427,7 @@ I18N.zh["repository/compare"] = { // 仓库 - 比较并创建拉取请求
         // /<user-name>/<repo-name>/compare/<branch>...<branch-1>
             "Comparing changes": "比较变更",
             "Choose two branches to see what’s changed or to start a new pull request. If you need to, you can also": "选择两个分支，看看发生了什么改变，或发起一个新的拉请求。如果您需要，您也可以",
-            "learn more about diff comparisons": "了解更多关于差异比较的信息",
+            "learn more about diff comparisons": "了解有关差异比较的更多信息",
             // "base fork:": "基复刻：",
 
             "There isn’t anything to compare.": "没有任何东西可比较。",
