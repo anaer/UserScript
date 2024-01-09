@@ -3445,7 +3445,7 @@ async function handlingComments() {
       const id = ev.currentTarget.dataset.id;
       const memberName = ev.currentTarget.dataset.memberName;
       if (typeof id === "string" && typeof memberName === "string") {
-        if (confirm(`\u786E\u8BA4\u82B1\u8D39 10 \u4E2A\u94DC\u5E01\u5411 @${memberName} \u7684\u8FD9\u6761\u56DE\u590D\u53D1\u9001\u611F\u8C22\uFF1F`)) {
+        if (confirm(`${memberName} 说的在理, 赏 10 铜币?`)) {
           const replyId = id.split("_").at(1);
           if (replyId) {
             void thankReply({
