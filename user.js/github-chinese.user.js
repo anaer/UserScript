@@ -4,12 +4,12 @@
 // @description  中文化 GitHub 界面的部分菜单及内容。原作者为楼教主(http://www.52cik.com/)。
 // @copyright    2021, 沙漠之子 (https://maboloshi.github.io/Blog)
 // @icon         https://github.githubassets.com/pinned-octocat.svg
-// @version      2024.1.8.1557
+// @version      2024.1.9.0922
 // @author       沙漠之子
 // @license      GPL-3.0
 // @match        https://github.com/*
 // @match        https://gist.github.com/*
-// @require      https://github.com/anaer/UserScript/raw/main/user.js/github-chinese.locales.js?_v=2024.1.5.1406
+// @require      https://github.com/anaer/UserScript/raw/main/user.js/github-chinese.locales.js?_v=2024.1.9.0922
 // @run-at       document-end
 // @grant        GM_xmlhttpRequest
 // @grant        GM_getValue
@@ -172,6 +172,11 @@
 
                 // 多文件比较 不翻译
                 if (node.hasAttribute('data-details-container-group') && node.getAttribute('data-details-container-group') === 'file'){
+                    return;
+                }
+            } else if (node.tagName === 'NAV') {
+                // 面包屑导航不进行翻译
+                if (node.hasAttribute('data-testid') && node.getAttribute('data-testid') === 'breadcrumbs'){
                     return;
                 }
             }
