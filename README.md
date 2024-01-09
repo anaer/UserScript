@@ -15,14 +15,15 @@
 | GitHub Old Feed               | [安装][github-old-feed]                                   |
 | Github 增强 - 高速下载        | [安装][GithubEnhanced-High-Speed-Download]                |
 | Github 查找活跃的 Forks 列表  | [安装][github-find-active-forks]                          |
-| Github 中文                      | [安装][github-chinese]                                 |
+| Github 中文                   | [安装][github-chinese]                                    |
 | Nacos 编辑框样式调整          | [安装][nacos-style]                                       |
 | RSS+ : 显示当前网站所有的 RSS | [安装][rss-show-site-all-rss]                             |
+| V2EX POLISH                   | [安装][v2ex-polish]                                       |
 | V2EX POLISH 插件补丁          | [安装][v2ex-polish-patch]                                 |
 | V2EX base64 自动解码          | [安装][Base64-Decode-In-V2ex]                             |
 | V2EX 图片链接处理             | [安装][Convert-Image-Link-to-Img-Tag]                     |
 | V2EX 头像 CDN 替换            | [安装][v2ex-avatar-cdn-replace]                           |
-| V2EX 导航栏添加flamewar       | [安装][v2ex-flamewar]                                     |
+| V2EX 导航栏添加 flamewar      | [安装][v2ex-flamewar]                                     |
 | 去除重定向                    | [安装][anti-redirect]                                     |
 | 图片缓存处理                  | [安装][image-cache]                                       |
 | 文本替换                      | [安装][TextReplacer]                                      |
@@ -42,6 +43,7 @@
 [nacos-style]: https://github.com/anaer/UserScript/raw/main/user.js/nacos-style.user.js
 [rss-show-site-all-rss]: https://github.com/anaer/UserScript/raw/main/user.js/rss-show-site-all-rss.user.js
 [v2ex-avatar-cdn-replace]: https://github.com/anaer/UserScript/raw/main/user.js/v2ex-avatar-cdn-replace.user.js
+[v2ex-polish]: https://github.com/anaer/UserScript/raw/main/user.js/v2ex-polish.user.js
 [v2ex-polish-patch]: https://github.com/anaer/UserScript/raw/main/user.js/v2ex-polish-patch.user.js
 [webpage-translate]: https://github.com/anaer/UserScript/raw/main/user.js/webpage-translate.user.js
 [v2ex-flamewar]: https://github.com/anaer/UserScript/raw/main/user.js/v2ex-flamewar.user.js
