@@ -5801,11 +5801,11 @@ I18N.zh["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
                 "Help your community understand how to securely report security vulnerabilities for your project.": "帮助您的社区了解如何安全地报告项目的安全漏洞。",
 
         // Action 仓库 右侧栏
-            "Suggested Workflows": "建议的工作流程",
-            "Based on your tech stack": "基于您的技术堆栈",
+            "Suggested Workflows": "推荐的工作流",
+            "Based on your tech stack": "基于您的技术栈",
             "Set up": "设立",
             "Configure": "设置",
-            "More workflows": "更多工作流程",
+            "More workflows": "更多工作流",
             "Dismiss suggestions": "隐藏建议",
 
         // 仓库复刻中...
