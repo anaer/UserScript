@@ -6211,6 +6211,7 @@ I18N.zh["repository/issues"] = { // 仓库 - 议题页面
             "Pinned issues": "置顶议题",
 
             "ProTip!": "专业提示！",
+                "on any issue or pull request to go back to the issue listing page.": "在任意议题或者拉取请求页, 返回议题列表页.",
                 "Find everything you created by searching": "查找您创建的所有内容，使用",
                 "Exclude your own issues with": "查看您自己的问题，使用",
                 "Mix and match filters to narrow down what you’re looking for.": "混搭筛选器，以缩小范围，找到您想看到的。",
