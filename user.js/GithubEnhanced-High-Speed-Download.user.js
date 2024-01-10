@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      2024.1.5.1112
+// @version      2024.1.10.1035
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -39,8 +39,8 @@
         ['https://ghps.cc/https://github.com', '美国', '[美国 Cloudflare CDN]'],
         ['https://download.fgit.cf', '美国', '[美国 洛杉矶] - 该公益加速源由 [FastGit 群组成员] 提供'],
         ['https://hub.gitmirror.com/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [GitMirror] 提供'],
-        ['https://mirror.ghproxy.com/https://github.com', '韩国', '主域名 ghproxy.com 已喜提 GFW，已启用镜像站 mirror.ghproxy.com'],
         ['https://download.fastgit.org', '德国', '[德国] - 该公益加速源由 [FastGit] 提供&#10;&#10;提示：如果速度可以接受，希望大家尽量多使用前面的美国节点（每次随机 4 个来负载均衡），&#10;避免流量都集中到亚洲公益节点，减少成本压力才能运营更持久~', 'https://archive.fastgit.org'],
+        // ['https://mirror.ghproxy.com/https://github.com', '韩国', '主域名 ghproxy.com 已喜提 GFW，已启用镜像站 mirror.ghproxy.com'],
         // ['https://cwb0207.online/https://github.com', '网络', ''],
         // ['https://999740.xyz/https://github.com', '网络', '仅支持200MB以下的文件'],
         // ['https://cors.isteed.cc/github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [Lufs\'s] 提供'],
