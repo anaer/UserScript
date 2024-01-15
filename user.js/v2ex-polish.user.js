@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         V2EX Polish
 // @namespace    https://github.com/anaer/UserScript
-// @version      2024.1.15.1624
+// @version      2024.1.15.1630
 // @description  一款专为 V2EX 用户设计的浏览器插件，提供了丰富的扩展功能，让原生页面焕然一新！✨
 // @author       anaer
 // @match        https://*.v2ex.com/*
 // @match        https://v2ex.com/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=v2ex.com
+// @icon         https://www.v2ex.com/favicon.ico
 // @run-at       document-start
 // @grant        GM_addStyle
 // @license      MIT

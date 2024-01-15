@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name                v2ex Tab栏添加flamewar
 // @namespace           https://github.com/anaer/UserScript
-// @version             1.0.0
+// @version             2024.1.15.1631
 // @description         v2ex Tab栏添加flamewar
 // @author              anaer
 // @match               https://www.v2ex.com/*
+// @icon                https://www.v2ex.com/favicon.ico
 // @run-at              document-end
 // @grant               none
 // @license             LGPLv3

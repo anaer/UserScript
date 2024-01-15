@@ -2,7 +2,7 @@
 // @name V2EX Polish Patch
 // @description V2EX Polish插件补丁
 // @author anaer
-// @version 1.0.4
+// @version 2024.1.15.1631
 // @grant none
 // @noframes
 // @run-at       document-start

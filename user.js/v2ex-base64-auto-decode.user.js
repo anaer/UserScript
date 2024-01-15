@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         V2EX base64自动解码
 // @namespace    https://github.com/anaer/UserScript
-// @version      1.5
+// @version      2024.1.15.1632
 // @description  Decode Base64 encoded content on web pages
 // @author       anaer
 // @match        https://www.v2ex.com/t/*
 // @match        https://v2ex.com/t/*
+// @icon         https://www.v2ex.com/favicon.ico
 // @grant        none
 // ==/UserScript==
 

@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         V2EX头像CDN替换
 // @namespace    https://github.com/anaer/UserScript
-// @version      1.1
+// @version      2024.1.15.1631
 // @description  自动替换V2EX网站上的头像CDN
 // @author       anaer
 // @match        https://www.v2ex.com/*
 // @match        https://v2ex.com/*
+// @icon         https://www.v2ex.com/favicon.ico
 // @grant        none
 // ==/UserScript==
 
