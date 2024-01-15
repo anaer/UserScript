@@ -1,17 +1,17 @@
 // ==UserScript==
-// @name         ▲V2EX Polish - 体验更现代化的 V2EX 🟢
-// @namespace    LeoKu(https://leoku.top)
-// @version      1.7.18
+// @name         V2EX Polish
+// @namespace    https://github.com/anaer/UserScript
+// @version      2024.1.15.1025
 // @description  一款专为 V2EX 用户设计的浏览器插件，提供了丰富的扩展功能，让原生页面焕然一新！✨
-// @author       LeoKu
+// @author       anaer
 // @match        https://*.v2ex.com/*
 // @match        https://v2ex.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=v2ex.com
 // @run-at       document-start
 // @grant        GM_addStyle
 // @license      MIT
-// @downloadURL none
 // ==/UserScript==
+// 原版功能太多, 因为只需要楼中楼, 所以基于1.7.18版本, 做些调整
 
 "use strict";
 var __getOwnPropNames = Object.getOwnPropertyNames;
