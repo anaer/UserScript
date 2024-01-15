@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         V2EX Polish
 // @namespace    https://github.com/anaer/UserScript
-// @version      2024.1.15.1025
+// @version      2024.1.15.1624
 // @description  一款专为 V2EX 用户设计的浏览器插件，提供了丰富的扩展功能，让原生页面焕然一新！✨
 // @author       anaer
 // @match        https://*.v2ex.com/*
@@ -156,7 +156,7 @@ var init_constants = __esm({
       }
     ];
     READABLE_CONTENT_HEIGHT = 250;
-    MAX_CONTENT_HEIGHT = 550;
+    MAX_CONTENT_HEIGHT = 850;
     READING_CONTENT_LIMIT = 150;
     dataExpiryTime = 60 * 60 * 1e3;
     imgurClientIdPool = [
