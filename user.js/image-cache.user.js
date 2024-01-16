@@ -1,13 +1,14 @@
 // ==UserScript==
-// @name         😄 图片缓存处理
-// @namespace    https://github.com/anaer/UserScript
-// @version      1.10
+// @name         图片缓存处理
 // @description  为图片添加error事件
+// @version      2024.1.16.1408
 // @author       anaer
 // @match        *://*/*
-// @run-at       document-start
 // @grant        none
+// @run-at       document-end
+// @namespace    https://github.com/anaer/UserScript
 // ==/UserScript==
+// 202401161410: 调整run-at执行时机, 更新版本号规则
 
 (function() {
     'use strict';

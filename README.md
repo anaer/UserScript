@@ -21,7 +21,7 @@
 | V2EX POLISH                   | [安装][v2ex-polish]                                       |
 | V2EX POLISH 插件补丁          | [安装][v2ex-polish-patch]                                 |
 | V2EX base64 自动解码          | [安装][Base64-Decode-In-V2ex]                             |
-| V2EX 图片链接处理             | [安装][Convert-Image-Link-to-Img-Tag]                     |
+| V2EX 图片链接处理             | [安装][v2ex-link-to-img]                     |
 | V2EX 头像 CDN 替换            | [安装][v2ex-avatar-cdn-replace]                           |
 | V2EX 导航栏添加 flamewar      | [安装][v2ex-flamewar]                                     |
 | 去除重定向                    | [安装][anti-redirect]                                     |
@@ -32,7 +32,7 @@
 
 [说明: 以下为引用, 在页面上不展示]: https://github.com/anaer/UserScript
 [Base64-Decode-In-V2ex]: https://github.com/anaer/UserScript/raw/main/user.js/Base64-Decode-In-V2ex.user.js
-[Convert-Image-Link-to-Img-Tag]: https://github.com/anaer/UserScript/raw/main/user.js/Convert-Image-Link-to-Img-Tag.user.js
+[v2ex-link-to-img]: https://github.com/anaer/UserScript/raw/main/user.js/v2ex-link-to-img.user.js
 [GithubEnhanced-High-Speed-Download]: https://github.com/anaer/UserScript/raw/main/user.js/GithubEnhanced-High-Speed-Download.user.js
 [Switch-Traditional-Chinese-and-Simplified-Chinese]: https://github.com/anaer/UserScript/raw/main/user.js/Switch-Traditional-Chinese-and-Simplified-Chinese.user.js
 [TextReplacer]: https://github.com/anaer/UserScript/raw/main/user.js/TextReplacer.user.js

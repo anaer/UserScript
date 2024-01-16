@@ -1,14 +1,13 @@
 // ==UserScript==
-// @name         🐭 V2EX 图片链接处理
-// @namespace    https://github.com/anaer/UserScript
-// @version      1.11
-// @description  Converts image links to <img> tags on webpages
-// @description:zh-CN 转换页面上的图片链接为img标签进行展示
+// @name         V2EX 图片链接处理
+// @description  转换页面上的图片链接为img标签进行展示
+// @version      2024.1.16.1407
 // @author       anaer
 // @match        https://www.v2ex.com/t/*
 // @match        https://machbbs.com/hostloc/*
-// @run-at       document-end
 // @grant        none
+// @run-at       document-end
+// @namespace    https://github.com/anaer/UserScript
 // ==/UserScript==
 
 (function() {
