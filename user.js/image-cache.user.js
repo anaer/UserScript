@@ -5,6 +5,7 @@
 // @author       anaer
 // @match        *://*/*
 // @grant        none
+// @icon         https://www.v2ex.com/favicon.ico
 // @run-at       document-end
 // @namespace    https://github.com/anaer/UserScript
 // ==/UserScript==

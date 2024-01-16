@@ -5,6 +5,7 @@
 // @author       anaer
 // @match        https://www.v2ex.com/t/*
 // @match        https://machbbs.com/hostloc/*
+// @icon         https://www.v2ex.com/favicon.ico
 // @grant        none
 // @run-at       document-end
 // @namespace    https://github.com/anaer/UserScript
