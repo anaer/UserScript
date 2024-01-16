@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         图片缓存处理
 // @description  为图片添加error事件
-// @version      2024.1.16.1408
+// @version      2024.1.16.1658
 // @author       anaer
 // @match        *://*/*
 // @grant        none
@@ -9,7 +9,8 @@
 // @run-at       document-end
 // @namespace    https://github.com/anaer/UserScript
 // ==/UserScript==
-// 202401161410: 调整run-at执行时机, 更新版本号规则
+// 2024.1.16.1410: 调整run-at执行时机, 更新版本号规则
+// 2024.1.16.1658: 过滤base64图片
 
 (function() {
     'use strict';
@@ -20,7 +21,7 @@
     // 遍历每个图片链接
     imgUrls.forEach(function(img) {
         img.addEventListener('error', function () {
-            if (img.src.toLowerCase().indexOf('images.weserv.nl') === -1) {
+            if (img.src.toLowerCase().indexOf('images.weserv.nl') === -1 && !img.src.toLowerCase().startsWith("data:")) {
                 img.src = 'https://images.weserv.nl/?url='+img.src;
             }
         });
