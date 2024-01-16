@@ -10,7 +10,7 @@
 // @namespace    https://github.com/anaer/UserScript
 // ==/UserScript==
 // 2024.1.16.1410: 调整run-at执行时机, 更新版本号规则
-// 2024.1.16.1658: 过滤base64图片
+// 2024.1.16.1658: 过滤base64图片, 只处理http链接
 
 (function() {
     'use strict';
@@ -21,7 +21,7 @@
     // 遍历每个图片链接
     imgUrls.forEach(function(img) {
         img.addEventListener('error', function () {
-            if (img.src.toLowerCase().indexOf('images.weserv.nl') === -1 && !img.src.toLowerCase().startsWith("data:")) {
+            if (img.src.toLowerCase().indexOf('images.weserv.nl') === -1 && img.src.toLowerCase().startsWith("http")) {
                 img.src = 'https://images.weserv.nl/?url='+img.src;
             }
         });
