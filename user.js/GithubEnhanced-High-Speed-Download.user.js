@@ -19,6 +19,7 @@
 // @grant        window.onurlchange
 // @license      GPL-3.0 License
 // @run-at       document-end
+// @icon         https://github.githubassets.com/pinned-octocat.svg
 // @namespace    https://greasyfork.org/scripts/412245
 // @supportURL   https://github.com/XIU2/UserScript
 // @homepageURL  https://github.com/XIU2/UserScript
