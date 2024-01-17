@@ -10,6 +10,7 @@
 // @run-at              document-end
 // @grant               none
 // @license             LGPLv3
+// @icon                https://github.githubassets.com/pinned-octocat.svg
 // ==/UserScript==
 
 (function () {

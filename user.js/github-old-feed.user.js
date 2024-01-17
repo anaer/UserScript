@@ -8,6 +8,7 @@
 // @namespace    http://tampermonkey.net/
 // @match        https://github.com/
 // @match        https://github.com/dashboard
+// @icon         https://github.githubassets.com/pinned-octocat.svg
 // ==/UserScript==
 
 (function () {
