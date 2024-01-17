@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         V2EX Polish
 // @namespace    https://github.com/anaer/UserScript
-// @version      2024.1.15.1630
+// @version      2024.1.17.1311
 // @description  一款专为 V2EX 用户设计的浏览器插件，提供了丰富的扩展功能，让原生页面焕然一新！✨
 // @author       anaer
 // @match        https://*.v2ex.com/*
@@ -11,7 +11,8 @@
 // @grant        GM_addStyle
 // @license      MIT
 // ==/UserScript==
-// 原版功能太多, 因为只需要楼中楼, 所以基于1.7.18版本, 做些调整
+// 2024.1.15.1630 原版功能太多, 因为只需要楼中楼, 所以基于1.7.18版本, 做些调整
+// 2024.1.17.1311 修改回复配置默认显示时间
 
 "use strict";
 var __getOwnPropNames = Object.getOwnPropertyNames;
@@ -184,7 +185,7 @@ var init_constants = __esm({
       },
       replyContent: {
         autoFold: true,
-        hideReplyTime: true,
+        hideReplyTime: false,
         hideRefName: false
       },
       nestedReply: {
@@ -212,23 +213,23 @@ var init_icons = __esm({
       dur="1s"
       values="0;1;0"
       repeatCount="indefinite"
-      begin="0.1"/>    
+      begin="0.1"/>
   </circle>
   <circle fill="currentcolor" stroke="none" cx="26" cy="50" r="6">
     <animate
       attributeName="opacity"
       dur="1s"
       values="0;1;0"
-      repeatCount="indefinite" 
-      begin="0.2"/>       
+      repeatCount="indefinite"
+      begin="0.2"/>
   </circle>
   <circle fill="currentcolor" stroke="none" cx="46" cy="50" r="6">
     <animate
       attributeName="opacity"
       dur="1s"
       values="0;1;0"
-      repeatCount="indefinite" 
-      begin="0.3"/>     
+      repeatCount="indefinite"
+      begin="0.3"/>
   </circle>
 </svg>
 `;
@@ -1211,12 +1212,12 @@ var init_common = __esm({
         const $extraFooter = $(`
     <div class="v2p-footer">
       <div class="v2p-footer-text">\u6269\u5C55\u81EA V2EX Polish </div>
-  
+
       <div class="v2p-footer-links">
         <a class="v2p-footer-link v2p-hover-btn" href="${"https://v2p.app" /* Home */}" target="_blank">\u63D2\u4EF6\u5B98\u7F51</a>
         <a class="v2p-footer-link v2p-hover-btn" href="${"https://github.com/coolpace/V2EX_Polish/discussions/1?sort=new" /* Feedback */}" target="_blank">\u95EE\u9898\u53CD\u9988</a>
       </div>
-  
+
       <div class="v2p-footer-brand">
         <span>
           <a
@@ -3993,9 +3994,9 @@ function handlingWrite() {
       }
       postTask(`
       editor.setValue(editor.getValue().replace("${find}", "${replace}"));
-      const doc = editor.getDoc(); 
-      const lastLine = doc.lastLine(); 
-      const lastChar = doc.getLine(lastLine).length; 
+      const doc = editor.getDoc();
+      const lastLine = doc.lastLine();
+      const lastChar = doc.getLine(lastLine).length;
       doc.setCursor({ line: doc.lastLine(), ch: lastChar });
       `);
     }
