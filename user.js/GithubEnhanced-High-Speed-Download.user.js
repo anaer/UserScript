@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      2024.1.10.1035
+// @version      2024.1.29.1537
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -40,7 +40,10 @@
         ['https://ghps.cc/https://github.com', '美国', '[美国 Cloudflare CDN]'],
         ['https://download.fgit.cf', '美国', '[美国 洛杉矶] - 该公益加速源由 [FastGit 群组成员] 提供'],
         ['https://hub.gitmirror.com/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [GitMirror] 提供'],
-        ['https://download.fastgit.org', '德国', '[德国] - 该公益加速源由 [FastGit] 提供&#10;&#10;提示：如果速度可以接受，希望大家尽量多使用前面的美国节点（每次随机 4 个来负载均衡），&#10;避免流量都集中到亚洲公益节点，减少成本压力才能运营更持久~', 'https://archive.fastgit.org'],
+        ['https://download.fastgit.org', '德国', '[德国]', 'https://archive.fastgit.org'],
+        ['https://kkgithub.com', '香港', '[香港、日本、新加坡等]'],
+        ['https://521github.com', '网络', ''],
+        ['https://githubfast.com', '网络', ''],
         // ['https://mirror.ghproxy.com/https://github.com', '韩国', '主域名 ghproxy.com 已喜提 GFW，已启用镜像站 mirror.ghproxy.com'],
         // ['https://cwb0207.online/https://github.com', '网络', ''],
         // ['https://999740.xyz/https://github.com', '网络', '仅支持200MB以下的文件'],
@@ -79,6 +82,9 @@
         ['https://hub.gitmirror.com/https://raw.githubusercontent.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [GitMirror] 提供'],
         ['https://jsdelivr.b-cdn.net/gh', '其他 2', '[香港、台湾、日本、新加坡等]（CDN 不固定） - 该公益加速源由 [rttwyjz] 提供&#10;&#10; - 缓存：有'], // 500
         ['https://gcore.jsdelivr.net/gh', '其他 1', '[移动走香港、电信走日本] - 该公益加速源由 [JSDelivr CDN] 提供&#10;&#10; - 缓存：有&#10; - 不支持大小超过 50 MB 的文件&#10; - 不支持版本号格式的分支名（如 v1.2.3）'],
+        ['https://cdn.jsdelivr.net/gh', '网络 1', '有缓存'], 
+        ['https://jsd.onmicrosoft.cn/gh', '网络 2', '无缓存'], 
+        ['https://jsd.cdn.zzko.cn/gh', '网络 3', '无缓存'], 
         ['https://raw.githubusercontent.com', 'Github 原生', '[日本 东京]'],
         // ['https://fastly.jsdelivr.net/gh', '日本 1', '[日本 东京] - 该公益加速源由 [JSDelivr CDN] 提供&#10;&#10; - 缓存：有&#10; - 不支持大小超过 50 MB 的文件&#10; - 不支持版本号格式的分支名（如 v1.2.3）'],
         // ['https://ghproxy.com/https://raw.githubusercontent.com', '韩国', '[日本、韩国、德国等]（CDN 不固定） - 该公益加速源由 [ghproxy] 提供&#10;&#10; - 缓存：无（或时间很短）'],
