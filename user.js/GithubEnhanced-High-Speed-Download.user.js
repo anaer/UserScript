@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      2024.1.29.1537
+// @version      2024.1.30.1642
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -85,6 +85,7 @@
         ['https://cdn.jsdelivr.net/gh', '网络 1', '有缓存'], 
         ['https://jsd.onmicrosoft.cn/gh', '网络 2', '无缓存'], 
         ['https://jsd.cdn.zzko.cn/gh', '网络 3', '无缓存'], 
+        ['https://cdn.statically.io/gh/', '网络 4', ''], 
         ['https://raw.githubusercontent.com', 'Github 原生', '[日本 东京]'],
         // ['https://fastly.jsdelivr.net/gh', '日本 1', '[日本 东京] - 该公益加速源由 [JSDelivr CDN] 提供&#10;&#10; - 缓存：有&#10; - 不支持大小超过 50 MB 的文件&#10; - 不支持版本号格式的分支名（如 v1.2.3）'],
         // ['https://ghproxy.com/https://raw.githubusercontent.com', '韩国', '[日本、韩国、德国等]（CDN 不固定） - 该公益加速源由 [ghproxy] 提供&#10;&#10; - 缓存：无（或时间很短）'],
