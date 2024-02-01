@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         searx.user.js
-// @version      2024.1.16.1512
+// @version      2024.2.1.0931
 // @icon         https://docs.searxng.org/_static/searxng-wordmark.svg
 // @description  SearXNG 搜索引擎优化
 // @author       anaer
