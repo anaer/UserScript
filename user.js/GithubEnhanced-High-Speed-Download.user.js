@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      2024.2.5.1328
+// @version      2024.2.22.1045
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -34,11 +34,11 @@
         ['https://dl.ghpig.top/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [feizhuqwq.com] 提供'],
         ['https://ghproxy.liuzhicong.com/https://github.com', '网络', ''],
         ['https://gh.ddlc.top/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@mtr-static-official] 提供'],
-        ['https://slink.ltd/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [知了小站] 提供'],
         ['https://git.xfj0.cn/https://github.com', '美国', '[美国 Cloudflare CDN]'],
-        ['https://gh.con.sh/https://github.com', '美国', '[美国 Cloudflare CDN]'],
         ['https://download.fgit.cf', '美国', '[美国 洛杉矶] - 该公益加速源由 [FastGit 群组成员] 提供'],
         ['https://kkgithub.com', '香港', '[香港、日本、新加坡等]'],
+        // ['https://slink.ltd/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [知了小站] 提供'],
+        // ['https://gh.con.sh/https://github.com', '美国', '[美国 Cloudflare CDN]'],
         // ['https://hub.gitmirror.com/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [GitMirror] 提供'],
         // ['https://download.fastgit.org', '德国', '[德国]', 'https://archive.fastgit.org'],
         // ['https://521github.com', '网络', ''],
@@ -71,9 +71,7 @@
     ], clone_ssh_url = [
         ['git@ssh.fastgit.org', '香港', '[中国 香港] - 该公益加速源由 [FastGit] 提供'],
     ], raw_url = [
-        ['https://slink.ltd/https://raw.githubusercontent.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [知了小站] 提供'],
         ['https://ghproxy.net/https://raw.githubusercontent.com', '日本 4', '[日本 大阪]&#10;&#10; - 缓存：无（或时间很短）'],
-        ['https://gh.con.sh/https://raw.githubusercontent.com', '美国', '[美国 Cloudflare CDN]'],
         ['https://git.xfj0.cn/https://raw.githubusercontent.com', '美国', '[美国 Cloudflare CDN]'],
         ['https://jsdelivr.b-cdn.net/gh', '其他 2', '[香港、台湾、日本、新加坡等]（CDN 不固定） - 该公益加速源由 [rttwyjz] 提供&#10;&#10; - 缓存：有'], // 500
         ['https://gcore.jsdelivr.net/gh', '其他 1', '[移动走香港、电信走日本] - 该公益加速源由 [JSDelivr CDN] 提供&#10;&#10; - 缓存：有&#10; - 不支持大小超过 50 MB 的文件&#10; - 不支持版本号格式的分支名（如 v1.2.3）'],
@@ -81,6 +79,8 @@
         ['https://jsd.onmicrosoft.cn/gh', '网络 2', '无缓存'], 
         ['https://jsd.cdn.zzko.cn/gh', '网络 3', '无缓存'], 
         ['https://raw.cachefly.998111.xyz', '其他 4', '[新加坡、日本、印度等]（Anycast CDN 不固定） - 该公益加速源由 [@XxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxX0] 提供&#10;&#10; - 缓存：有（约 12 小时）'],
+        // ['https://slink.ltd/https://raw.githubusercontent.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [知了小站] 提供'],
+        // ['https://gh.con.sh/https://raw.githubusercontent.com', '美国', '[美国 Cloudflare CDN]'],
         // ['https://hub.gitmirror.com/https://raw.githubusercontent.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [GitMirror] 提供'],
         // ['https://cdn.statically.io/gh/', '网络 4', ''], 
         // ['https://raw.fastgit.org', '日本 3', '[日本 东京] - 该公益加速源由 [FastGit] 提供&#10;&#10; - 缓存：无（或时间很短）'],
