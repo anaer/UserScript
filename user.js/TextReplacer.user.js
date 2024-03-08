@@ -2,7 +2,7 @@
 // @name         文本替换
 // @description
 // @author       anaer
-// @version      2024.1.16.1116
+// @version      2024.3.8.926
 // @match        https://www.v2ex.com/*
 // @match        https://v2ex.com/*
 // @match        https://www.oschina.net/comment/*
@@ -12,6 +12,7 @@
 
 // 定义要查询和替换的文本
 const replacements = {
+  '农夫三拳': '农夫山泉',
   '蒸馍(.*?)你不扶器(.*?)': '怎么$1你不服气$2',
   '(?<![A-Za-z0-9])[Dd][Yy](?![A-Za-z0-9])': '抖音',
   '(?<![A-Za-z0-9])[Xx][Dd][Mm](?![A-Za-z0-9])': '兄弟们',
