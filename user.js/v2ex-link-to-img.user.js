@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         V2EX 图片链接处理
 // @description  转换页面上的图片链接为img标签进行展示
-// @version      2024.1.16.1407
+// @version 2024.3.13.1758
 // @author       anaer
-// @match        https://www.v2ex.com/t/*
+// @match        https://*.v2ex.com/t/*
 // @match        https://machbbs.com/hostloc/*
 // @icon         https://www.v2ex.com/favicon.ico
 // @grant        none

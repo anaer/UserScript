@@ -2,12 +2,12 @@
 // @name V2EX Polish Patch
 // @description V2EX Polish插件补丁
 // @author anaer
-// @version 2024.1.15.1631
+// @version 2024.3.13.1758
 // @grant none
 // @noframes
 // @run-at       document-start
-// @include https://www.v2ex.com/*
-// @include https://www.v2ex.com/t/*
+// @include https://*.v2ex.com/*
+// @include https://*.v2ex.com/t/*
 // @include https://v2ex.com/*
 // @include https://v2ex.com/t/*
 // @icon https://www.v2ex.com/favicon.ico
