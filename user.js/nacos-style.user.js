@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name         🐑 Nacos页面优化
+// @name         Nacos页面优化
 // @namespace    https://github.com/anaer/UserScript
-// @version 1.0.1
+// @version 2024.3.18.1416
 // @description Nacos配置详情页配置内容编辑框 高度调整
 // @author anaer
 // @grant none
 // @noframes
 // @include http://*/nacos/#/configdetail?*
 // @include http://*/nacos/#/config*
-// @icon http://www.inoreader.com/favicon.ico
+// @icon https://nacos.io/favicon.ico
 // ==/UserScript==
 /*jshint multistr: true */
 

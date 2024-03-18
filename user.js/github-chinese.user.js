@@ -10,7 +10,7 @@
 // @match        https://github.com/*
 // @match        https://gist.github.com/*
 // @exclude      https://github.com/*/edit/*
-// @require      https://github.com/anaer/UserScript/raw/main/user.js/github-chinese.locales.js?_v=1722
+// @require      https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/github-chinese.locales.js?_v=1722
 // @run-at       document-end
 // @grant        GM_xmlhttpRequest
 // @grant        GM_getValue
