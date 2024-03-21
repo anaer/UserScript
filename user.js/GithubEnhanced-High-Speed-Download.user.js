@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      2024.3.11.1638
+// @version      2024.3.21.918
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -33,7 +33,6 @@
         ['https://gh.mzec.top/https://github.com', '网络', ''],
         ['https://gh.mixyun.cyou/https://github.com', '网络', ''],
         ['https://git.domob.org/https://github.com', '网络', ''],
-        ['https://uhk.corpa.me/https://github.com', '网络', ''],
         ['https://ghproxy.053000.xyz/https://github.com', '网络', ''],
         ['https://gh.nxnow.top/https://github.com', '网络', ''],
         ['https://git.814560.xyz/https://github.com', '网络', ''],
@@ -41,6 +40,7 @@
         ['https://ghproxy.liuzhicong.com/https://github.com', '网络', ''],
         ['https://gh.ddlc.top/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@mtr-static-official] 提供'],
         ['https://kkgithub.com', '香港', '[香港、日本、新加坡等]'],
+        // ['https://uhk.corpa.me/https://github.com', '网络', ''],
         // ['https://git.xfj0.cn/https://github.com', '美国', '[美国 Cloudflare CDN]'],
         // ['https://download.fgit.cf', '美国', '[美国 洛杉矶] - 该公益加速源由 [FastGit 群组成员] 提供'],
         // ['https://slink.ltd/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [知了小站] 提供'],
