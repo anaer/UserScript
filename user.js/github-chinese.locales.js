@@ -7270,7 +7270,7 @@ I18N.zh["repository/pull"] = { // 仓库 - 拉取请求页面
                     // 顶部提醒
                         "You need to leave a comment indicating the requested changes.": "您需要留下评论，说明所要求的更改。",
                 "Cancel review": "取消审核",
-                "pending": "条待处理",
+                "pending": "待处理",
                 "comment": "评论",
                 "comments": "评论",
 
