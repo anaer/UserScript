@@ -250,6 +250,7 @@
         // 示例2：https://www.v2ex.com/go/apple
         if ((m = url.match(/v2ex\.com\/\?tab=([^?]+?)(\?|\/|$)/s)) || (m = url.match(/v2ex\.com\/go\/([^?]+?)(\?|\/|$)/s))) {
             add("RSS", "https://www.v2ex.com/feed/" + m[1] + ".xml");
+            add("RSS", "https://rsshub.app/v2ex/tab/" + m[1]);
 
             add("最新主题", "https://rsshub.app/v2ex/topics/latest");
             add("最热主题", "https://rsshub.app/v2ex/topics/hot");
