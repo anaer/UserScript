@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      2024.4.24.1639
+// @version      2024.4.29.928
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -32,7 +32,7 @@
     var aria2c = 'aria2c --check-certificate=false --max-connection-per-server=5 --max-concurrent-downloads=10 --split=100 --min-split-size=1M --continue=true --optimize-concurrent-downloads=true --connect-timeout=3 --timeout=5 --lowest-speed-limit=50K --allow-overwrite=true ';
     const download_url = [
         // ['https://www.subook.link:88/https://github.com', '网络', ''],
-        ['https://shrill-pond-3e81.hunsh.workers.dev/https://github.com', '网络', ''],
+        // ['https://shrill-pond-3e81.hunsh.workers.dev/https://github.com', '网络', ''],
         ['https://git.988896.xyz/https://github.com', '网络', ''],
         ['https://cf.ghproxy.cc/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii lau] 提供'],
         ['https://cors.isteed.cc/github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@Lufs\'s] 提供'],
@@ -65,8 +65,8 @@
         ['git@ssh.fastgit.org', '香港', '[中国 香港] - 该公益加速源由 [FastGit] 提供'],
     ], raw_url = [
         // ['https://www.subook.link:88/https://raw.githubusercontent.com', '网络', ''],
-        ['https://shrill-pond-3e81.hunsh.workers.dev/https://raw.githubusercontent.com', '网络', ''],
-        ['https://p.ntnas.top/https://raw.githubusercontent.com', '网络', ''],
+        // ['https://shrill-pond-3e81.hunsh.workers.dev/https://raw.githubusercontent.com', '网络', ''],
+        // ['https://p.ntnas.top/https://raw.githubusercontent.com', '网络', ''],
         ['https://git.988896.xyz/https://raw.githubusercontent.com', '网络', ''],
         ['https://cf.ghproxy.cc/https://raw.githubusercontent.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii lau] 提供'],
         ['https://jsd.cdn.zzko.cn/gh', '网络 3', '无缓存'], 
