@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      2024.4.29.928
+// @version      2024.4.30.1437
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -29,7 +29,7 @@
 (function () {
     'use strict';
     var backColor = '#ffffff', fontColor = '#888888', menu_raw_fast = GM_getValue('xiu2_menu_raw_fast'), menu_menu_raw_fast_ID, menu_feedBack_ID;
-    var aria2c = 'aria2c --check-certificate=false --max-connection-per-server=5 --max-concurrent-downloads=10 --split=100 --min-split-size=1M --continue=true --optimize-concurrent-downloads=true --connect-timeout=3 --timeout=5 --lowest-speed-limit=50K --allow-overwrite=true ';
+    var aria2c = 'aria2c -d . --check-certificate=false --max-connection-per-server=5 --max-concurrent-downloads=10 --split=10 --min-split-size=1M --continue=true --optimize-concurrent-downloads=true --connect-timeout=3 --timeout=5 --lowest-speed-limit=10K --allow-overwrite=true ';
     const download_url = [
         // ['https://www.subook.link:88/https://github.com', '网络', ''],
         // ['https://shrill-pond-3e81.hunsh.workers.dev/https://github.com', '网络', ''],
