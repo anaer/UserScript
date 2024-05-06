@@ -2,7 +2,7 @@
 // @name         文本替换
 // @description
 // @author       anaer
-// @version      2024.3.8.926
+// @version      2024.5.6.1734
 // @match        https://www.v2ex.com/*
 // @match        https://v2ex.com/*
 // @match        https://www.oschina.net/comment/*
@@ -19,6 +19,7 @@ const replacements = {
   '(?<![A-Za-z0-9])[Ll][Jj](?![A-Za-z0-9])': '垃圾',
   '(?<![A-Za-z0-9])[Ss][Bb](?![A-Za-z0-9])': '傻逼',
   '(?<![A-Za-z0-9])[Pp][Dd][Dd](?![A-Za-z0-9])': '拼多多',
+  '(?<![A-Za-z0-9])[Yy][Yy][Ll][Xx](?![A-Za-z0-9])': '遥遥领先',
   '依托答辩': '一坨大便',
   '某乎': '知乎',
   '某宝': '淘宝',
