@@ -5435,7 +5435,7 @@ I18N.zh["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
                 "Unwatch": "取消关注",
 
                 "Star": "星标",
-                "Unstar": "已加星标",
+                "Unstar": "取消星标",
                 "Fork": "复刻",
                 "Unfork": "取消复刻",
 
@@ -14719,7 +14719,7 @@ I18N.zh["topics"] = { // 探索-->主题页面
             "Browse popular topics on GitHub.": "浏览 GitHub 上的热门主题。",
             "All featured topics": "所有主题",
             "Popular topics": "热门主题",
-            "Unstar": "已加星标",
+            "Unstar": "取消星标",
             "Load more…": "载入更多…",
             "Loading more…": "载入中…",
 
@@ -17134,7 +17134,7 @@ I18N.zh["projects"] = { // 项目页面(含仓库项目)
             "Unwatch": "取消关注",
 
             "Star": "星标",
-            "Unstar": "已加星标",
+            "Unstar": "取消星标",
             "Fork": "复刻",
             "Unfork": "取消复刻",
 
