@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name                v2ex Tab栏添加flamewar
 // @namespace           https://github.com/anaer/UserScript
-// @version 2024.3.13.1758
+// @version             2024.5.7.1043
 // @description         v2ex Tab栏添加flamewar
 // @author              anaer
 // @match               https://*.v2ex.com/*
+// @match               https://v2ex.com/*
 // @icon                https://www.v2ex.com/favicon.ico
 // @run-at              document-end
 // @grant               none
@@ -12,32 +13,30 @@
 // ==/UserScript==
 
 (function () {
-    'use strict'
-    function addFlamewarNode () {
-        var flamewarNode = document.querySelector(".flamewar");
-        if (flamewarNode == null) {
-            var tabs = document.querySelector("#Tabs");
-            if (tabs != null) {
-                  var tempNode = document.createElement('a');
-                  tempNode.href = 'https://www.v2ex.com/go/flamewar'
-                  tempNode.innerHTML = '水深火热';
-                  tempNode.className = 'tab v2p-hover-btn flamewar ';
-                  // console.log(tempNode)
-                  tabs.appendChild(tempNode);
-            }
-        }
+  "use strict";
+  function addFlamewarNode() {
+    var flamewarNode = document.querySelector(".flamewar");
+    if (flamewarNode == null) {
+      var tabs = document.querySelector("#Tabs");
+      if (tabs != null) {
+        var tempNode = document.createElement("a");
+        tempNode.href = "https://www.v2ex.com/go/flamewar";
+        tempNode.innerHTML = "水深火热";
+        tempNode.className = "tab v2p-hover-btn flamewar ";
+        // console.log(tempNode)
+        tabs.appendChild(tempNode);
+      }
     }
+  }
 
-
-    var main = document.querySelector('#Main');
-    if (main != null) {
-        var observer = new MutationObserver(function (mutations, observer) {
-            addFlamewarNode();
-        })
-        observer.observe(main, {
-            childList: true
-        })
-        addFlamewarNode();
-    }
-
-})()
+  var main = document.querySelector("#Main");
+  if (main != null) {
+    var observer = new MutationObserver(function (mutations, observer) {
+      addFlamewarNode();
+    });
+    observer.observe(main, {
+      childList: true,
+    });
+    addFlamewarNode();
+  }
+})();

@@ -6,10 +6,10 @@
 // @grant none
 // @noframes
 // @run-at       document-start
-// @include https://*.v2ex.com/*
-// @include https://*.v2ex.com/t/*
-// @include https://v2ex.com/*
-// @include https://v2ex.com/t/*
+// @match https://*.v2ex.com/*
+// @match https://*.v2ex.com/t/*
+// @match https://v2ex.com/*
+// @match https://v2ex.com/t/*
 // @icon https://www.v2ex.com/favicon.ico
 // ==/UserScript==
 /*jshint multistr: true */
@@ -39,9 +39,9 @@ body #Rightbar {
     float: none;
     display: none !important;
 }
-`
+`;
 
-var styleEl = document.createElement('style');
-styleEl.type = 'text/css';
+var styleEl = document.createElement("style");
+styleEl.type = "text/css";
 styleEl.innerHTML = css;
 document.documentElement.appendChild(styleEl);
