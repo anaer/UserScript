@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         V2EX base64自动解码
 // @namespace    https://github.com/anaer/UserScript
-// @version      2024.5.16.957
+// @version      2024.5.16.1006
 // @description  Decode Base64 encoded content on web pages
 // @author       anaer
 // @match        https://*.v2ex.com/t/*
@@ -13,18 +13,31 @@
 (function() {
   'use strict';
 
-    // 正则表达式匹配 Base64 编码的内容, 限制长度为10以上
-  var base64Regex = /(?<!@)([A-Za-z0-9+/=]{10,})/g;
+    // 正则表达式匹配 Base64 编码的内容, 限制长度为8以上
+  var base64Regex = /(?<!@)([A-Za-z0-9+/=]{8,})/g;
 
   // 获取页面上所有的回复内容
   var replyContents = document.querySelectorAll('div.reply_content, div.topic_content');
 
-  // 例外如 120G 返回true
-  // 可能存在编码串忽略了最后的等号, 导致编码不一致, 所以使用startsWith进行判断
   function isBase64(str) {
+    if (typeof str !== 'string' || str.length === 0) {
+      return false;
+    }
+  
+    // 检查是否只包含有效的Base64字符（包括填充符）
+    const base64Pattern = /^[A-Za-z0-9+/]+={0,2}$/;
+    if (!base64Pattern.test(str)) {
+      return false;
+    }
+
+    // 补充等号使长度成为4的倍数
+    while (str.length % 4 !== 0) {
+      str += '=';
+    }
+  
     try {
-      // return btoa(atob(str)) === str; 
-      return btoa(atob(str)).startsWith(str);
+      // 检查编码和解码的一致性
+      return btoa(atob(str)) === str;
     } catch (error) {
       return false;
     }
