@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         V2EX base64自动解码
 // @namespace    https://github.com/anaer/UserScript
-// @version 2024.3.13.1758
+// @version      2024.5.16.957
 // @description  Decode Base64 encoded content on web pages
 // @author       anaer
 // @match        https://*.v2ex.com/t/*
@@ -20,9 +20,11 @@
   var replyContents = document.querySelectorAll('div.reply_content, div.topic_content');
 
   // 例外如 120G 返回true
+  // 可能存在编码串忽略了最后的等号, 导致编码不一致, 所以使用startsWith进行判断
   function isBase64(str) {
     try {
-      return btoa(atob(str)) === str;
+      // return btoa(atob(str)) === str; 
+      return btoa(atob(str)).startsWith(str);
     } catch (error) {
       return false;
     }
