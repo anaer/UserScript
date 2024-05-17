@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name                v2ex Tab栏添加flamewar
+// @name                V2EX Tab栏添加flamewar
 // @namespace           https://github.com/anaer/UserScript
-// @version             2024.5.10.1335
-// @description         v2ex Tab栏添加flamewar
+// @version             2024.5.17.1130
+// @description         V2EX Tab栏添加flamewar
 // @author              anaer
 // @match               https://*.v2ex.com/*
 // @match               https://v2ex.com/*

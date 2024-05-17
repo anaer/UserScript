@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name                🐍 Github Find Active Forks
-// @name:zh-CN          🐍 Github查找活跃的Forks列表
+// @name                Github Find Active Forks
+// @name:zh-CN          Github查找活跃的Forks列表
 // @namespace           https://github.com/anaer/UserScript
-// @version             1.0.1
+// @version             2024.5.17.1129
 // @description         allows you to find the most active forks of a repository.
 // @description:zh-CN   Github显示活跃的Forks列表，可以快速了解各个分叉的热度，比如在主项目存档不维护时，就能知道有哪个新分叉有更新，
 // @author              anaer
