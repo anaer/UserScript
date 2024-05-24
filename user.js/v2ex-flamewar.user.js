@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name                V2EX Tab栏添加flamewar
+// @name                V2EX Tab栏添加节点
 // @namespace           https://github.com/anaer/UserScript
-// @version             2024.5.17.1130
-// @description         V2EX Tab栏添加flamewar
+// @version             2024.5.24.1544
+// @description         V2EX Tab栏添加节点
 // @author              anaer
 // @match               https://*.v2ex.com/*
 // @match               https://v2ex.com/*
@@ -14,28 +14,24 @@
 
 (function () {
   "use strict";
+
+  function addNode(tabs, name, url, className) {
+    var node = document.querySelector("."+className);
+    if(node == null){
+        var tempNode = document.createElement("a");
+        tempNode.href = url;
+        tempNode.innerHTML = name;
+        tempNode.className = "tab v2p-hover-btn ${className}";
+        tabs.appendChild(tempNode);
+    }
+  }
+
   function addFlamewarNode() {
     var tabs = document.querySelector("#Tabs");
     if (tabs != null) {
-      var flamewarNode = document.querySelector(".flamewar");
-      if (flamewarNode == null) {
-        var tempNode = document.createElement("a");
-        tempNode.href = "https://www.v2ex.com/go/flamewar";
-        tempNode.innerHTML = "水深火热";
-        tempNode.className = "tab v2p-hover-btn flamewar ";
-        // console.log(tempNode)
-        tabs.appendChild(tempNode);
-      }
-
-      var balanceNode = document.querySelector(".balance");
-      if (balanceNode == null) {
-        var tempNode = document.createElement("a");
-        tempNode.href = "https://v2ex.com/balance";
-        tempNode.innerHTML = "账户余额";
-        tempNode.className = "tab v2p-hover-btn balance";
-        // console.log(tempNode)
-        tabs.appendChild(tempNode);
-      }
+      addNode(tabs, '水深火热', 'https://www.v2ex.com/go/flamewar', 'flamewar');
+      addNode(tabs, 'VXNA', 'https://v2ex.com/xna', 'xna');
+      addNode(tabs, '账户余额', 'https://v2ex.com/balance', 'balance');
     }
   }
 
