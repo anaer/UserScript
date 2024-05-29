@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name         Redirect to Telegram and Close Tab
-// @namespace    http://tampermonkey.net/
-// @version      1.1
-// @description  将特定的URL重定向到Telegram协议链接，并关闭当前标签页
-// @author       ChatGPT
+// @name         快速跳转TG
+// @version      2024.5.29.1105
+// @description  快速跳转TG
+// @author       anaer
 // @match        https://tgnav.github.io/*
 // @match        https://tgnav.github.io/go/*
+// @namespace    https://github.com/anaer/UserScript
 // @grant        none
 // ==/UserScript==
 

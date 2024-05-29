@@ -20,8 +20,8 @@
 | RSS+ : 显示当前网站所有的 RSS | [安装][rss-show-site-all-rss]                             |
 | V2EX POLISH                   | [安装][v2ex-polish]                                       |
 | V2EX POLISH 插件补丁          | [安装][v2ex-polish-patch]                                 |
-| V2EX base64 自动解码          | [安装][v2ex-base64-auto-decode]                             |
-| V2EX 图片链接处理             | [安装][v2ex-link-to-img]                     |
+| V2EX base64 自动解码          | [安装][v2ex-base64-auto-decode]                           |
+| V2EX 图片链接处理             | [安装][v2ex-link-to-img]                                  |
 | V2EX 头像 CDN 替换            | [安装][v2ex-avatar-cdn-replace]                           |
 | V2EX 导航栏添加 flamewar      | [安装][v2ex-flamewar]                                     |
 | 去除重定向                    | [安装][anti-redirect]                                     |
@@ -29,6 +29,7 @@
 | 文本替换                      | [安装][TextReplacer]                                      |
 | 简繁自动切换                  | [安装][Switch-Traditional-Chinese-and-Simplified-Chinese] |
 | 网页翻译                      | [安装][webpage-translate]                                 |
+| 快速跳转 TG                   | [安装][tg-redirect]                                       |
 
 [说明: 以下为引用, 在页面上不展示]: https://github.com/anaer/UserScript
 [v2ex-base64-auto-decode]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/v2ex-base64-auto-decode.user.js
@@ -48,3 +49,4 @@
 [webpage-translate]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/webpage-translate.user.js
 [v2ex-flamewar]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/v2ex-flamewar.user.js
 [github-chinese]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/github-chinese.user.js
+[tg-redirect]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/tg.redirect.user.js
