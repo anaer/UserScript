@@ -1,20 +1,20 @@
 // ==UserScript==
+// @version      2024.5.29.1604
 // @name         V2EX base64自动解码
-// @namespace    https://github.com/anaer/UserScript
-// @version      2024.5.16.1006
 // @description  Decode Base64 encoded content on web pages
-// @author       anaer
 // @match        https://*.v2ex.com/t/*
 // @match        https://v2ex.com/t/*
-// @icon         https://www.v2ex.com/favicon.ico
 // @grant        none
+// @author       anaer
+// @icon         https://www.v2ex.com/favicon.ico
+// @namespace    https://github.com/anaer/UserScript
 // ==/UserScript==
 
 (function() {
   'use strict';
 
     // 正则表达式匹配 Base64 编码的内容, 限制长度为8以上
-  var base64Regex = /(?<!@)([A-Za-z0-9+/=]{8,})/g;
+  var base64Regex = /(?<!@)\b([A-Za-z0-9+/=]{8,})\b/g;
 
   // 获取页面上所有的回复内容
   var replyContents = document.querySelectorAll('div.reply_content, div.topic_content');
@@ -64,7 +64,7 @@ function getDecode(str){
                   // var decodedData = atob(base64Data);
                   var decodedData = getDecode(base64Data);
 
-                  console.log('Decoded Base64 content:', decodedData);
+                  console.log('Decoded Base64 content:', base64Data, " => ",  decodedData);
 
                   var br = document.createElement('br');
                   // 处理链接, 添加a标签
