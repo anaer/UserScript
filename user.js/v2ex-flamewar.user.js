@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name                V2EX Tab栏添加节点
 // @namespace           https://github.com/anaer/UserScript
-// @version             2024.5.24.1544
+// @version             2024.6.7.2107
 // @description         V2EX Tab栏添加节点
 // @author              anaer
 // @match               https://*.v2ex.com/*
@@ -30,7 +30,6 @@
     var tabs = document.querySelector("#Tabs");
     if (tabs != null) {
       addNode(tabs, '水深火热', 'https://www.v2ex.com/go/flamewar', 'flamewar');
-      addNode(tabs, 'VXNA', 'https://v2ex.com/xna', 'xna');
       addNode(tabs, '账户余额', 'https://v2ex.com/balance', 'balance');
     }
   }
