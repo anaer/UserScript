@@ -32,21 +32,21 @@
 | 快速跳转 TG                   | [安装][tg-redirect]                                       |
 
 [说明: 以下为引用, 在页面上不展示]: https://github.com/anaer/UserScript
-[v2ex-base64-auto-decode]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/v2ex-base64-auto-decode.user.js
-[v2ex-link-to-img]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/v2ex-link-to-img.user.js
-[GithubEnhanced-High-Speed-Download]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/GithubEnhanced-High-Speed-Download.user.js
-[Switch-Traditional-Chinese-and-Simplified-Chinese]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/Switch-Traditional-Chinese-and-Simplified-Chinese.user.js
-[TextReplacer]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/TextReplacer.user.js
-[anti-redirect]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/anti-redirect.user.js
-[github-find-active-forks]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/github-find-active-forks.user.js
-[github-old-feed]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/github-old-feed.user.js
-[image-cache]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/image-cache.user.js
-[nacos-style]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/nacos-style.user.js
-[rss-show-site-all-rss]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/rss-show-site-all-rss.user.js
-[v2ex-avatar-cdn-replace]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/v2ex-avatar-cdn-replace.user.js
-[v2ex-polish]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/v2ex-polish.user.js
-[v2ex-polish-patch]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/v2ex-polish-patch.user.js
-[webpage-translate]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/webpage-translate.user.js
-[v2ex-flamewar]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/v2ex-flamewar.user.js
-[github-chinese]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/github-chinese.user.js
-[tg-redirect]: https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/tg.redirect.user.js
+[v2ex-base64-auto-decode]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/v2ex-base64-auto-decode.user.js
+[v2ex-link-to-img]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/v2ex-link-to-img.user.js
+[GithubEnhanced-High-Speed-Download]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/GithubEnhanced-High-Speed-Download.user.js
+[Switch-Traditional-Chinese-and-Simplified-Chinese]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/Switch-Traditional-Chinese-and-Simplified-Chinese.user.js
+[TextReplacer]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/TextReplacer.user.js
+[anti-redirect]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/anti-redirect.user.js
+[github-find-active-forks]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/github-find-active-forks.user.js
+[github-old-feed]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/github-old-feed.user.js
+[image-cache]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/image-cache.user.js
+[nacos-style]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/nacos-style.user.js
+[rss-show-site-all-rss]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/rss-show-site-all-rss.user.js
+[v2ex-avatar-cdn-replace]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/v2ex-avatar-cdn-replace.user.js
+[v2ex-polish]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/v2ex-polish.user.js
+[v2ex-polish-patch]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/v2ex-polish-patch.user.js
+[webpage-translate]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/webpage-translate.user.js
+[v2ex-flamewar]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/v2ex-flamewar.user.js
+[github-chinese]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/github-chinese.user.js
+[tg-redirect]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/tg.redirect.user.js
