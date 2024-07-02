@@ -2,7 +2,7 @@
 // @name         文本替换
 // @description
 // @author       anaer
-// @version      2024.5.7.1343
+// @version      2024.07.02.1101
 // @match        https://www.v2ex.com/*
 // @match        https://v2ex.com/*
 // @match        https://www.oschina.net/comment/*
@@ -14,7 +14,7 @@
 const replacements = {
   '农夫三拳': '农夫山泉',
   '蒸馍(.*?)你不扶器(.*?)': '怎么$1你不服气$2',
-  '(?<![A-Za-z0-9])[Dd][Yy](?![A-Za-z0-9])': '抖音',
+  '(?<![A-Za-z0-9-])[Dd][Yy](?![A-Za-z0-9-])': '抖音',
   '(?<![A-Za-z0-9])[Xx][Dd][Mm](?![A-Za-z0-9])': '兄弟们',
   '(?<![A-Za-z0-9])[Ll][Jj](?![A-Za-z0-9])': '垃圾',
   '(?<![A-Za-z0-9])[Ss][Bb](?![A-Za-z0-9])': '傻逼',
