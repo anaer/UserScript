@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         图片缓存处理
 // @description  为图片添加error事件
-// @version      2024.1.16.1658
+// @version      2024.07.02.1024
 // @author       anaer
 // @match        *://*/*
 // @grant        none
@@ -21,8 +21,12 @@
     // 遍历每个图片链接
     imgUrls.forEach(function(img) {
         img.addEventListener('error', function () {
-            if (img.src.toLowerCase().indexOf('images.weserv.nl') === -1 && img.src.toLowerCase().startsWith("http")) {
-                img.src = 'https://images.weserv.nl/?url='+img.src;
+            // if (img.src.toLowerCase().indexOf('images.weserv.nl') === -1 && img.src.toLowerCase().startsWith("http")) {
+                // img.src = 'https://images.weserv.nl/?url='+img.src;
+            // }
+            
+            if (img.src.toLowerCase().indexOf('img.noobzone.ru') === -1 && img.src.toLowerCase().startsWith("http")) {
+                img.src = 'https://img.noobzone.ru/getimg.php?url='+img.src;
             }
         });
     });
