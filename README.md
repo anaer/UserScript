@@ -24,6 +24,7 @@
 | V2EX 图片链接处理             | [安装][v2ex-link-to-img]                                  |
 | V2EX 头像 CDN 替换            | [安装][v2ex-avatar-cdn-replace]                           |
 | V2EX 导航栏添加 flamewar      | [安装][v2ex-flamewar]                                     |
+| V2EX 自动收藏                 | [安装][v2ex-auto-favorite]                                |
 | 去除重定向                    | [安装][anti-redirect]                                     |
 | 图片缓存处理                  | [安装][image-cache]                                       |
 | 文本替换                      | [安装][TextReplacer]                                      |
@@ -48,5 +49,6 @@
 [v2ex-polish-patch]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/v2ex-polish-patch.user.js
 [webpage-translate]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/webpage-translate.user.js
 [v2ex-flamewar]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/v2ex-flamewar.user.js
+[v2ex-auto-favorite]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/v2ex-auto-favorite.user.js
 [github-chinese]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/github-chinese.user.js
 [tg-redirect]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/tg.redirect.user.js
