@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         图片缓存处理
 // @description  为图片添加error事件
-// @version      2024.07.02.1024
+// @version      2024.07.02.1358
 // @author       anaer
 // @match        *://*/*
 // @grant        none
@@ -30,5 +30,14 @@
             }
         });
     });
+    
+    const open = XMLHttpRequest.prototype.open;
+
+    XMLHttpRequest.prototype.open = function(method, url) {
+        if (url.includes('https://img.noobzone.ru/getimg.php')) {
+            this.setRequestHeader('Referer', '');
+        }
+        return open.apply(this, arguments);
+    }
 
 })();

@@ -30,7 +30,6 @@
 | 简繁自动切换                  | [安装][Switch-Traditional-Chinese-and-Simplified-Chinese] |
 | 网页翻译                      | [安装][webpage-translate]                                 |
 | 快速跳转 TG                   | [安装][tg-redirect]                                       |
-| noobzone                      | [安装][noobzone]                                          |
 
 [说明: 以下为引用, 在页面上不展示]: https://github.com/anaer/UserScript
 [v2ex-base64-auto-decode]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/v2ex-base64-auto-decode.user.js
@@ -51,4 +50,3 @@
 [v2ex-flamewar]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/v2ex-flamewar.user.js
 [github-chinese]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/github-chinese.user.js
 [tg-redirect]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/tg.redirect.user.js
-[noobzone]: https://raw.githubusercontent.com/anaer/UserScript/main/user.js/noobzone.user.js
