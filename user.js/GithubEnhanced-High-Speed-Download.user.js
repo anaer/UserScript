@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      2024.06.25.923
+// @version      2024.07.03.1438
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -33,7 +33,11 @@
 
     const download_url = [
         ['https://github.com', '官方', '默认第一个'],
+        ['https://gh.idayer.com/https://github.com', '网络', ''],
+        ['https://gh-proxy.com/https://github.com', '网络', ''],
+        ['https://ghproxy.org/https://github.com', '网络', ''],
         ['https://git.988896.xyz/https://github.com', '网络', ''],
+        ['https://mirrors.chenby.cn/https://github.com', '网络', ''],
         ['https://raw.bunnyxyz.eu.org/https://github.com', '网络', ''],
         ['https://cf.ghproxy.cc/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii lau] 提供'],
         ['https://cors.isteed.cc/github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@Lufs\'s] 提供'],
@@ -191,7 +195,7 @@
                 let href = _this.href.split(location.host), url = '', _html = `<div class="XIU2-RS" style="${divDisplay}">`;
 
                 let aria2 = aria2c;
-                for (let i = 0; i < download_url.length; i++) {
+                for (let i = 0; i < download_url.length && i < 10; i++) {
                     if (download_url[i][3] !== undefined && url.indexOf('/archive/') !== -1) {
                         url = download_url[i][3] + href[1];
                     } else {
