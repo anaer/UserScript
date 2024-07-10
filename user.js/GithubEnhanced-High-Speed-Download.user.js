@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      2024.07.03.1438
+// @version      2024.07.10.1424
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -15,6 +15,7 @@
 // @grant        GM_openInTab
 // @grant        GM_getValue
 // @grant        GM_setValue
+// @grant        GM_setClipboard
 // @grant        GM_notification
 // @grant        window.onurlchange
 // @license      GPL-3.0 License
@@ -79,8 +80,8 @@
         ['https://git.988896.xyz/https://raw.githubusercontent.com', '网络', ''],
         ['https://raw.bunnyxyz.eu.org/https://raw.githubusercontent.com', '网络', ''],
         ['https://cf.ghproxy.cc/https://raw.githubusercontent.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii lau] 提供'],
-        ['https://jsd.cdn.zzko.cn/gh', '网络 3', '无缓存'], 
-        ['https://jsd.onmicrosoft.cn/gh', '网络 2', '无缓存'], 
+        ['https://jsd.cdn.zzko.cn/gh', '网络 3', '无缓存'],
+        ['https://jsd.onmicrosoft.cn/gh', '网络 2', '无缓存'],
         ['https://hub.incept.pw', '网络', ''],
         ['https://fastraw.ixnic.net', '日本 3', '[日本 大阪] - 该公益加速源由 [FastGit 群组成员] 提供&#10;&#10; - 缓存：无（或时间很短）'],
         ['https://ghproxy.net/https://raw.githubusercontent.com', '日本 4', '[日本 大阪]&#10;&#10; - 缓存：无（或时间很短）'],
@@ -225,9 +226,9 @@
     // Download ZIP
     function addDownloadZIP(target) {
         let html = target.querySelector('ul[class^=List__ListBox-sc-] ul[class^=List__ListBox-sc-]>li:last-child'); if (!html) return;
-        let href_script = document.querySelector('react-partial[partial-name=repos-overview]>script[data-target="react-partial.embeddedData"]'), 
+        let href_script = document.querySelector('react-partial[partial-name=repos-overview]>script[data-target="react-partial.embeddedData"]'),
             href_slice = href_script.textContent.slice(href_script.textContent.indexOf('"zipballUrl":"') + 14),
-            href = href_slice.slice(0, href_slice.indexOf('"')), 
+            href = href_slice.slice(0, href_slice.indexOf('"')),
             url = '', _html = ''
 
         // 克隆原 Download ZIP 元素，并定位 <a> <span> 标签
@@ -260,10 +261,13 @@
     // Git Clone
     function addGitClone(target) {
         let html = target.querySelector('input[value^="https:"]'); if (!html) return;
-        let href_split = html.value.split(location.host)[1], 
-            html_parent = '<div style="margin-top: 4px;" class="XIU2-GC ' + html.parentElement.className + '">', 
+        let href_split = html.value.split(location.host)[1],
+            html_parent = '<div style="margin-top: 4px;" class="XIU2-GC ' + html.parentElement.className + '">',
             url = '', _html = '', _gitClone = '';
         html.nextElementSibling.hidden = true; // 隐藏右侧复制按钮
+        if (html.parentElement.nextElementSibling.tagName === 'SPAN'){
+            html.parentElement.nextElementSibling.textContent += ' (↑点击文字可复制)'
+        }
         if (GM_getValue('menu_gitClone')) { _gitClone = 'git clone '; html.value = _gitClone + html.value; html.setAttribute('value', html.value); }
         for (let i = 0; i < clone_url.length; i++) {
             if (clone_url[i][0] === 'https://gitclone.com') {
@@ -277,6 +281,10 @@
             _html += html_parent + html_clone.outerHTML + '</div>';
         }
         html.parentElement.insertAdjacentHTML('afterend', _html);
+        if (html.parentElement.parentElement.className.indexOf('XIU2-GCP') === -1){
+            html.parentElement.parentElement.classList.add('XIU2-GCP')
+            html.parentElement.parentElement.addEventListener('click', (e)=>{if (e.target.tagName === 'INPUT') {GM_setClipboard(e.target.value);}})
+        }
     }
 
 
@@ -285,6 +293,9 @@
         let html = target.querySelector('input[value^="git@"]'); if (!html) return;
         let href_split = html.value.split(':')[1], html_parent = '<div style="margin-top: 4px;" class="XIU2-GCS ' + html.parentElement.className + '">', url = '', _html = '', _gitClone = '';
         html.nextElementSibling.hidden = true; // 隐藏右侧复制按钮
+        if (html.parentElement.nextElementSibling.tagName === 'SPAN'){
+            html.parentElement.nextElementSibling.textContent += ' (↑点击文字可复制)'
+        }
         if (GM_getValue('menu_gitClone')) { _gitClone = 'git clone '; html.value = _gitClone + html.value; html.setAttribute('value', html.value); }
         for (let i = 0; i < clone_ssh_url.length; i++) {
             url = _gitClone + clone_ssh_url[i][0] + href_split;
@@ -294,6 +305,10 @@
             _html += html_parent + html_clone.outerHTML + '</div>';
         }
         html.parentElement.insertAdjacentHTML('afterend', _html);
+        if (html.parentElement.parentElement.className.indexOf('XIU2-GCP') === -1){
+            html.parentElement.parentElement.classList.add('XIU2-GCP')
+            html.parentElement.parentElement.addEventListener('click', (e)=>{if (e.target.tagName === 'INPUT') {GM_setClipboard(e.target.value);}})
+        }
     }
 
 
