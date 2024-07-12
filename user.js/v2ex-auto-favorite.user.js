@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         自动收藏
+// @name         V2EX 自动收藏
 // @namespace    https://github.com/anaer/UserScript
 // @version      2024.07.02.1618
 // @description  自动点击 "Favorite This Node" 链接
