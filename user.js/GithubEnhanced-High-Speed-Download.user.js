@@ -37,7 +37,6 @@
         ['https://gh.idayer.com/https://github.com', '网络', ''],
         ['https://gh-proxy.com/https://github.com', '网络', ''],
         ['https://ghproxy.org/https://github.com', '网络', ''],
-        ['https://git.988896.xyz/https://github.com', '网络', ''],
         ['https://mirrors.chenby.cn/https://github.com', '网络', ''],
         ['https://raw.bunnyxyz.eu.org/https://github.com', '网络', ''],
         ['https://cf.ghproxy.cc/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii lau] 提供'],
@@ -64,13 +63,14 @@
         ['https://slink.ltd/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [知了小站] 提供'],
         ['https://521github.com', '网络', ''],
         ['https://gh.900110.xyz/https://github.com', '网络', ''],
-        // ['https://hub.whtrys.space', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [FastGit 群组成员] 提供'],
-        // ['https://ghps.cc', '网络', ''],
-        // ['https://gh.h233.eu.org/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@X.I.U/XIU2] 提供'],
-        // ['https://www.subook.link:88/https://github.com', '网络', ''],
-        // ['https://shrill-pond-3e81.hunsh.workers.dev/https://github.com', '网络', ''],
-        // ['https://git.xfj0.cn/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [佚名] 提供'],
-        // ['https://kkgithub.com', '香港', '[香港、日本、新加坡等]'],
+        ['https://git.988896.xyz/https://github.com', '网络', ''],
+        ['https://hub.whtrys.space', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [FastGit 群组成员] 提供'],
+        ['https://ghps.cc', '网络', ''],
+        ['https://gh.h233.eu.org/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@X.I.U/XIU2] 提供'],
+        ['https://www.subook.link:88/https://github.com', '网络', ''],
+        ['https://shrill-pond-3e81.hunsh.workers.dev/https://github.com', '网络', ''],
+        ['https://git.xfj0.cn/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [佚名] 提供'],
+        ['https://kkgithub.com', '香港', '[香港、日本、新加坡等]'],
     ], clone_url = [
         ['https://ghproxy.com/https://github.com', '韩国', '[韩国 首尔] - 该公益加速源由 [ghproxy] 提供，有不同地区的服务器，不过国内一般分配为韩国'],
     ], clone_ssh_url = [
@@ -80,7 +80,6 @@
         ['https://jsd.proxy.aks.moe/gh', '香港 2', '[中国 香港] - 该公益加速源由 [cdn.akass.cn] 提供&#10;&#10; - 缓存：有（官方标注 2 小时）'],
         ['https://cdn.jsdelivr.us/gh', '香港 3', '[中国 香港] - 该公益加速源由 [@ayao] 提供&#10;&#10; - 缓存：有'],
         ['https://gh.con.sh/https://raw.githubusercontent.com', '网络', ''],
-        ['https://git.988896.xyz/https://raw.githubusercontent.com', '网络', ''],
         ['https://raw.bunnyxyz.eu.org/https://raw.githubusercontent.com', '网络', ''],
         ['https://cf.ghproxy.cc/https://raw.githubusercontent.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii lau] 提供'],
         ['https://jsd.cdn.zzko.cn/gh', '网络 3', '无缓存'],
@@ -96,11 +95,12 @@
         ['https://cdn.jsdelivr.net/gh', '其他 1', '[移动走香港、电信走日本] - 该公益加速源由 [JSDelivr CDN] 提供&#10;&#10; - 缓存：有&#10; - 不支持大小超过 50 MB 的文件&#10; - 不支持版本号格式的分支名（如 v1.2.3）'],
         ['https://raw.cachefly.998111.xyz', '其他 4', '[新加坡、日本、印度等]（Anycast CDN 不固定） - 该公益加速源由 [@XxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxX0] 提供&#10;&#10; - 缓存：有（约 12 小时）'],
         ['https://raw.githubusercontent.com', 'Github 原生', '[日本 东京]'],
-        // ['https://ghps.cc/https://raw.githubusercontent.com', '网络', ''],
-        // ['https://jsdelivr.b-cdn.net/gh', '其他 2', '[香港、台湾、日本、新加坡等]（CDN 不固定） - 该公益加速源由 [rttwyjz] 提供&#10;&#10; - 缓存：有'], // 500
-        // ['https://www.subook.link:88/https://raw.githubusercontent.com', '网络', ''],
-        // ['https://shrill-pond-3e81.hunsh.workers.dev/https://raw.githubusercontent.com', '网络', ''],
-        // ['https://p.ntnas.top/https://raw.githubusercontent.com', '网络', ''],
+        ['https://git.988896.xyz/https://raw.githubusercontent.com', '网络', ''],
+        ['https://ghps.cc/https://raw.githubusercontent.com', '网络', ''],
+        ['https://jsdelivr.b-cdn.net/gh', '其他 2', '[香港、台湾、日本、新加坡等]（CDN 不固定） - 该公益加速源由 [rttwyjz] 提供&#10;&#10; - 缓存：有'], // 500
+        ['https://www.subook.link:88/https://raw.githubusercontent.com', '网络', ''],
+        ['https://shrill-pond-3e81.hunsh.workers.dev/https://raw.githubusercontent.com', '网络', ''],
+        ['https://p.ntnas.top/https://raw.githubusercontent.com', '网络', ''],
     ], svg = [
         '<svg class="octicon octicon-cloud-download" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M9 12h2l-3 3-3-3h2V7h2v5zm3-8c0-.44-.91-3-4.5-3C5.08 1 3 2.92 3 5 1.02 5 0 6.52 0 8c0 1.53 1 3 3 3h3V9.7H3C1.38 9.7 1.3 8.28 1.3 8c0-.17.05-1.7 1.7-1.7h1.3V5c0-1.39 1.56-2.7 3.2-2.7 2.55 0 3.13 1.55 3.2 1.8v1.2H12c.81 0 2.7.22 2.7 2.2 0 2.09-2.25 2.2-2.7 2.2h-2V11h2c2.08 0 4-1.16 4-3.5C16 5.06 14.08 4 12 4z"></path></svg>'
     ], style = ['padding:0 6px; margin-right: -1px; border-radius: 2px; background-color: var(--XIU2-back-Color); border-color: rgba(27, 31, 35, 0.1); font-size: 11px; color: var(--XIU2-font-Color);'];
@@ -320,7 +320,7 @@
         let href = location.href.replace(`https://${location.host}`, ''), href2 = href.replace('/blob/', '/'), url = '', _html = '';
 
         let aria2 = aria2c;
-        for (let i = 0; i < raw_url.length; i++) {
+        for (let i = 0; i < raw_url.length && i < 10; i++) {
             if ((raw_url[i][0].indexOf('/gh') + 3 === raw_url[i][0].length) && raw_url[i][0].indexOf('cdn.staticaly.com') === -1) {
                 url = raw_url[i][0] + href.replace('/blob/', '@');
             } else {
