@@ -21,9 +21,34 @@
     // 遍历每个图片链接
     imgUrls.forEach(function(img) {
         img.addEventListener('error', function () {
-            if (img.src.toLowerCase().indexOf('images.weserv.nl') === -1 && img.src.toLowerCase().startsWith("http")) {
-                img.src = 'https://images.weserv.nl/?url='+img.src;
+            if (img.src.toLowerCase().startsWith("http")) {
+                const id = img.dataset.id || '0';
+
+
+                switch (id) {
+                    case '0':
+                        img.src = 'https://images.weserv.nl/?url='+img.src;
+                        img.dataset.id = '1';
+                        break;
+                    case '1':
+                        // img.src = 'https://img.noobzone.ru/getimg.php?url='+img.src;
+                        img.src = img.src.replace('https://images.weserv.nl/?url=', 'https://img.noobzone.ru/getimg.php?url=');
+                        img.dataset.id = '2';
+                        break;
+                    case '2':
+                        // img.src = 'https://search.pstatic.net/common?src='+img.src;
+                        img.src = img.src.replace('https://img.noobzone.ru/getimg.php?url=', 'https://search.pstatic.net/common?src=');
+                        img.dataset.id = '3';
+                        break;
+                    default:
+                        break;
             }
+
+
+
+            // if (img.src.toLowerCase().indexOf('images.weserv.nl') === -1 && img.src.toLowerCase().startsWith("http")) {
+                // img.src = 'https://images.weserv.nl/?url='+img.src;
+            // }
             
             // if (img.src.toLowerCase().indexOf('img.noobzone.ru') === -1 && img.src.toLowerCase().startsWith("http")) {
                 // img.src = 'https://img.noobzone.ru/getimg.php?url='+img.src;
