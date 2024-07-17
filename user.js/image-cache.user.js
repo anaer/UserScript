@@ -24,7 +24,6 @@
             if (img.src.toLowerCase().startsWith("http")) {
                 const id = img.dataset.id || '0';
 
-
                 switch (id) {
                     case '0':
                         img.src = 'https://images.weserv.nl/?url='+img.src;
@@ -42,6 +41,7 @@
                         break;
                     default:
                         break;
+                }
             }
 
 
