@@ -4,6 +4,7 @@
 // @version      2024.07.09.1311
 // @author       anaer
 // @match        *://*/*
+// @exclude-match https://linux.do/*
 // @grant        none
 // @icon         https://www.v2ex.com/favicon.ico
 // @run-at       document-end
@@ -24,45 +25,42 @@
             if (img.src.toLowerCase().startsWith("http")) {
                 const id = img.dataset.id || '0';
 
+
                 switch (id) {
                     case '0':
                         img.src = 'https://images.weserv.nl/?url='+img.src;
                         img.dataset.id = '1';
                         break;
                     case '1':
-                        // img.src = 'https://img.noobzone.ru/getimg.php?url='+img.src;
-                        img.src = img.src.replace('https://images.weserv.nl/?url=', 'https://img.noobzone.ru/getimg.php?url=');
+                        img.src = img.src.replace('https://images.weserv.nl/?url=', 'https://search.pstatic.net/common?src=');
                         img.dataset.id = '2';
                         break;
                     case '2':
-                        // img.src = 'https://search.pstatic.net/common?src='+img.src;
-                        img.src = img.src.replace('https://img.noobzone.ru/getimg.php?url=', 'https://search.pstatic.net/common?src=');
+                        img.src = img.src.replace('https://search.pstatic.net/common?src=', 'https://img.noobzone.ru/getimg.php?url=');
                         img.dataset.id = '3';
                         break;
                     default:
                         break;
                 }
             }
-
-
-
-            // if (img.src.toLowerCase().indexOf('images.weserv.nl') === -1 && img.src.toLowerCase().startsWith("http")) {
-                // img.src = 'https://images.weserv.nl/?url='+img.src;
-            // }
-            
-            // if (img.src.toLowerCase().indexOf('img.noobzone.ru') === -1 && img.src.toLowerCase().startsWith("http")) {
-                // img.src = 'https://img.noobzone.ru/getimg.php?url='+img.src;
-            // }
         });
     });
-    
-    const open = XMLHttpRequest.prototype.open;
 
-    XMLHttpRequest.prototype.open = function(method, url) {
-        if (url.includes('https://img.noobzone.ru/getimg.php')) {
-            this.setRequestHeader('Referer', '');
-        }
-        return open.apply(this, arguments);
-    }
+    // const originalOpen = XMLHttpRequest.prototype.open;
+    // const originalSend = XMLHttpRequest.prototype.send;
+
+    // XMLHttpRequest.prototype.open = function(method, url) {
+    //     if (url) {
+    //         this._isTargetUrl = url.includes('https://img.noobzone.ru/getimg.php');
+    //     }
+    //     return originalOpen.apply(this, arguments);
+    // };
+
+    // XMLHttpRequest.prototype.send = function() {
+    //     if (this._isTargetUrl) {
+    //         this.setRequestHeader('Referer', '');
+    //     }
+    //     return originalSend.apply(this, arguments);
+    // };
 
 })();
