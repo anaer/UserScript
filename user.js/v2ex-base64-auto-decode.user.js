@@ -1,9 +1,10 @@
 // ==UserScript==
-// @version      2024.5.29.1604
+// @version      2024.07.18.1518
 // @name         V2EX base64自动解码
 // @description  Decode Base64 encoded content on web pages
 // @match        https://*.v2ex.com/t/*
 // @match        https://v2ex.com/t/*
+// @match        https://linux.do/t/topic/*
 // @grant        none
 // @author       anaer
 // @icon         https://www.v2ex.com/favicon.ico
@@ -17,7 +18,11 @@
   var base64Regex = /(?<!@)\b([A-Za-z0-9+/=]{8,})\b/g;
 
   // 获取页面上所有的回复内容
-  var replyContents = document.querySelectorAll('div.reply_content, div.topic_content');
+  if (document.URL.includes('linux.do')) {
+    var replyContents = document.querySelectorAll('div.cooked');
+  }else{
+    var replyContents = document.querySelectorAll('div.reply_content, div.topic_content');
+  }
 
   function isBase64(str) {
     if (typeof str !== 'string' || str.length === 0) {
