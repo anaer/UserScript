@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Linux.do 自动点赞
 // @namespace    https://github.com/anaer/UserScript
-// @version      2024.07.18.1310
+// @version      2024.07.23.1315
 // @description  停留片刻自动点赞
 // @author       anaer
-// @match        https://linux.do/t/topic/*
+// @match        https://linux.do/*
 // @icon         https://cdn.linux.do/uploads/default/original/3X/b/4/b4fa45d8b03df61f5d011e173c0adf8497028b16.png
 // @grant        none
 // ==/UserScript==
