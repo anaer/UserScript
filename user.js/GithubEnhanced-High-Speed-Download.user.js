@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      24.725.1009
+// @version      24.726.1647
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -35,9 +35,6 @@
     const download_url = [
         ['https://github.com', '官方', '默认第一个'],
         ['https://fastgh.lainbo.com/https://github.com', '网络', ''],
-        ['https://gh.idayer.com/https://github.com', '网络', ''],
-        ['https://gh-proxy.com/https://github.com', '网络', ''],
-        ['https://ghproxy.org/https://github.com', '网络', ''],
         ['https://mirrors.chenby.cn/https://github.com', '网络', ''],
         ['https://raw.bunnyxyz.eu.org/https://github.com', '网络', ''],
         ['https://cf.ghproxy.cc/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii lau] 提供'],
@@ -72,6 +69,10 @@
         ['https://shrill-pond-3e81.hunsh.workers.dev/https://github.com', '网络', ''],
         ['https://git.xfj0.cn/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [佚名] 提供'],
         ['https://kkgithub.com', '香港', '[香港、日本、新加坡等]'],
+        // 失效分隔行
+        ['https://gh.idayer.com/https://github.com', '网络', ''],
+        ['https://gh-proxy.com/https://github.com', '网络', ''],
+        ['https://ghproxy.org/https://github.com', '网络', ''],
     ], clone_url = [
         ['https://ghproxy.com/https://github.com', '韩国', '[韩国 首尔] - 该公益加速源由 [ghproxy] 提供，有不同地区的服务器，不过国内一般分配为韩国'],
     ], clone_ssh_url = [
