@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         linux.do显示创建时间
 // @namespace    https://github.com/anaer/UserScript
-// @version      24.730.1531
+// @version      24.730.1927
 // @description  linux.do显示创建时间
 // @author       anaer
 // @match        *://*.linux.do/*
@@ -10,6 +10,7 @@
 // @icon         https://cdn.linux.do/uploads/default/optimized/3X/9/d/9dd49731091ce8656e94433a26a3ef36062b3994_2_32x32.png
 // @license      MIT
 // ==/UserScript==
+// 2024-07-30 19:27:21 调整展示位置, 显示在标题前面
 
 (function () {
   "use strict";
@@ -90,12 +91,7 @@
         var timestamp = convertToTimestamp(creationDate);
       }
 
-      if ($(this).find(".linuxtime").length < 1) {
-        $(".post-activity").attr(
-          "style",
-          "white-space:nowrap;display:inline-block;width:100%;text-align:left;"
-        );
-
+      if ($(this).parent().find(".linuxtime").length < 1) {
         if (timestamp) {
           var now = new Date().getTime();
           var oneDay = 1000 * 60 * 60 * 24;
@@ -117,12 +113,10 @@
           } else {
             color = "#cccccc";
           }
-          $(this)
-            .find(".post-activity")
-            .append(
-              `<span class="linuxtime" style="color:${color}"> / ${formattedDate(
-                timestamp
-              )}</span>`
+          $(this).parent()
+            .find(".raw-topic-link")
+            .prepend(
+              `<span class="linuxtime" style="color:${color}">[${formattedDate(timestamp)}]</span>`
             );
         }
       }
