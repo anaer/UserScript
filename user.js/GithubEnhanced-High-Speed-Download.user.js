@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      24.726.1647
+// @version      24.731.1029
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -34,6 +34,11 @@
 
     const download_url = [
         ['https://github.com', '官方', '默认第一个'],
+        ['https://gh.labx.me/https://github.com', '网络', ''],
+        ['https://git-yjs.jiongzu.cn/https://github.com', '网络', ''],
+        ['https://git.043.me/https://github.com', '网络', ''],
+        ['https://gh.samiya.pro/https://github.com', '网络', ''],
+        ['https://ghproxy.liki4.icu/https://github.com', '网络', ''],
         ['https://fastgh.lainbo.com/https://github.com', '网络', ''],
         ['https://mirrors.chenby.cn/https://github.com', '网络', ''],
         ['https://raw.bunnyxyz.eu.org/https://github.com', '网络', ''],
@@ -78,6 +83,11 @@
     ], clone_ssh_url = [
         ['git@ssh.fastgit.org', '香港', '[中国 香港] - 该公益加速源由 [FastGit] 提供'],
     ], raw_url = [
+        ['https://gh.labx.me/https://raw.githubusercontent.com', '网络', ''],
+        ['https://git-yjs.jiongzu.cn/https://raw.githubusercontent.com', '网络', ''],
+        ['https://git.043.me/https://raw.githubusercontent.com', '网络', ''],
+        ['https://gh.samiya.pro/https://raw.githubusercontent.com', '网络', ''],
+        ['https://ghproxy.liki4.icu/https://raw.githubusercontent.com', '网络', ''],
         ['https://fastgh.lainbo.com/https://raw.githubusercontent.com', '网络', ''],
         ['https://raw.kkgithub.com', '香港 1', '[中国香港、日本、新加坡等] - 该公益加速源由 [help.kkgithub.com] 提供&#10;&#10; - 缓存：无（或时间很短）'],
         ['https://jsd.proxy.aks.moe/gh', '香港 2', '[中国 香港] - 该公益加速源由 [cdn.akass.cn] 提供&#10;&#10; - 缓存：有（官方标注 2 小时）'],
