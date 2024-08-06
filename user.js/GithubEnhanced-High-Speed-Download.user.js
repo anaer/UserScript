@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      24.731.1029
+// @version      24.806.1048
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -34,6 +34,7 @@
 
     const download_url = [
         ['https://github.com', '官方', '默认第一个'],
+        ['https://gitdl.cn/https://github.com', '网络', ''],
         ['https://gh.labx.me/https://github.com', '网络', ''],
         ['https://git-yjs.jiongzu.cn/https://github.com', '网络', ''],
         ['https://git.043.me/https://github.com', '网络', ''],
@@ -83,6 +84,7 @@
     ], clone_ssh_url = [
         ['git@ssh.fastgit.org', '香港', '[中国 香港] - 该公益加速源由 [FastGit] 提供'],
     ], raw_url = [
+        ['https://gitdl.cn/https://raw.githubusercontent.com', '网络', ''],
         ['https://gh.labx.me/https://raw.githubusercontent.com', '网络', ''],
         ['https://git-yjs.jiongzu.cn/https://raw.githubusercontent.com', '网络', ''],
         ['https://git.043.me/https://raw.githubusercontent.com', '网络', ''],
