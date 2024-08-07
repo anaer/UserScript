@@ -4,7 +4,7 @@
 // @license      MIT
 // @author       anaer
 // @namespace    https://github.com/anaer/UserScript
-// @version      24.806.1332
+// @version      24.807.1742
 // @description  屏蔽常见类型的低质量主题帖，如重复提问、戾气帖子、日经抱怨等。支持手机电脑双平台，支持自定义屏蔽规则。默认规则开箱即用。
 // @match        https://linux.do/*
 // @grant        GM_addStyle
@@ -15,7 +15,6 @@
   var removeMode = "remove";
   var counter = 0; //屏蔽计数器
   var blacklistKeywords = [
-    "蜜雪冰城",
     "😅",
     "贵物",
     "占座",
@@ -33,27 +32,8 @@
   ];
   //最高优先级：有白名单总会不屏蔽
   var whitelistWords = [
-    "投喂",
-    "公告",
-    "搭子",
-    "分享",
-    "指北",
-    "指南",
-    "生存",
-    "教程",
-    "笔记",
-    "接龙",
-    "飞花令",
-    "交流",
-    "挑战",
-    "每日",
-    "闲谈",
-    "经验",
-    "通知",
-    "Wiki",
-    "wiki",
-    "WIKI",
-  ]; 
+  
+  ];
   var clickbaitList = [
     "！",
     "：",
@@ -145,6 +125,10 @@
   var highReplyThresh = localStorage.getItem("highReplyThresh");
   if (highReplyThresh === null) {
     highReplyThresh = 1000; //默认
+  }
+  var historyPostThresh = localStorage.getItem("historyPostThresh");
+  if (historyPostThresh === null) {
+    historyPostThresh = 30; //默认
   }
 
   function getCurrentDate() {
@@ -260,6 +244,8 @@
         //---白名单检测---
         var element = elements[i];
         var replyNum = getReplyNum(element);
+        var createDays = getCreateTime(element);
+        console.log('createDays:', createDays);
         var textContent = element.innerText.trim();
         blockExplanation = "[" + textContent + "] ";
         var isPostInWhitelist = false;
@@ -292,7 +278,7 @@
             replyNum +
             ">；";
         }
-        if (window.location.href.includes("shuiyuan.sjtu.edu.cn/search")) {
+        if (window.location.href.includes("linux.do/search")) {
           isPostInWhitelist = true;
           console.log("白名单通过：目前处于搜索页面。");
           blockExplanation =
@@ -468,6 +454,25 @@
               replyNum +
               "<" +
               fewReplyThresh +
+              "；";
+          }
+        }
+
+        //6. 坟帖屏蔽
+        console.log("创建天数：", textContent + " " + createDays);
+        if (historyPostThresh > 0 && createDays > historyPostThresh) {
+          if (
+            parentElement &&
+            parentElement.parentElement &&
+            parentElement.parentElement.parentElement
+          ) {
+            isTrashContentFlag = true;
+            blockExplanation =
+              blockExplanation +
+              "规则7：坟帖，创建天数=" +
+              createDays +
+              ">" +
+              historyPostThresh +
               "；";
           }
         }
@@ -1058,6 +1063,45 @@
       var separator7 = document.createElement("hr");
       containerElement.appendChild(separator7);
 
+      // 创建标题元素
+      var titleElement7 = document.createElement("h3");
+      titleElement7.style.fontWeight = "bold";
+      titleElement7.style.color = "black";
+      titleElement7.style.marginBottom = "10px";
+      titleElement7.textContent = "专项屏蔽：坟帖屏蔽";
+      containerElement.appendChild(titleElement7);
+
+      // 创建数字调整框
+      var numberInput5HighReply = document.createElement("input");
+      numberInput5HighReply.type = "number";
+      numberInput5HighReply.value =
+        localStorage.getItem("historyPostThresh") || 30; // 默认值为30
+      containerElement.appendChild(numberInput5HighReply);
+
+      // 创建保存按钮
+      var saveButton5HighReply = document.createElement("button");
+      saveButton5HighReply.textContent = "保存";
+      saveButton5HighReply.style.padding = "6px 12px";
+      saveButton5HighReply.style.backgroundColor = "#ccc";
+      saveButton5HighReply.style.border = "none";
+      saveButton5HighReply.style.marginLeft = "10px";
+      saveButton5HighReply.style.color = "#000";
+      containerElement.appendChild(saveButton5HighReply);
+
+      // 创建说明文本
+      var descriptionText5HighReply = document.createElement("p");
+      descriptionText5HighReply.style.fontSize = "12px";
+      descriptionText5HighReply.innerHTML =
+        "当创建天数高于此值时，该帖可能为坟帖，进行屏蔽。要关闭此功能，请将本项设置为0. ";
+      containerElement.appendChild(descriptionText5HighReply);
+
+      // 点击保存按钮时的事件处理函数
+      saveButton5HighReply.addEventListener("click", function () {
+        var value = numberInput5HighReply.value;
+          localStorage.setItem("historyPostThresh", value);
+          alert("已保存选择的阈值：" + value + "，刷新网页生效。");
+      });
+
       // 将外层容器插入到目标元素之前
       targetElement.parentNode.insertBefore(containerElement, targetElement);
     }
@@ -1260,6 +1304,48 @@
     }
 
     return replyNumReturn;
+  }
+
+    function convertToTimestamp(dateStr) {
+    // 创建一个正则表达式来匹配日期和时间部分
+    var datePattern = /(\d{4}) 年 (\d{1,2}) 月 (\d{1,2}) 日 (\d{2}):(\d{2})/;
+    var dateMatch = dateStr.match(datePattern);
+
+    if (dateMatch) {
+      var year = parseInt(dateMatch[1], 10);
+      var month = parseInt(dateMatch[2], 10) - 1; // 月份从0开始
+      var day = parseInt(dateMatch[3], 10);
+      var hours = parseInt(dateMatch[4], 10);
+      var minutes = parseInt(dateMatch[5], 10);
+
+      // 创建 Date 对象
+      var date = new Date(year, month, day, hours, minutes);
+      return date.getTime(); // 返回时间戳
+    } else {
+      return null; // 日期格式无效
+    }
+  }
+
+function getDaysDiff(date1) {
+  const date2 = new Date();
+  const oneDay = 24 * 60 * 60 * 1000; // 一天的毫秒数
+  const diffDays = Math.round(Math.abs((date1 - date2) / oneDay));
+  return diffDays;
+}
+
+  function getCreateTime(element) {
+    var parentDiv = element.parentElement.parentElement.parentElement;
+    var ageDiv = parentDiv.querySelector(".age");
+     const str = ageDiv.getAttribute("title");
+      var match = str.match(/创建日期：([\s\S]*?)最新：/);
+
+      if (match && match[1]) {
+        var creationDate = match[1].trim();
+        var timestamp = convertToTimestamp(creationDate);
+        // console.log('age:', timestamp)
+            return getDaysDiff(timestamp);
+      }
+    return null;
   }
   function getCurrentPageLink() {
     return window.location.href;
