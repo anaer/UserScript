@@ -963,6 +963,49 @@
       });
 
       // 分割线
+      var separator4HistoryPost = document.createElement("hr");
+      containerElement.appendChild(separator4HistoryPost);
+
+      // 创建标题元素
+      var title4HistoryPost = document.createElement("h3");
+      title4HistoryPost.style.fontWeight = "bold";
+      title4HistoryPost.style.color = "black";
+      title4HistoryPost.style.marginBottom = "10px";
+      title4HistoryPost.textContent = "专项屏蔽：坟帖屏蔽";
+      containerElement.appendChild(title4HistoryPost);
+
+      // 创建数字调整框
+      var numberInput4HistoryPost = document.createElement("input");
+      numberInput4HistoryPost.type = "number";
+      numberInput4HistoryPost.value =
+        localStorage.getItem("historyPostThresh") || 30; // 默认值为30
+      containerElement.appendChild(numberInput4HistoryPost);
+
+      // 创建保存按钮
+      var saveButton4HistoryPost = document.createElement("button");
+      saveButton4HistoryPost.textContent = "保存";
+      saveButton4HistoryPost.style.padding = "6px 12px";
+      saveButton4HistoryPost.style.backgroundColor = "#ccc";
+      saveButton4HistoryPost.style.border = "none";
+      saveButton4HistoryPost.style.marginLeft = "10px";
+      saveButton4HistoryPost.style.color = "#000";
+      containerElement.appendChild(saveButton4HistoryPost);
+
+      // 创建说明文本
+      var descriptionText4HistoryPost = document.createElement("p");
+      descriptionText4HistoryPost.style.fontSize = "12px";
+      descriptionText4HistoryPost.innerHTML =
+        "当创建天数高于此值时，该帖可能为坟帖，进行屏蔽。要关闭此功能，请将本项设置为0. ";
+      containerElement.appendChild(descriptionText4HistoryPost);
+
+      // 点击保存按钮时的事件处理函数
+      saveButton4HistoryPost.addEventListener("click", function () {
+        var value = numberInput4HistoryPost.value;
+          localStorage.setItem("historyPostThresh", value);
+          alert("已保存选择的阈值：" + value + "，刷新网页生效。");
+      });
+
+      // 分割线
       var separator5 = document.createElement("hr");
       containerElement.appendChild(separator5);
 
@@ -1062,45 +1105,6 @@
       // 分割线
       var separator7 = document.createElement("hr");
       containerElement.appendChild(separator7);
-
-      // 创建标题元素
-      var titleElement7 = document.createElement("h3");
-      titleElement7.style.fontWeight = "bold";
-      titleElement7.style.color = "black";
-      titleElement7.style.marginBottom = "10px";
-      titleElement7.textContent = "专项屏蔽：坟帖屏蔽";
-      containerElement.appendChild(titleElement7);
-
-      // 创建数字调整框
-      var numberInput5HighReply = document.createElement("input");
-      numberInput5HighReply.type = "number";
-      numberInput5HighReply.value =
-        localStorage.getItem("historyPostThresh") || 30; // 默认值为30
-      containerElement.appendChild(numberInput5HighReply);
-
-      // 创建保存按钮
-      var saveButton5HighReply = document.createElement("button");
-      saveButton5HighReply.textContent = "保存";
-      saveButton5HighReply.style.padding = "6px 12px";
-      saveButton5HighReply.style.backgroundColor = "#ccc";
-      saveButton5HighReply.style.border = "none";
-      saveButton5HighReply.style.marginLeft = "10px";
-      saveButton5HighReply.style.color = "#000";
-      containerElement.appendChild(saveButton5HighReply);
-
-      // 创建说明文本
-      var descriptionText5HighReply = document.createElement("p");
-      descriptionText5HighReply.style.fontSize = "12px";
-      descriptionText5HighReply.innerHTML =
-        "当创建天数高于此值时，该帖可能为坟帖，进行屏蔽。要关闭此功能，请将本项设置为0. ";
-      containerElement.appendChild(descriptionText5HighReply);
-
-      // 点击保存按钮时的事件处理函数
-      saveButton5HighReply.addEventListener("click", function () {
-        var value = numberInput5HighReply.value;
-          localStorage.setItem("historyPostThresh", value);
-          alert("已保存选择的阈值：" + value + "，刷新网页生效。");
-      });
 
       // 将外层容器插入到目标元素之前
       targetElement.parentNode.insertBefore(containerElement, targetElement);
