@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      24.806.1550
+// @version      24.820.1622
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -36,7 +36,6 @@
         ['https://github.com', '官方', '默认第一个'],
         ['https://github.tmby.shop/https://github.com', '网络', ''],
         ['https://gitdl.cn/https://github.com', '网络', ''],
-        ['https://gh.labx.me/https://github.com', '网络', ''],
         ['https://git-yjs.jiongzu.cn/https://github.com', '网络', ''],
         ['https://git.043.me/https://github.com', '网络', ''],
         ['https://gh.samiya.pro/https://github.com', '网络', ''],
@@ -80,6 +79,7 @@
         ['https://gh.idayer.com/https://github.com', '网络', ''],
         ['https://gh-proxy.com/https://github.com', '网络', ''],
         ['https://ghproxy.org/https://github.com', '网络', ''],
+        ['https://gh.labx.me/https://github.com', '网络', ''],
     ], clone_url = [
         ['https://ghproxy.com/https://github.com', '韩国', '[韩国 首尔] - 该公益加速源由 [ghproxy] 提供，有不同地区的服务器，不过国内一般分配为韩国'],
     ], clone_ssh_url = [
@@ -87,7 +87,6 @@
     ], raw_url = [
         ['https://github.tmby.shop/https://raw.githubusercontent.com', '网络', ''],
         ['https://gitdl.cn/https://raw.githubusercontent.com', '网络', ''],
-        ['https://gh.labx.me/https://raw.githubusercontent.com', '网络', ''],
         ['https://git-yjs.jiongzu.cn/https://raw.githubusercontent.com', '网络', ''],
         ['https://git.043.me/https://raw.githubusercontent.com', '网络', ''],
         ['https://gh.samiya.pro/https://raw.githubusercontent.com', '网络', ''],
@@ -118,6 +117,7 @@
         ['https://www.subook.link:88/https://raw.githubusercontent.com', '网络', ''],
         ['https://shrill-pond-3e81.hunsh.workers.dev/https://raw.githubusercontent.com', '网络', ''],
         ['https://p.ntnas.top/https://raw.githubusercontent.com', '网络', ''],
+        ['https://gh.labx.me/https://raw.githubusercontent.com', '网络', ''],
     ], svg = [
         '<svg class="octicon octicon-cloud-download" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M9 12h2l-3 3-3-3h2V7h2v5zm3-8c0-.44-.91-3-4.5-3C5.08 1 3 2.92 3 5 1.02 5 0 6.52 0 8c0 1.53 1 3 3 3h3V9.7H3C1.38 9.7 1.3 8.28 1.3 8c0-.17.05-1.7 1.7-1.7h1.3V5c0-1.39 1.56-2.7 3.2-2.7 2.55 0 3.13 1.55 3.2 1.8v1.2H12c.81 0 2.7.22 2.7 2.2 0 2.09-2.25 2.2-2.7 2.2h-2V11h2c2.08 0 4-1.16 4-3.5C16 5.06 14.08 4 12 4z"></path></svg>'
     ], style = ['padding:0 6px; margin-right: -1px; border-radius: 2px; background-color: var(--XIU2-back-Color); border-color: rgba(27, 31, 35, 0.1); font-size: 11px; color: var(--XIU2-font-Color);'];
