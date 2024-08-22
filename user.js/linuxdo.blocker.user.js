@@ -4,10 +4,11 @@
 // @license      MIT
 // @author       anaer
 // @namespace    https://github.com/anaer/UserScript
-// @version      24.807.1742
+// @version      24.822.1549
 // @description  屏蔽常见类型的低质量主题帖，如重复提问、戾气帖子、日经抱怨等。支持手机电脑双平台，支持自定义屏蔽规则。默认规则开箱即用。
 // @match        https://linux.do/*
 // @grant        GM_addStyle
+// @updateURL    https://raw.githubusercontent.com/anaer/UserScript/main/user.js/linuxdo.blocker.user.js
 // ==/UserScript==
 
 (function () {
@@ -15,24 +16,12 @@
   var removeMode = "remove";
   var counter = 0; //屏蔽计数器
   var blacklistKeywords = [
-    "😅",
-    "贵物",
-    "占座",
-    "恶心",
-    "分流",
-    "你妈",
-    "傻逼",
-    "脑瘫",
-    "死妈",
-    "死个妈",
-    "奇葩",
-    "能洗鞋",
-    "有病",
-    "素质",
+    "已关闭",
+    "已结束",
   ];
   //最高优先级：有白名单总会不屏蔽
   var whitelistWords = [
-  
+
   ];
   var clickbaitList = [
     "！",
