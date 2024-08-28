@@ -27,6 +27,10 @@ const googleUrl = 'https://translate.googleapis.com/translate_a/single?client=gt
 const deeplxUrl = 'http://47.99.104.56/translate'
 const reHZ = /^[\u4E00-\u9FA5\uFF00-\uFF20\u3000-\u301C]/;
 
+const g_svg = '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">  <image id="image0" width="16" height="16" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAIGNIUk0AAHomAACAhAAA+gAAAIDo AAB1MAAA6mAAADqYAAAXcJy6UTwAAAEXUExURQAAAP7+/v39/f39/f39/f39/f39/f////////39 /f7+/v39/f39/f39/f39/f39/f39/f39/f7+/v39/f39/f////////75+faspe5pXetKPOpHOu5m WvWpov3q6O5jWOpDNfB2bO1iVutJO/SclfrSz/rU0fSdlu1eUvzj4fvPkuxSN+pGOPrU0P/9/fzJ NfmyCvaka/u+C/u8Bf7stkKF9Huq9/u9Cv7rtXWm9/HELO28EbDRjYKu+I21+M3WiUiqSziqVs7q 1djm/UaH9MPY/Pn8+le3cTSoUzqqWJHQoszp1M7q1pvUqkqjmUGG8Ged9v7+/+n17Fi3cVivjujw /vn9+qfZtF26djqrWFm4cp3VrPb7+Iuoq/wAAAAWdFJOUwAymdv62pgwCp0Jw8GW2PnXlC6Vvwhl LiriAAAAAWJLR0QHFmGI6wAAAAd0SU1FB+gIHAk2OcW0slsAAADOSURBVBjTPY/pVoJQFIWPgBCo 4LixySw1zdQspdLSRk2ch8zM3v85vBfB78dZZ+91RiKGTxAlyS8rtONAhYugOToAM3l4dHxyaiLI HRWps7TDOSCzfpgX6Uw2d5kvXLEuhQQUr0tlPqHCQ4hE3FRvsUcnCXe1Ossszj0MZjzUHj2jwQw/ mk/Pu/KW1UaYZLy8vr1z/fFpdRAhBd2vnt0fDEfjyXSGKLG980XP4XuJGLtUC+Jn9bu2/zb/iCf4 M5rgHRFLuP8qId0wwpEoz7eIzR2QKLmXUwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyNC0wOC0yOFQw OTo1NDo1NyswMDowMIzd0cUAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjQtMDgtMjhUMDk6NTQ6NTcr MDA6MDD9gGl5AAAAKHRFWHRkYXRlOnRpbWVzdGFtcAAyMDI0LTA4LTI4VDA5OjU0OjU3KzAwOjAw qpVIpgAAAABJRU5ErkJggg=="/></svg>'
+
+const d_svg = '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">  <image id="image0" width="16" height="16" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAIGNIUk0AAHomAACAhAAA+gAAAIDo AAB1MAAA6mAAADqYAAAXcJy6UTwAAABvUExURQAAABArRRAsSA8rRw8rRhAwSBAwUA4rRg4rRw4s Rw8sRhApRw8rRg8rRxAoSBArRg8sRhArRRArSA8rRi1GXVpuf8PK0f///2l7i3iIlrS9xYeVo/Dy 9HiIl3iHl5ajrh45UUtgdNLX3aWvueHl6CGOdagAAAATdFJOUwBgQL/fIBCPn2/vcO/fIKCvMGD7 86y1AAAAAWJLR0QXC9aYjwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB+gIHAoAMDcyJdMA AAB5SURBVBjTVc/rEoIgEAVgvFsJqatgaYWX939Gd44Ycv7A+WbYYYU4EkXimjghSrN/zQtCSke3 O3U9JH0A+KbNAKlOeL31CDmBM+jpEwB9zc+D7efFztaDNqv1MyQP3Tp0CVBPN4Vq5b7aSPTrOi1T GazH72IRRuU4drWrCnc+CDVgAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI0LTA4LTI4VDEwOjAwOjQ4 KzAwOjAw1BlGFAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNC0wOC0yOFQxMDowMDo0OCswMDowMKVE /qgAAAAodEVYdGRhdGU6dGltZXN0YW1wADIwMjQtMDgtMjhUMTA6MDA6NDgrMDA6MDDyUd93AAAA AElFTkSuQmCC"/></svg>'
+
 const countOfWord = s => s ? s.split(/\s+/).length : 0;
 const isChina = s => reHZ.test(s);
 const sleep = ms => new Promise(resolve => { setTimeout(resolve, ms) });
@@ -82,7 +86,7 @@ const comTranslate = {
 
 			xfetch(url).then(r => {
 				const ra = r.response.sentences; // 翻译结果数组
-				if (ra) this.showResult('谷歌翻译：<br><hr>'+ ra.map(s => s.trans).join(''));
+				if (ra) this.showResult(g_svg + ' '+ ra.map(s => s.trans).join(''));
 			})
 			.catch (e => {
 				this.showResult('谷歌服务器连接失败');
@@ -96,7 +100,7 @@ const comTranslate = {
 			xpost(deeplxUrl, data).then(r => {
         const ra = r.response;
         console.log(deeplxUrl, data, ra)
-				this.showResult('DeepLX翻译：<br><hr>'+ ra.data);
+				this.showResult(d_svg + ' ' + ra.data);
 			})
 			.catch (e => {
 				this.showResult('DeepLX服务器连接失败');
