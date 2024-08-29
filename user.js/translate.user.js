@@ -100,7 +100,9 @@ const comTranslate = {
 			xpost(deeplxUrl, data).then(r => {
         const ra = r.response;
         console.log(deeplxUrl, data, ra)
-				this.showResult(d_svg + ' ' + ra.data);
+				let msg = d_svg + ' ' + ra.data;
+				if (ra.alternatives) msg += '<br>' + ra.alternatives;
+				this.showResult(msg);
 			})
 			.catch (e => {
 				this.showResult('DeepLX服务器连接失败');
