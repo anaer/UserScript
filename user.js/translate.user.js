@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         智能划词翻译
 // @namespace    translate.xinggsf
-// @version      24.830.958
+// @version      24.902.1348
 // @description  划词翻译。谷歌翻译和有道词典双引擎；CTRL + ?翻译剪贴板
 // @author       xinggsf  田雨菲
 // @include      http*
@@ -101,7 +101,8 @@ const comTranslate = {
             this.showResult(g_svg + " " + ra.map((s) => s.trans).join(""));
         })
         .catch((e) => {
-          this.showResult("谷歌服务器连接失败");
+          // this.showResult("谷歌服务器连接失败");
+          console.log("谷歌服务器连接失败");
         });
 
       var data = JSON.stringify({
@@ -112,13 +113,14 @@ const comTranslate = {
       xpost(deeplxUrl, data)
         .then((r) => {
           const ra = r.response;
-          console.log(deeplxUrl, data, ra);
+          // console.log(deeplxUrl, data, ra);
           let msg = d_svg + " " + ra.data;
           if (ra.alternatives) msg += "<br>" + ra.alternatives.map((s) => s).join("<br>");
           this.showResult(msg);
         })
         .catch((e) => {
-          this.showResult("DeepLX服务器连接失败");
+          // this.showResult("DeepLX服务器连接失败");
+          console.log("DeepLX服务器连接失败");
         });
 
       this.selText = ""; // hide icon
