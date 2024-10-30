@@ -38,11 +38,9 @@
         ['https://git-yjs.jiongzu.cn/https://github.com', '网络', ''],
         ['https://cf.ghproxy.cc/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii lau] 提供'],
         ['https://cors.isteed.cc/github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@Lufs\'s] 提供'],
-        ['https://dl.ghpig.top/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [feizhuqwq.com] 提供'],
         ['https://download.nuaa.cf', '美国', '[美国 洛杉矶] - 该公益加速源由 [FastGit 群组成员] 提供'],
         ['https://download.scholar.rr.nu', '美国', '[美国 纽约] - 该公益加速源由 [FastGit 群组成员] 提供'],
         ['https://download.yzuu.cf', '美国', '[美国 纽约] - 该公益加速源由 [FastGit 群组成员] 提供'],
-        ['https://gh.con.sh/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [佚名] 提供'],
         ['https://gh.ddlc.top/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@mtr-static-official] 提供'],
         ['https://gh.jiasu.in/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@0-RTT] 提供'],
         ['https://gh.mixyun.cyou/https://github.com', '网络', ''],
@@ -81,6 +79,8 @@
         ['https://raw.bunnyxyz.eu.org/https://github.com', '网络', ''],
         ['https://ghproxy.liki4.icu/https://github.com', '网络', ''],
         ['https://fastgh.lainbo.com/https://github.com', '网络', ''],
+        ['https://gh.con.sh/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [佚名] 提供'],
+        ['https://dl.ghpig.top/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [feizhuqwq.com] 提供'],
     ], clone_url = [
         ['https://ghproxy.com/https://github.com', '韩国', '[韩国 首尔] - 该公益加速源由 [ghproxy] 提供，有不同地区的服务器，不过国内一般分配为韩国'],
     ], clone_ssh_url = [
@@ -216,7 +216,7 @@
                 let href = _this.href.split(location.host), url = '', _html = `<div class="XIU2-RS" style="${divDisplay}">`;
 
                 let aria2 = aria2c;
-                for (let i = 0; i < download_url.length && i < 10; i++) {
+                for (let i = 0; i < download_url.length && i < 20; i++) {
                     if (download_url[i][3] !== undefined && url.indexOf('/archive/') !== -1) {
                         url = download_url[i][3] + href[1];
                     } else {
@@ -339,7 +339,7 @@
         let href = location.href.replace(`https://${location.host}`, ''), href2 = href.replace('/blob/', '/'), url = '', _html = '';
 
         let aria2 = aria2c;
-        for (let i = 0; i < raw_url.length && i < 10; i++) {
+        for (let i = 0; i < raw_url.length && i < 20; i++) {
             if ((raw_url[i][0].indexOf('/gh') + 3 === raw_url[i][0].length) && raw_url[i][0].indexOf('cdn.staticaly.com') === -1) {
                 url = raw_url[i][0] + href.replace('/blob/', '@');
             } else {
