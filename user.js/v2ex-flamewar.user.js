@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name                V2EX Tab栏添加节点
 // @namespace           https://github.com/anaer/UserScript
-// @version             2024.6.7.2107
+// @version             24.1105.1535
 // @description         V2EX Tab栏添加节点
 // @author              anaer
 // @match               https://*.v2ex.com/*
@@ -21,7 +21,7 @@
         var tempNode = document.createElement("a");
         tempNode.href = url;
         tempNode.innerHTML = name;
-        tempNode.className = "tab v2p-hover-btn ${className}";
+        tempNode.className = "tab v2p-hover-btn "+className;
         tabs.appendChild(tempNode);
     }
   }
