@@ -24,7 +24,7 @@
 // @require      https://jsd.onmicrosoft.cn/npm/js-base64@3.6.0/base64.min.js
 // @require      https://jsd.onmicrosoft.cn/npm/greensock@1.20.2/dist/TweenMax.min.js
 // @require      https://jsd.onmicrosoft.cn/npm/qrcode@1.5.0/build/qrcode.min.js
-// @resource     RulerJs https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/rss-show-site-all-rss.rules.js?v=1712
+// @resource     RulerJs https://gcore.jsdelivr.net/gh/anaer/UserScript@main/user.js/rss-show-site-all-rss.rules.js?v=1715
 // @grant        GM_xmlhttpRequest
 // @grant        GM_getResourceText
 // @grant        GM_setClipboard

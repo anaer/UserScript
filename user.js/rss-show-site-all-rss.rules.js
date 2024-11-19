@@ -4,10 +4,10 @@
         function add (title, link) {
             const domain = 'https://rsshub.app';
             const replacements = [
+                'https://rsshub.rssforever.com',
                 'https://rsshub.atgw.io',
                 'https://rsshub.ktachibana.party',
                 'https://rsshub.rss.tips',
-                'https://rsshub.rssforever.com',
                 'https://rsshub.woodland.cafe'
             ];
 
