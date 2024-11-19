@@ -2,10 +2,34 @@
     find: function (url, res = "") {
         var feeds = [];
         function add (title, link) {
-            feeds.push({
-                "title": title,
-                "link": link
-            });
+            const domain = 'https://rsshub.app';
+            const replacements = [
+                'https://rsshub.atgw.io',
+                'https://rsshub.ktachibana.party',
+                'https://rsshub.rss.tips',
+                'https://rsshub.rssforever.com',
+                'https://rsshub.woodland.cafe'
+            ];
+
+            if (link.startsWith(domain)) {
+                feeds.push({
+                    "title": title,
+                    "link": link
+                });
+
+                replacements.forEach(replacement => {
+                    const newLink = link.replace(domain, replacement);
+                    feeds.push({
+                        "title": title,
+                        "link": newLink
+                    });
+                });
+            } else {
+                feeds.push({
+                    "title": title,
+                    "link": link
+                });
+            }
             return feeds;
         };
 
