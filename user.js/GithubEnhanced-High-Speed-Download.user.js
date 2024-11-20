@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      24.920.1706
+// @version      24.1120.1010
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -47,11 +47,11 @@
         ['https://ghproxy.liuzhicong.com/https://github.com', '网络', ''],
         ['https://ghproxy.net/https://github.com', '日本', '[日本 大阪] - 该公益加速源由 [ghproxy] 提供&#10;&#10;提示：希望大家尽量多使用前面的美国节点（每次随机 负载均衡），&#10;避免流量都集中到亚洲公益节点，减少成本压力，公益才能更持久~'],
         ['https://git.814560.xyz/https://github.com', '网络', ''],
-        ['https://git.domob.org/https://github.com', '网络', ''],
+        // ['https://git.domob.org/https://github.com', '网络', ''],
         ['https://mirror.ghproxy.com/https://github.com', '韩国', '[日本、韩国、德国等]（CDN 不固定） - 该公益加速源由 [ghproxy] 提供&#10;&#10;提示：希望大家尽量多使用前面的美国节点（每次随机 负载均衡），&#10;避免流量都集中到亚洲公益节点，减少成本压力，公益才能更持久~'],
         ['https://sciproxy.com/github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [sciproxy.com] 提供'],
         ['https://slink.ltd/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [知了小站] 提供'],
-        ['https://521github.com', '网络', ''],
+        // ['https://521github.com', '网络', ''],
         ['https://gh.900110.xyz/https://github.com', '网络', ''],
         ['https://git.988896.xyz/https://github.com', '网络', ''],
         ['https://hub.whtrys.space', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [FastGit 群组成员] 提供'],
@@ -61,26 +61,25 @@
         ['https://shrill-pond-3e81.hunsh.workers.dev/https://github.com', '网络', ''],
         ['https://git.xfj0.cn/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [佚名] 提供'],
         ['https://kkgithub.com', '香港', '[香港、日本、新加坡等]'],
-        // 失效分隔行
-        ['https://gh.idayer.com/https://github.com', '网络', ''],
-        ['https://gh-proxy.com/https://github.com', '网络', ''],
-        ['https://ghproxy.org/https://github.com', '网络', ''],
-        ['https://gh.labx.me/https://github.com', '网络', ''],
-        ['https://github.tmby.shop/https://github.com', '网络', ''],
-        ['https://gitdl.cn/https://github.com', '网络', ''],
-        ['https://git.043.me/https://github.com', '网络', ''],
-        ['https://gh.samiya.pro/https://github.com', '网络', ''],
-        ['https://mirrors.chenby.cn/https://github.com', '网络', ''],
-        ['https://raw.bunnyxyz.eu.org/https://github.com', '网络', ''],
-        ['https://ghproxy.liki4.icu/https://github.com', '网络', ''],
-        ['https://fastgh.lainbo.com/https://github.com', '网络', ''],
-        ['https://gh.con.sh/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [佚名] 提供'],
-        ['https://dl.ghpig.top/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [feizhuqwq.com] 提供'],
-        ['https://gh.mixyun.cyou/https://github.com', '网络', ''],
-        ['https://gh.jiasu.in/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@0-RTT] 提供'],
-        ['https://hub.gitmirror.com/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [GitMirror] 提供'],
-        ['https://ghproxy.053000.xyz/https://github.com', '网络', ''],
-        ['https://gh.ddlc.top/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@mtr-static-official] 提供'],
+        // ['https://gh.idayer.com/https://github.com', '网络', ''],
+        // ['https://gh-proxy.com/https://github.com', '网络', ''],
+        // ['https://ghproxy.org/https://github.com', '网络', ''],
+        // ['https://gh.labx.me/https://github.com', '网络', ''],
+        // ['https://github.tmby.shop/https://github.com', '网络', ''],
+        // ['https://gitdl.cn/https://github.com', '网络', ''],
+        // ['https://git.043.me/https://github.com', '网络', ''],
+        // ['https://gh.samiya.pro/https://github.com', '网络', ''],
+        // ['https://mirrors.chenby.cn/https://github.com', '网络', ''],
+        // ['https://raw.bunnyxyz.eu.org/https://github.com', '网络', ''],
+        // ['https://ghproxy.liki4.icu/https://github.com', '网络', ''],
+        // ['https://fastgh.lainbo.com/https://github.com', '网络', ''],
+        // ['https://gh.con.sh/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [佚名] 提供'],
+        // ['https://dl.ghpig.top/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [feizhuqwq.com] 提供'],
+        // ['https://gh.mixyun.cyou/https://github.com', '网络', ''],
+        // ['https://gh.jiasu.in/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@0-RTT] 提供'],
+        // ['https://hub.gitmirror.com/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [GitMirror] 提供'],
+        // ['https://ghproxy.053000.xyz/https://github.com', '网络', ''],
+        // ['https://gh.ddlc.top/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@mtr-static-official] 提供'],
     ], clone_url = [
         ['https://ghproxy.com/https://github.com', '韩国', '[韩国 首尔] - 该公益加速源由 [ghproxy] 提供，有不同地区的服务器，不过国内一般分配为韩国'],
     ], clone_ssh_url = [
