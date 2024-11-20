@@ -34,6 +34,8 @@
 
     const download_url = [
         ['https://github.com', '官方', '默认第一个'],
+        ['https://github.site', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii] 提供'],
+        ['https://github.store', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii] 提供'],
         ['https://ghp.ci/https://github.com', '网络', ''],
         ['https://git-yjs.jiongzu.cn/https://github.com', '网络', ''],
         ['https://cf.ghproxy.cc/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii lau] 提供'],
