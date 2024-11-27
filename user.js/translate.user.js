@@ -1,7 +1,7 @@
 /* globals Vue */
 // ==UserScript==
 // @name         智能划词翻译
-// @version      24.1126.1100
+// @version      24.1127.1746
 // @description  划词翻译。谷歌翻译和有道词典双引擎；CTRL + ?翻译剪贴板
 // @author       xinggsf  田雨菲
 //
@@ -78,7 +78,7 @@ const comTranslate = {
 	methods: {
 		showResult(text) { //显示翻译文本
 			if (!this.resultDOM) this.resultDOM = text;
-			else this.resultDOM += '<br><hr>' + text;
+			else this.resultDOM += '<br>' + text;
 		},
 		query() {
 			const enc = encodeURIComponent(this.selText);
@@ -86,7 +86,7 @@ const comTranslate = {
 
 			xfetch(url).then(r => {
 				const ra = r.response.sentences; // 翻译结果数组
-				if (ra) this.showResult('谷歌翻译：<br><hr>'+ ra.map(s => s.trans).join(''));
+				if (ra) this.showResult(ra.map(s => s.trans).join(''));
 			})
 			.catch (e => {
 				this.showResult('谷歌服务器连接失败');
@@ -100,7 +100,13 @@ const comTranslate = {
 			xpost(deeplxUrl, data).then(r => {
         const ra = r.response;
         console.log(deeplxUrl, data, ra)
-				this.showResult('DeepLX翻译：<br><hr>'+ ra.data);
+
+        let msg = ra.data;
+
+        if (ra.alternatives && ra.alternatives.length > 0) {
+          msg = msg + '<br>' + ra.alternatives.join("<br>");
+        }
+				this.showResult(msg);
 			})
 			.catch (e => {
 				this.showResult('DeepLX服务器连接失败');
