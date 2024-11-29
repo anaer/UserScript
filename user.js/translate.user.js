@@ -1,7 +1,7 @@
 /* globals Vue */
 // ==UserScript==
 // @name         智能划词翻译
-// @version      24.1127.1746
+// @version      24.1129.1018
 // @description  划词翻译。谷歌翻译和有道词典双引擎；CTRL + ?翻译剪贴板
 // @author       xinggsf  田雨菲
 //
@@ -11,6 +11,7 @@
 // @exclude      https://nnyy.in/*
 // @exclude      https://www.dandanzan.net/*
 // @exclude      https://www.dandanzan.com/*
+// @exclude      https://account.google.com/*
 //
 // @run-at       document-body
 //
