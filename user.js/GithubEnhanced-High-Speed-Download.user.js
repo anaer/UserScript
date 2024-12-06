@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      24.1120.1010
+// @version      24.1206.1633
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -349,6 +349,9 @@
             aria2 = aria2 + ' ' + url;
         }
 
+        let rawurl = 'https://raw.githubusercontent.com' + href2;
+
+        _html += `<clipboard-copy value="${rawurl}" aria-label="Copy to clipboard" class="btn btn-sm js-clipboard-copy tooltipped-no-delay ClipboardButton XIU2-RF" tabindex="0" role="button">复制raw链接</clipboard-copy>`;
         _html += `<clipboard-copy value="${aria2}" aria-label="Copy to clipboard" class="btn btn-sm js-clipboard-copy tooltipped-no-delay ClipboardButton XIU2-RF" tabindex="0" role="button">复制aria2链接</clipboard-copy>`;
         html.insertAdjacentHTML('afterend', _html);
     }
