@@ -34,8 +34,6 @@
 
     const download_url = [
         ['https://github.com', '官方', '默认第一个'],
-        ['https://github.site', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii] 提供'],
-        ['https://github.store', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii] 提供'],
         ['https://ghp.ci/https://github.com', '网络', ''],
         ['https://git-yjs.jiongzu.cn/https://github.com', '网络', ''],
         ['https://cf.ghproxy.cc/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii lau] 提供'],
@@ -61,6 +59,8 @@
         ['https://shrill-pond-3e81.hunsh.workers.dev/https://github.com', '网络', ''],
         ['https://git.xfj0.cn/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [佚名] 提供'],
         ['https://kkgithub.com', '香港', '[香港、日本、新加坡等]'],
+        // ['https://github.site', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii] 提供'],
+        // ['https://github.store', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii] 提供'],
         // ['https://521github.com', '网络', ''],
         // ['https://git.domob.org/https://github.com', '网络', ''],
         // ['https://gh.idayer.com/https://github.com', '网络', ''],
@@ -89,16 +89,12 @@
     ], raw_url = [
         ['https://ghp.ci/https://raw.githubusercontent.com', '网络', ''],
         ['https://github.tmby.shop/https://raw.githubusercontent.com', '网络', ''],
-        ['https://gitdl.cn/https://raw.githubusercontent.com', '网络', ''],
         ['https://git-yjs.jiongzu.cn/https://raw.githubusercontent.com', '网络', ''],
         ['https://git.043.me/https://raw.githubusercontent.com', '网络', ''],
         ['https://gh.samiya.pro/https://raw.githubusercontent.com', '网络', ''],
         ['https://ghproxy.liki4.icu/https://raw.githubusercontent.com', '网络', ''],
         ['https://fastgh.lainbo.com/https://raw.githubusercontent.com', '网络', ''],
-        ['https://raw.kkgithub.com', '香港 1', '[中国香港、日本、新加坡等] - 该公益加速源由 [help.kkgithub.com] 提供&#10;&#10; - 缓存：无（或时间很短）'],
-        ['https://jsd.proxy.aks.moe/gh', '香港 2', '[中国 香港] - 该公益加速源由 [cdn.akass.cn] 提供&#10;&#10; - 缓存：有（官方标注 2 小时）'],
         ['https://cdn.jsdelivr.us/gh', '香港 3', '[中国 香港] - 该公益加速源由 [@ayao] 提供&#10;&#10; - 缓存：有'],
-        ['https://gh.con.sh/https://raw.githubusercontent.com', '网络', ''],
         ['https://raw.bunnyxyz.eu.org/https://raw.githubusercontent.com', '网络', ''],
         ['https://cf.ghproxy.cc/https://raw.githubusercontent.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii lau] 提供'],
         ['https://jsd.cdn.zzko.cn/gh', '网络 3', '无缓存'],
@@ -121,6 +117,10 @@
         ['https://shrill-pond-3e81.hunsh.workers.dev/https://raw.githubusercontent.com', '网络', ''],
         ['https://p.ntnas.top/https://raw.githubusercontent.com', '网络', ''],
         ['https://gh.labx.me/https://raw.githubusercontent.com', '网络', ''],
+        // ['https://gitdl.cn/https://raw.githubusercontent.com', '网络', ''], // 证书无效
+        // ['https://gh.con.sh/https://raw.githubusercontent.com', '网络', ''], // 因滥用暂停
+        // ['https://jsd.proxy.aks.moe/gh', '香港 2', '[中国 香港] - 该公益加速源由 [cdn.akass.cn] 提供&#10;&#10; - 缓存：有（官方标注 2 小时）'], // 证书错误
+        // ['https://raw.kkgithub.com', '香港 1', '[中国香港、日本、新加坡等] - 该公益加速源由 [help.kkgithub.com] 提供&#10;&#10; - 缓存：无（或时间很短）'], // 证书错误
     ], svg = [
         '<svg class="octicon octicon-cloud-download" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M9 12h2l-3 3-3-3h2V7h2v5zm3-8c0-.44-.91-3-4.5-3C5.08 1 3 2.92 3 5 1.02 5 0 6.52 0 8c0 1.53 1 3 3 3h3V9.7H3C1.38 9.7 1.3 8.28 1.3 8c0-.17.05-1.7 1.7-1.7h1.3V5c0-1.39 1.56-2.7 3.2-2.7 2.55 0 3.13 1.55 3.2 1.8v1.2H12c.81 0 2.7.22 2.7 2.2 0 2.09-2.25 2.2-2.7 2.2h-2V11h2c2.08 0 4-1.16 4-3.5C16 5.06 14.08 4 12 4z"></path></svg>'
     ], style = ['padding:0 6px; margin-right: -1px; border-radius: 2px; background-color: var(--XIU2-back-Color); border-color: rgba(27, 31, 35, 0.1); font-size: 11px; color: var(--XIU2-font-Color);'];
