@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      24.1210.1044
+// @version      24.1212.1029
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -34,6 +34,7 @@
 
     const download_url = [
         ['https://github.com', '官方', '默认第一个'],
+        ['https://github.boki.moe/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [blog.boki.moe] 提供'],
         ['https://ghp.ci/https://github.com', '网络', ''],
         ['https://git-yjs.jiongzu.cn/https://github.com', '网络', ''],
         ['https://cf.ghproxy.cc/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii lau] 提供'],
@@ -51,11 +52,11 @@
         ['https://git.988896.xyz/https://github.com', '网络', ''],
         ['https://hub.whtrys.space', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [FastGit 群组成员] 提供'],
         ['https://ghps.cc', '网络', ''],
-        ['https://gh.h233.eu.org/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@X.I.U/XIU2] 提供'],
         ['https://www.subook.link:88/https://github.com', '网络', ''],
         ['https://shrill-pond-3e81.hunsh.workers.dev/https://github.com', '网络', ''],
         ['https://git.xfj0.cn/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [佚名] 提供'],
         ['https://kkgithub.com', '香港', '[香港、日本、新加坡等]'],
+        // ['https://gh.h233.eu.org/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@X.I.U/XIU2] 提供'],
         // ['https://cors.isteed.cc/github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@Lufs\'s] 提供'],
         // ['https://download.nuaa.cf', '美国', '[美国 洛杉矶] - 该公益加速源由 [FastGit 群组成员] 提供'],
         // ['https://download.scholar.rr.nu', '美国', '[美国 纽约] - 该公益加速源由 [FastGit 群组成员] 提供'],
@@ -89,7 +90,7 @@
         ['git@ssh.fastgit.org', '香港', '[中国 香港] - 该公益加速源由 [FastGit] 提供'],
     ], raw_url = [
         ['https://ghp.ci/https://raw.githubusercontent.com', '网络', ''],
-        ['https://github.tmby.shop/https://raw.githubusercontent.com', '网络', ''],
+        ['https://github.boki.moe/https://raw.githubusercontent.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [blog.boki.moe] 提供'],
         ['https://git-yjs.jiongzu.cn/https://raw.githubusercontent.com', '网络', ''],
         ['https://git.043.me/https://raw.githubusercontent.com', '网络', ''],
         ['https://gh.samiya.pro/https://raw.githubusercontent.com', '网络', ''],
@@ -118,6 +119,7 @@
         ['https://shrill-pond-3e81.hunsh.workers.dev/https://raw.githubusercontent.com', '网络', ''],
         ['https://p.ntnas.top/https://raw.githubusercontent.com', '网络', ''],
         ['https://gh.labx.me/https://raw.githubusercontent.com', '网络', ''],
+        // ['https://github.tmby.shop/https://raw.githubusercontent.com', '网络', ''],
         // ['https://gitdl.cn/https://raw.githubusercontent.com', '网络', ''], // 证书无效
         // ['https://gh.con.sh/https://raw.githubusercontent.com', '网络', ''], // 因滥用暂停
         // ['https://jsd.proxy.aks.moe/gh', '香港 2', '[中国 香港] - 该公益加速源由 [cdn.akass.cn] 提供&#10;&#10; - 缓存：有（官方标注 2 小时）'], // 证书错误
