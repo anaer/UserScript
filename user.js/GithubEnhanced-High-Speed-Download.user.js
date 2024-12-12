@@ -46,16 +46,15 @@
         ['https://ghproxy.net/https://github.com', '日本', '[日本 大阪] - 该公益加速源由 [ghproxy] 提供&#10;&#10;提示：希望大家尽量多使用前面的美国节点（每次随机 负载均衡），&#10;避免流量都集中到亚洲公益节点，减少成本压力，公益才能更持久~'],
         ['https://git.814560.xyz/https://github.com', '网络', ''],
         ['https://mirror.ghproxy.com/https://github.com', '韩国', '[日本、韩国、德国等]（CDN 不固定） - 该公益加速源由 [ghproxy] 提供&#10;&#10;提示：希望大家尽量多使用前面的美国节点（每次随机 负载均衡），&#10;避免流量都集中到亚洲公益节点，减少成本压力，公益才能更持久~'],
-
         ['https://slink.ltd/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [知了小站] 提供'],
         ['https://gh.900110.xyz/https://github.com', '网络', ''],
         ['https://git.988896.xyz/https://github.com', '网络', ''],
         ['https://hub.whtrys.space', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [FastGit 群组成员] 提供'],
         ['https://ghps.cc', '网络', ''],
-        ['https://www.subook.link:88/https://github.com', '网络', ''],
         ['https://shrill-pond-3e81.hunsh.workers.dev/https://github.com', '网络', ''],
         ['https://git.xfj0.cn/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [佚名] 提供'],
         ['https://kkgithub.com', '香港', '[香港、日本、新加坡等]'],
+        // ['https://www.subook.link:88/https://github.com', '网络', ''],
         // ['https://gh.h233.eu.org/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@X.I.U/XIU2] 提供'],
         // ['https://cors.isteed.cc/github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@Lufs\'s] 提供'],
         // ['https://download.nuaa.cf', '美国', '[美国 洛杉矶] - 该公益加速源由 [FastGit 群组成员] 提供'],
@@ -115,10 +114,10 @@
         ['https://git.988896.xyz/https://raw.githubusercontent.com', '网络', ''],
         ['https://ghps.cc/https://raw.githubusercontent.com', '网络', ''],
         ['https://jsdelivr.b-cdn.net/gh', '其他 2', '[香港、台湾、日本、新加坡等]（CDN 不固定） - 该公益加速源由 [rttwyjz] 提供&#10;&#10; - 缓存：有'], // 500
-        ['https://www.subook.link:88/https://raw.githubusercontent.com', '网络', ''],
         ['https://shrill-pond-3e81.hunsh.workers.dev/https://raw.githubusercontent.com', '网络', ''],
         ['https://p.ntnas.top/https://raw.githubusercontent.com', '网络', ''],
         ['https://gh.labx.me/https://raw.githubusercontent.com', '网络', ''],
+        // ['https://www.subook.link:88/https://raw.githubusercontent.com', '网络', ''],
         // ['https://github.tmby.shop/https://raw.githubusercontent.com', '网络', ''],
         // ['https://gitdl.cn/https://raw.githubusercontent.com', '网络', ''], // 证书无效
         // ['https://gh.con.sh/https://raw.githubusercontent.com', '网络', ''], // 因滥用暂停
