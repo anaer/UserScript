@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      24.1212.1029
+// @version      24.1213.1033
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -37,7 +37,6 @@
         ['https://github.boki.moe/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [blog.boki.moe] 提供'],
         ['https://ghp.ci/https://github.com', '网络', ''],
         ['https://git-yjs.jiongzu.cn/https://github.com', '网络', ''],
-        ['https://cf.ghproxy.cc/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii lau] 提供'],
         ['https://download.yzuu.cf', '美国', '[美国 纽约] - 该公益加速源由 [FastGit 群组成员] 提供'],
         ['https://gh.mzec.top/https://github.com', '网络', ''],
         ['https://gh.nxnow.top/https://github.com', '网络', ''],
@@ -51,9 +50,10 @@
         ['https://git.988896.xyz/https://github.com', '网络', ''],
         ['https://hub.whtrys.space', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [FastGit 群组成员] 提供'],
         ['https://ghps.cc', '网络', ''],
-        ['https://shrill-pond-3e81.hunsh.workers.dev/https://github.com', '网络', ''],
-        ['https://git.xfj0.cn/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [佚名] 提供'],
         ['https://kkgithub.com', '香港', '[香港、日本、新加坡等]'],
+        // ['https://cf.ghproxy.cc/https://github.com', '美国', '低速'],
+        // ['https://shrill-pond-3e81.hunsh.workers.dev/https://github.com', '网络', '证书错误'],
+        // ['https://git.xfj0.cn/https://github.com', '美国', '证书错误'],
         // ['https://www.subook.link:88/https://github.com', '网络', ''],
         // ['https://gh.h233.eu.org/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@X.I.U/XIU2] 提供'],
         // ['https://cors.isteed.cc/github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@Lufs\'s] 提供'],
