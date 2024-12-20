@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      24.1217.1418
+// @version      24.1220.1013
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -94,7 +94,6 @@
         ['https://gh.samiya.pro/https://raw.githubusercontent.com', '网络', ''],
         ['https://ghproxy.liki4.icu/https://raw.githubusercontent.com', '网络', ''],
         ['https://fastgh.lainbo.com/https://raw.githubusercontent.com', '网络', ''],
-        ['https://cdn.jsdelivr.us/gh', '香港 3', '[中国 香港] - 该公益加速源由 [@ayao] 提供&#10;&#10; - 缓存：有'],
         ['https://raw.bunnyxyz.eu.org/https://raw.githubusercontent.com', '网络', ''],
         ['https://cf.ghproxy.cc/https://raw.githubusercontent.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii lau] 提供'],
         ['https://jsd.cdn.zzko.cn/gh', '网络 3', '无缓存'],
@@ -116,6 +115,7 @@
         ['https://shrill-pond-3e81.hunsh.workers.dev/https://raw.githubusercontent.com', '网络', ''],
         ['https://p.ntnas.top/https://raw.githubusercontent.com', '网络', ''],
         ['https://gh.labx.me/https://raw.githubusercontent.com', '网络', ''],
+        // ['https://cdn.jsdelivr.us/gh', '香港 3', '无效了 跳转其他网站'],
         // ['https://ghp.ci/https://raw.githubusercontent.com', '网络', ''],
         // ['https://www.subook.link:88/https://raw.githubusercontent.com', '网络', ''],
         // ['https://github.tmby.shop/https://raw.githubusercontent.com', '网络', ''],
