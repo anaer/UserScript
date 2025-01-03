@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      25.103.1339
+// @version      25.103.1507
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -34,6 +34,7 @@
 
     const download_url = [
         ['https://github.com', '官方', '默认第一个'],
+        ['https://ghgo.xyz/https://github.com', '网络', ''],
         ['https://github.boki.moe/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [blog.boki.moe] 提供'],
         ['https://download.yzuu.cf', '美国', '[美国 纽约] - 该公益加速源由 [FastGit 群组成员] 提供'],
         ['https://gh.nxnow.top/https://github.com', '网络', ''],
@@ -88,6 +89,7 @@
     ], clone_ssh_url = [
         ['git@ssh.fastgit.org', '香港', '[中国 香港] - 该公益加速源由 [FastGit] 提供'],
     ], raw_url = [
+        ['https://ghgo.xyz/https://raw.githubusercontent.com', '网络', ''],
         ['https://github.boki.moe/https://raw.githubusercontent.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [blog.boki.moe] 提供'],
         ['https://git-yjs.jiongzu.cn/https://raw.githubusercontent.com', '网络', ''],
         ['https://git.043.me/https://raw.githubusercontent.com', '网络', ''],
