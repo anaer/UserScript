@@ -4,7 +4,9 @@
 // @version      0.1
 // @description  优雅地显示当前网页的Clash连接信息
 // @author       Your name
-// @match        *://*/*
+// @match        https://github.com/*
+// @match        https://chatgpt.com/*
+// @match        https://www.v2ex.com/*
 // @grant        GM_xmlhttpRequest
 // @icon         https://cdn.jsdelivr.net/gh/Dreamacro/clash/docs/logo.png
 // ==/UserScript==
