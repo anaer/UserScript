@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Linux.do 自动点赞
+// @name         Linux.do 自动点赞+阅读
 // @namespace    https://github.com/anaer/UserScript
 // @version      2024.07.23.1315
 // @description  停留片刻自动点赞
@@ -12,8 +12,169 @@
 (function() {
     'use strict';
 
+
+const headerButtons = document.querySelector(".header-buttons")
+
+// 默认参数
+const DEFAULT_CONFIG = {
+    baseDelay: 2500,
+    randomDelayRange: 800,
+    minReqSize: 8,
+    maxReqSize: 20,
+    minReadTime: 800,
+    maxReadTime: 3000,
+    autoStart: true
+}
+let config = { ...DEFAULT_CONFIG }
+
+const statusLabel = createStatusLabel("ReadBoost待命中")
+
+headerButtons.appendChild(statusLabel)
+
+/**
+ * 状态标签封装
+ */
+function createStatusLabel(initialText) {
+    const labelSpan = document.createElement("span")
+    labelSpan.id = "statusLabel"
+    labelSpan.style.marginLeft = "10px"
+    labelSpan.style.marginRight = "10px"
+
+
+    labelSpan.textContent = initialText
+    return labelSpan
+}
+
+
+/**
+ * 更新状态标签内容
+ */
+function updateStatus(text, color = "#555") {
+    console.log(text)
+    const statusLabel = document.getElementById("statusLabel")
+    if (statusLabel) {
+        statusLabel.textContent = text
+        statusLabel.style.color = color
+    }
+}
+
+/**
+ * 开始刷取已读帖子
+ * @param {string} topicId 主题ID
+ * @param {number} totalReplies 总回复数
+ */
+async function startReading() {
+    updateStatus("启动阅读处理...")
+
+    const topicId = window.location.pathname.split("/")[3]
+    const repliesInfo = document.querySelector("div[class=timeline-replies]").textContent.trim()
+    const [currentPosition, totalReplies] = repliesInfo.split("/").map(part => parseInt(part.trim(), 10))
+    const csrfToken = document.querySelector("meta[name=csrf-token]").getAttribute("content")
+
+    const baseRequestDelay = config.baseDelay
+    const randomDelayRange = config.randomDelayRange
+    const minBatchReplyCount = config.minReqSize
+    const maxBatchReplyCount = config.maxReqSize
+    const minReadTime = config.minReadTime
+    const maxReadTime = config.maxReadTime
+
+    // 随机数生成
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min
+    }
+
+    // 发起读帖请求
+    async function sendBatch(startId, endId, retryCount = 2) {
+        const params = createBatchParams(startId, endId)
+        try {
+            const response = await fetch("https://linux.do/topics/timings", {
+                headers: {
+                    "accept": "*/*",
+                    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                    "discourse-background": "true",
+                    "discourse-logged-in": "true",
+                    "discourse-present": "true",
+                    "priority": "u=1, i",
+                    "sec-fetch-dest": "empty",
+                    "sec-fetch-mode": "cors",
+                    "sec-fetch-site": "same-origin",
+                    "x-csrf-token": csrfToken,
+                    "x-requested-with": "XMLHttpRequest",
+                    "x-silence-logger": "true"
+                },
+                referrer: `https://linux.do/`,
+                body: params.toString(),
+                method: "POST",
+                mode: "cors",
+                credentials: "include"
+            })
+            if (!response.ok) {
+                throw new Error(`HTTP请求失败，状态码：${response.status}`)
+            }
+            console.log(`成功处理回复 ${startId} - ${endId}`)
+            updateStatus(`成功处理回复 ${startId} - ${endId}`, "green")
+        } catch (e) {
+            csrfToken = None
+            // console.error(`处理回复 ${startId} - ${endId} 失败: `, e)
+
+//             if (retryCount > 0) {
+//                 console.log(`重试处理回复 ${startId} - ${endId}，剩余重试次数：${retryCount}`)
+//                 updateStatus(`重试处理回复 ${startId} - ${endId}，剩余重试次数：${retryCount}`, "orange")
+
+//                 // 等待一段时间再重试
+//                 const retryDelay = 2000 // 重试间隔时间（毫秒）
+//                 await new Promise(r => setTimeout(r, retryDelay))
+//                 await sendBatch(startId, endId, retryCount - 1)
+//             } else {
+//                 console.error(`处理回复 ${startId} - ${endId} 失败，自动跳过`)
+//                 updateStatus(`处理回复 ${startId} - ${endId} ，自动跳过`, "red")
+//             }
+            console.error(`处理回复 ${startId} - ${endId} 失败，自动跳过`)
+            updateStatus(`处理回复 ${startId} - ${endId} ，自动跳过`, "red")
+        }
+        const delay = baseRequestDelay + getRandomInt(0, randomDelayRange)
+        await new Promise(r => setTimeout(r, delay))
+    }
+
+    // 生成请求body参数
+    function createBatchParams(startId, endId) {
+        const params = new URLSearchParams()
+
+        for (let i = startId; i <= endId; i++) {
+            params.append(`timings[${i}]`, getRandomInt(minReadTime, maxReadTime).toString())
+        }
+        const topicTime = getRandomInt(minReadTime * (endId - startId + 1), maxReadTime * (endId - startId + 1)).toString()
+        params.append('topic_time', topicTime)
+        params.append('topic_id', topicId)
+        return params
+    }
+
+      if (topicId && totalReplies && csrfToken) {
+        updateStatus('开始处理:' + topicId+' '+totalReplies)
+        // 批量阅读处理
+        for (let i = currentPosition + 1 ; i <= totalReplies;) {
+            const batchSize = getRandomInt(minBatchReplyCount, maxBatchReplyCount)
+            const startId = i
+            const endId = Math.min(i + batchSize - 1, totalReplies)
+
+            if (csrfToken) {
+              await sendBatch(startId, endId)
+              i = endId + 1
+            } else {
+              break
+            }
+        }
+        updateStatus(` `, "green")
+        console.log('所有回复处理完成')
+    } else {
+      updateStatus("待命中")
+    }
+  }
+
+
     // 目标按钮的选择器
     const buttonSelector = 'article#post_1 .discourse-reactions-reaction-button[title="点赞此帖子"]';
+    const lastViewSelector = 'span.topic-post-visited-message';
 
 
     // 定义函数来启动定时任务
@@ -27,8 +188,15 @@
             } else {
                 console.log('定时任务执行时未找到点赞按钮');
             }
-        }, 10000); // 60000毫秒等于1分钟
+        }, 3000); // 60000毫秒等于1分钟
     };
+
+    // const showHide = () => {
+    //   let eles = document.querySelectorAll('div.spoiler-blurred');
+    //   for (const ele of eles) {
+    //     ele.classList.remove("spoiler-blurred")
+    //   }
+    // }
 
     // 使用MutationObserver来监视DOM变化
     const observeDOMChanges = () => {
@@ -36,10 +204,24 @@
             for (const mutation of mutationsList) {
                 if (document.querySelector(buttonSelector)) {
                     startTimer();
+                    // showHide();
+
+                    // 自启动处理
+                    startReading();
+
                     // 停止观察，避免多次触发
                     observer.disconnect();
                     break;
                 }
+
+              if (document.querySelector(lastViewSelector)) {
+                    // 自启动处理
+                    startReading();
+
+                    // 停止观察，避免多次触发
+                    observer.disconnect();
+                    break;
+              }
             }
         });
 
@@ -50,11 +232,12 @@
 
     // 使用setInterval来反复检查页面是否重新加载
     const checkPageReload = () => {
-        let lastHref = location.href;
+        let lastTopicId = window.location.pathname.split("/")[3]
         setInterval(() => {
-            if (location.href !== lastHref) {
+            let curTopicId = window.location.pathname.split("/")[3]
+            if (curTopicId !== lastTopicId) {
                 console.log('检测到页面重新加载');
-                lastHref = location.href;
+                lastTopicId = curTopicId;
                 observeDOMChanges();
             }
         }, 1000); // 每秒检查一次
