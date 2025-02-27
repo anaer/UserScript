@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Linux.do 自动点赞+阅读
 // @namespace    https://github.com/anaer/UserScript
-// @version      2024.07.23.1315
+// @version      25.227.1339
 // @description  停留片刻自动点赞
 // @author       anaer
 // @match        https://linux.do/*
@@ -22,8 +22,7 @@ const DEFAULT_CONFIG = {
     minReqSize: 8,
     maxReqSize: 20,
     minReadTime: 800,
-    maxReadTime: 3000,
-    autoStart: true
+    maxReadTime: 3000
 }
 let config = { ...DEFAULT_CONFIG }
 
@@ -67,7 +66,12 @@ async function startReading() {
     updateStatus("启动阅读处理...")
 
     const topicId = window.location.pathname.split("/")[3]
-    const repliesInfo = document.querySelector("div[class=timeline-replies]").textContent.trim()
+    const repliesInfoElement = document.querySelector("div[class=timeline-replies]");
+    // 判空 未查到回复数据 直接返回
+    if (!repliesInfoElement) {
+        return;
+    }
+    const repliesInfo = repliesInfoElement.textContent.trim();
     const [currentPosition, totalReplies] = repliesInfo.split("/").map(part => parseInt(part.trim(), 10))
     const csrfToken = document.querySelector("meta[name=csrf-token]").getAttribute("content")
 
@@ -151,18 +155,22 @@ async function startReading() {
 
       if (topicId && totalReplies && csrfToken) {
         updateStatus('开始处理:' + topicId+' '+totalReplies)
-        // 批量阅读处理
-        for (let i = currentPosition + 1 ; i <= totalReplies;) {
-            const batchSize = getRandomInt(minBatchReplyCount, maxBatchReplyCount)
-            const startId = i
-            const endId = Math.min(i + batchSize - 1, totalReplies)
+        // 只处理未读数超过5的帖子
+        currentPosition = currentPosition + 1
+        if (currentPosition && (totalReplies - currentPosition > 5)){
+          // 批量阅读处理
+          for (let i = currentPosition ; i <= totalReplies;) {
+              const batchSize = getRandomInt(minBatchReplyCount, maxBatchReplyCount)
+              const startId = i
+              const endId = Math.min(i + batchSize - 1, totalReplies)
 
-            if (csrfToken) {
-              await sendBatch(startId, endId)
-              i = endId + 1
-            } else {
-              break
-            }
+              if (csrfToken) {
+                await sendBatch(startId, endId)
+                i = endId + 1
+              } else {
+                break
+              }
+          }
         }
         updateStatus(` `, "green")
         console.log('所有回复处理完成')
