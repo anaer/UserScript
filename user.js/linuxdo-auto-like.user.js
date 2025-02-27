@@ -6,12 +6,26 @@
 // @author       anaer
 // @match        https://linux.do/*
 // @icon         https://cdn.linux.do/uploads/default/original/3X/b/4/b4fa45d8b03df61f5d011e173c0adf8497028b16.png
-// @grant        none
+// @grant        unsafeWindow
 // ==/UserScript==
 
 (function() {
     'use strict';
 
+// 定义日志方法
+// 某些网站会重写 console.log，导致日志无法输出。
+const logger = {
+    log: (...args) => {
+        try {
+            // 使用 unsafeWindow 的原始 console
+            unsafeWindow.console.log("[脚本日志]", ...args);
+        } catch (e) {
+            // 异常时回退到 Tampermonkey 内置日志
+            // GM_log("日志输出失败: " + e.message);
+            console.log("日志输出失败: " + e.message);
+        }
+    }
+};
 
 const headerButtons = document.querySelector(".header-buttons")
 
@@ -22,7 +36,8 @@ const DEFAULT_CONFIG = {
     minReqSize: 8,
     maxReqSize: 20,
     minReadTime: 800,
-    maxReadTime: 3000
+    maxReadTime: 3000,
+    autoStart: true
 }
 let config = { ...DEFAULT_CONFIG }
 
@@ -49,7 +64,7 @@ function createStatusLabel(initialText) {
  * 更新状态标签内容
  */
 function updateStatus(text, color = "#555") {
-    console.log(text)
+    logger.log(text)
     const statusLabel = document.getElementById("statusLabel")
     if (statusLabel) {
         statusLabel.textContent = text
@@ -115,14 +130,14 @@ async function startReading() {
             if (!response.ok) {
                 throw new Error(`HTTP请求失败，状态码：${response.status}`)
             }
-            console.log(`成功处理回复 ${startId} - ${endId}`)
+            logger.log(`成功处理回复 ${startId} - ${endId}`)
             updateStatus(`成功处理回复 ${startId} - ${endId}`, "green")
         } catch (e) {
             csrfToken = None
             // console.error(`处理回复 ${startId} - ${endId} 失败: `, e)
 
 //             if (retryCount > 0) {
-//                 console.log(`重试处理回复 ${startId} - ${endId}，剩余重试次数：${retryCount}`)
+//                 logger.log(`重试处理回复 ${startId} - ${endId}，剩余重试次数：${retryCount}`)
 //                 updateStatus(`重试处理回复 ${startId} - ${endId}，剩余重试次数：${retryCount}`, "orange")
 
 //                 // 等待一段时间再重试
@@ -156,10 +171,9 @@ async function startReading() {
       if (topicId && totalReplies && csrfToken) {
         updateStatus('开始处理:' + topicId+' '+totalReplies)
         // 只处理未读数超过5的帖子
-        currentPosition = currentPosition + 1
-        if (currentPosition && (totalReplies - currentPosition > 5)){
+        if (totalReplies - currentPosition > 5){
           // 批量阅读处理
-          for (let i = currentPosition ; i <= totalReplies;) {
+          for (let i = currentPosition; i <= totalReplies;) {
               const batchSize = getRandomInt(minBatchReplyCount, maxBatchReplyCount)
               const startId = i
               const endId = Math.min(i + batchSize - 1, totalReplies)
@@ -173,7 +187,7 @@ async function startReading() {
           }
         }
         updateStatus(` `, "green")
-        console.log('所有回复处理完成')
+        logger.log('所有回复处理完成')
     } else {
       updateStatus("待命中")
     }
@@ -187,14 +201,14 @@ async function startReading() {
 
     // 定义函数来启动定时任务
     const startTimer = () => {
-        console.log('目标按钮已加载，开始计时');
+        logger.log('目标按钮已加载，开始计时');
         setTimeout(function() {
             let likeButton = document.querySelector(buttonSelector);
             if (likeButton) {
                 likeButton.click();
-                console.log('点赞按钮已被自动点击');
+                logger.log('点赞按钮已被自动点击');
             } else {
-                console.log('定时任务执行时未找到点赞按钮');
+                logger.log('定时任务执行时未找到点赞按钮');
             }
         }, 3000); // 60000毫秒等于1分钟
     };
@@ -235,7 +249,7 @@ async function startReading() {
 
         const config = { childList: true, subtree: true };
         observer.observe(document.body, config);
-        console.log('MutationObserver已启动，正在监听DOM变化');
+        logger.log('MutationObserver已启动，正在监听DOM变化');
     };
 
     // 使用setInterval来反复检查页面是否重新加载
@@ -244,7 +258,7 @@ async function startReading() {
         setInterval(() => {
             let curTopicId = window.location.pathname.split("/")[3]
             if (curTopicId !== lastTopicId) {
-                console.log('检测到页面重新加载');
+                logger.log('检测到页面重新加载');
                 lastTopicId = curTopicId;
                 observeDOMChanges();
             }
