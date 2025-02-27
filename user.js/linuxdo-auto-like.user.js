@@ -133,7 +133,7 @@ async function startReading() {
             logger.log(`成功处理回复 ${startId} - ${endId}`)
             updateStatus(`成功处理回复 ${startId} - ${endId}`, "green")
         } catch (e) {
-            csrfToken = None
+            csrfToken = null
             // console.error(`处理回复 ${startId} - ${endId} 失败: `, e)
 
 //             if (retryCount > 0) {
