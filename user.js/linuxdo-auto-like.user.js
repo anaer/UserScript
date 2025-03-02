@@ -88,7 +88,7 @@ async function startReading() {
     }
     const repliesInfo = repliesInfoElement.textContent.trim();
     const [currentPosition, totalReplies] = repliesInfo.split("/").map(part => parseInt(part.trim(), 10))
-    const csrfToken = document.querySelector("meta[name=csrf-token]").getAttribute("content")
+    let csrfToken = document.querySelector("meta[name=csrf-token]").getAttribute("content")
 
     const baseRequestDelay = config.baseDelay
     const randomDelayRange = config.randomDelayRange
