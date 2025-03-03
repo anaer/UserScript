@@ -1,11 +1,10 @@
 // ==UserScript==
 // @name         Linux.do 自动点赞+阅读
 // @namespace    https://github.com/anaer/UserScript
-// @version      25.303.1015
+// @version      25.303.1230
 // @description  停留片刻自动点赞
 // @author       anaer
 // @match        https://linux.do/*
-// @icon         https://cdn.linux.do/uploads/default/original/3X/b/4/b4fa45d8b03df61f5d011e173c0adf8497028b16.png
 // @grant        unsafeWindow
 // ==/UserScript==
 
@@ -26,6 +25,11 @@ const logger = {
         }
     }
 };
+
+// 判断是否为上午
+function isAM() {
+    return new Date().getHours() < 12;
+}
 
 const headerButtons = document.querySelector(".header-buttons")
 
@@ -213,20 +217,15 @@ async function startReading() {
         }, 3000); // 60000毫秒等于1分钟
     };
 
-    // const showHide = () => {
-    //   let eles = document.querySelectorAll('div.spoiler-blurred');
-    //   for (const ele of eles) {
-    //     ele.classList.remove("spoiler-blurred")
-    //   }
-    // }
-
     // 使用MutationObserver来监视DOM变化
     const observeDOMChanges = () => {
         const observer = new MutationObserver((mutationsList, observer) => {
             for (const mutation of mutationsList) {
                 if (document.querySelector(buttonSelector)) {
-                    startTimer();
-                    // showHide();
+                    // 只在上午自动点赞, 因为有24小时50赞的限制
+                    if (isAM()) {
+                        startTimer();
+                    }
 
                     // 自启动处理
                     startReading();
