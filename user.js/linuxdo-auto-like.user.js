@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Linux.do 自动点赞+阅读
 // @namespace    https://github.com/anaer/UserScript
-// @version      25.227.1339
+// @version      25.303.1015
 // @description  停留片刻自动点赞
 // @author       anaer
 // @match        https://linux.do/*
