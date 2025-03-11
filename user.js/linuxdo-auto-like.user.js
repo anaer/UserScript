@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Linux.do 自动点赞+阅读
 // @namespace    https://github.com/anaer/UserScript
-// @version      25.303.1230
+// @version      25.311.1641
 // @description  停留片刻自动点赞
 // @author       anaer
 // @match        https://linux.do/*
@@ -45,7 +45,7 @@ const DEFAULT_CONFIG = {
 }
 let config = { ...DEFAULT_CONFIG }
 
-const statusLabel = createStatusLabel("ReadBoost待命中")
+const statusLabel = createStatusLabel("待命中")
 
 headerButtons.appendChild(statusLabel)
 
@@ -57,7 +57,6 @@ function createStatusLabel(initialText) {
     labelSpan.id = "statusLabel"
     labelSpan.style.marginLeft = "10px"
     labelSpan.style.marginRight = "10px"
-
 
     labelSpan.textContent = initialText
     return labelSpan
@@ -82,7 +81,7 @@ function updateStatus(text, color = "#555") {
  * @param {number} totalReplies 总回复数
  */
 async function startReading() {
-    updateStatus("启动阅读处理...")
+    updateStatus("启动中...")
 
     const topicId = window.location.pathname.split("/")[3]
     const repliesInfoElement = document.querySelector("div[class=timeline-replies]");
@@ -107,7 +106,7 @@ async function startReading() {
     }
 
     // 发起读帖请求
-    async function sendBatch(startId, endId, retryCount = 2) {
+    async function sendBatch(startId, endId) {
         const params = createBatchParams(startId, endId)
         try {
             const response = await fetch("https://linux.do/topics/timings", {
@@ -138,20 +137,6 @@ async function startReading() {
             updateStatus(`成功处理回复 ${startId} - ${endId}`, "green")
         } catch (e) {
             csrfToken = null
-            // console.error(`处理回复 ${startId} - ${endId} 失败: `, e)
-
-//             if (retryCount > 0) {
-//                 logger.log(`重试处理回复 ${startId} - ${endId}，剩余重试次数：${retryCount}`)
-//                 updateStatus(`重试处理回复 ${startId} - ${endId}，剩余重试次数：${retryCount}`, "orange")
-
-//                 // 等待一段时间再重试
-//                 const retryDelay = 2000 // 重试间隔时间（毫秒）
-//                 await new Promise(r => setTimeout(r, retryDelay))
-//                 await sendBatch(startId, endId, retryCount - 1)
-//             } else {
-//                 console.error(`处理回复 ${startId} - ${endId} 失败，自动跳过`)
-//                 updateStatus(`处理回复 ${startId} - ${endId} ，自动跳过`, "red")
-//             }
             console.error(`处理回复 ${startId} - ${endId} 失败，自动跳过`)
             updateStatus(`处理回复 ${startId} - ${endId} ，自动跳过`, "red")
         }
@@ -173,30 +158,32 @@ async function startReading() {
     }
 
       if (topicId && totalReplies && csrfToken) {
-        updateStatus('开始处理:' + topicId+' '+totalReplies)
+        // updateStatus('开始处理:' + topicId+' '+totalReplies)
         // 只处理未读数超过5的帖子
         if (totalReplies - currentPosition > 5){
           // 批量阅读处理
           for (let i = currentPosition; i <= totalReplies;) {
               const batchSize = getRandomInt(minBatchReplyCount, maxBatchReplyCount)
               const startId = i
-              const endId = Math.min(i + batchSize - 1, totalReplies)
+              let endId = Math.min(i + batchSize - 1, totalReplies);
+              if (totalReplies - endId <= 5) {
+                  endId = totalReplies;
+              }
 
               if (csrfToken) {
                 await sendBatch(startId, endId)
                 i = endId + 1
               } else {
+                updateStatus(`处理中止`, "red")
                 break
               }
           }
+          updateStatus(`处理结束`, "green")
+        } else {
+          updateStatus(`无须结束`, "green")
         }
-        updateStatus(` `, "green")
-        logger.log('所有回复处理完成')
-    } else {
-      updateStatus("待命中")
     }
   }
-
 
     // 目标按钮的选择器
     const buttonSelector = 'article#post_1 .discourse-reactions-reaction-button[title="点赞此帖子"]';
