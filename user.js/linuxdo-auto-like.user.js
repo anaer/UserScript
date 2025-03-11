@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Linux.do 自动点赞+阅读
 // @namespace    https://github.com/anaer/UserScript
-// @version      25.311.1641
+// @version      25.311.1657
 // @description  停留片刻自动点赞
 // @author       anaer
 // @match        https://linux.do/*
@@ -180,7 +180,7 @@ async function startReading() {
           }
           updateStatus(`处理结束`, "green")
         } else {
-          updateStatus(`无须结束`, "green")
+          updateStatus(` `, "green")
         }
     }
   }

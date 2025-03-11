@@ -2,7 +2,7 @@
 // @name         文本替换
 // @description
 // @author       anaer
-// @version      2024.07.02.1101
+// @version      25.311.1701
 // @match        https://www.v2ex.com/*
 // @match        https://v2ex.com/*
 // @match        https://www.oschina.net/comment/*
@@ -39,6 +39,12 @@ const replacements = {
   '拼夕夕': '拼多多',
 };
 
+// Compile the regular expressions once
+const regexReplacements = Object.entries(replacements).map(([search, replace]) => ({
+  regex: new RegExp(search, 'g'),
+  replace
+}));
+
 // 遍历所有文本节点进行替换
 const walker = document.createTreeWalker(
   document.body,
@@ -49,21 +55,23 @@ const walker = document.createTreeWalker(
 
 let node;
 while ((node = walker.nextNode())) {
-  for (const search in replacements) {
-    const replace = replacements[search];
-    const regex = new RegExp(search, 'g');
-    const oldValue = node.nodeValue
-    node.nodeValue = node.nodeValue.replace(regex, replace);
+  let oldValue = node.nodeValue;
+  let newValue = oldValue;
 
-    const elements = node.parentNode.querySelectorAll('span.replace-icon'); // 对于同一段文本 存在多个替换词时, 只展示一次替换标识
-    if (elements.length === 0 && node.nodeValue != oldValue) {
+  for (const { regex, replace } of regexReplacements) {
+    newValue = newValue.replace(regex, replace);
+  }
+
+  if (newValue !== oldValue) {
+    node.nodeValue = newValue;
+
+    if (!node.parentNode.querySelector('.replace-icon')) {
       node.parentNode.setAttribute('title', oldValue); // 修改节点的title属性为源文本
 
       const iconElement = document.createElement('span');
       iconElement.innerHTML = '&#x2714;';
       iconElement.className = 'replace-icon';
       iconElement.style.color = 'red';
-      // iconElement.setAttribute('title', oldValue); // 红勾上显式原文tip
       node.parentNode.appendChild(iconElement);
     }
   }

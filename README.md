@@ -1,13 +1,14 @@
 | 脚本名称 | 文件名 |
 |----------|--------|
 | anti-redirect | [安装](https://raw.githubusercontent.com/anaer/UserScript/main/user.js/anti-redirect.user.js) |
+| Clash Connection Monitor | [安装](https://raw.githubusercontent.com/anaer/UserScript/main/user.js/clash-connection-monitor.user.js) |
 | FOFA IP and Domain Extractor | [安装](https://raw.githubusercontent.com/anaer/UserScript/main/user.js/fofa.user.js) |
 | GitHub 中文化插件 | [安装](https://raw.githubusercontent.com/anaer/UserScript/main/user.js/github-chinese.user.js) |
 | Github查找活跃的Forks列表 | [安装](https://raw.githubusercontent.com/anaer/UserScript/main/user.js/github-find-active-forks.user.js) |
 | Github Old Feed | [安装](https://raw.githubusercontent.com/anaer/UserScript/main/user.js/github-old-feed.user.js) |
 | Github 增强 - 高速下载 | [安装](https://raw.githubusercontent.com/anaer/UserScript/main/user.js/GithubEnhanced-High-Speed-Download.user.js) |
 | 图片缓存处理 | [安装](https://raw.githubusercontent.com/anaer/UserScript/main/user.js/image-cache.user.js) |
-| Linux.do 自动点赞 | [安装](https://raw.githubusercontent.com/anaer/UserScript/main/user.js/linuxdo-auto-like.user.js) |
+| Linux.do 自动点赞+阅读 | [安装](https://raw.githubusercontent.com/anaer/UserScript/main/user.js/linuxdo-auto-like.user.js) |
 | linux.do显示创建时间 | [安装](https://raw.githubusercontent.com/anaer/UserScript/main/user.js/linuxdo-enhanced.user.js) |
 | Linux do Level | [安装](https://raw.githubusercontent.com/anaer/UserScript/main/user.js/linuxdo-level.user.js) |
 | 社区低质量主题帖过滤器 | [安装](https://raw.githubusercontent.com/anaer/UserScript/main/user.js/linuxdo.blocker.user.js) |
