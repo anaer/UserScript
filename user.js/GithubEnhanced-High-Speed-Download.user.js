@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      25.325.1323
+// @version      25.325.1402
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -37,6 +37,14 @@
       ['https://cf.ghproxy.cc/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii] 提供'],
       ['https://down.sciproxy.com/github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [sciproxy.com] 提供'],
       ['https://gh.900110.xyz/https://github.com', '网络', ''],
+      ['https://firewall.lxstd.org/https://github.com', '网络', ''],
+      ['https://gh.monlor.com/https://github.com', '网络', ''],
+      ['https://gh.xx9527.cn/https://github.com', '网络', ''],
+      ['https://github.tbedu.top/https://github.com', '网络', ''],
+      ['https://gh.jasonzeng.dev/https://github.com', '网络', ''],
+      ['https://fastgit.cc/https://github.com', '网络', ''],
+      ['https://ghfile.geekertao.top/https://github.com', '网络', ''],
+      ['https://ghp.keleyaa.com/https://github.com', '网络', ''],
       ['https://gh.ddlc.top/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@mtr-static-official] 提供'],
       ['https://ghproxy.cc/https://github.com', '美国', '[美国 洛杉矶] - 该公益加速源由 [@yionchiii] 提供'],
       ['https://ghproxy.cfd/https:/github.com', '网络', ''],
@@ -119,6 +127,14 @@
       ['git@ssh.fastgit.org', '香港', '[中国 香港] - 该公益加速源由 [FastGit] 提供'],
   ], raw_url = [
       ['https://raw.githubusercontent.com', 'Github 原生', '[日本 东京]'],
+      ['https://firewall.lxstd.org/https://raw.githubusercontent.com', '网络', ''],
+      ['https://gh.monlor.com/https://raw.githubusercontent.com', '网络', ''],
+      ['https://gh.xx9527.cn/https://raw.githubusercontent.com', '网络', ''],
+      ['https://github.tbedu.top/https://raw.githubusercontent.com', '网络', ''],
+      ['https://gh.jasonzeng.dev/https://raw.githubusercontent.com', '网络', ''],
+      ['https://fastgit.cc/https://raw.githubusercontent.com', '网络', ''],
+      ['https://ghfile.geekertao.top/https://raw.githubusercontent.com', '网络', ''],
+      ['https://ghp.keleyaa.com/https://raw.githubusercontent.com', '网络', ''],
       ['https://ghproxy.cfd/https://raw.githubusercontent.com', '网络', ''],
       ['https://cdn.githubraw.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [githubraw.com] 提供&#10;&#10; - 缓存：有（几乎永久）'],
       ['https://cdn.jsdelivr.net/gh', '其他 1', '[移动走香港、电信走日本] - 该公益加速源由 [JSDelivr CDN] 提供&#10;&#10; - 缓存：有&#10; - 不支持大小超过 50 MB 的文件&#10; - 不支持版本号格式的分支名（如 v1.2.3）'],
