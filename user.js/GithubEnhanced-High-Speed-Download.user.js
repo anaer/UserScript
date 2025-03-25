@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      25.325.1402
+// @version      25.325.1452
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -29,8 +29,7 @@
 (function () {
   'use strict';
   var backColor = '#ffffff', fontColor = '#888888', menu_raw_fast = GM_getValue('xiu2_menu_raw_fast'), menu_menu_raw_fast_ID, menu_feedBack_ID;
-  // var aria2c = 'aria2c -d . --check-certificate=false --max-connection-per-server=5 --max-concurrent-downloads=10 --split=10 --min-split-size=1M --continue=true --optimize-concurrent-downloads=true --connect-timeout=3 --timeout=5 --lowest-speed-limit=10K --allow-overwrite=true ';
-  var aria2c = 'aria2c -d . --check-certificate=false --max-connection-per-server=10 --max-concurrent-downloads=20 --split=20 --min-split-size=1M --continue=true --optimize-concurrent-downloads=true --connect-timeout=5 --timeout=10 --lowest-speed-limit=5K --allow-overwrite=true --disk-cache=64M --max-tries=5 --retry-wait=5 ';
+  var aria2c = 'aria2c -d . --check-certificate=false --max-connection-per-server=10 --max-concurrent-downloads=20 --split=20 --min-split-size=1M --continue=true --optimize-concurrent-downloads=true --connect-timeout=5 --timeout=10 --lowest-speed-limit=5K --allow-overwrite=true --disk-cache=64M --max-tries=3 --retry-wait=5 --file-allocation=none';
 
   const download_url = [
       ['https://github.com', '官方', '默认第一个'],
