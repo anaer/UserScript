@@ -44,19 +44,7 @@
     let tempElement, tempText;
     // 链接转化，添加播放按钮
     Zepto('input[name*=copy_]').forEach(elm => {
-      // 链接转化为真链接
-      if (Zepto(elm).parent().find('a').length) {
-        // 有 <a> 元素的情况
-        Zepto(elm).parent().find('a').attr({
-          href: Zepto(elm).val(),
-          target: '_blank'
-        }).after(`<span class="zPlayButton" data-url='${Zepto(elm).val()}'>▶</span>`);
-      } else {
-        // 没有 <a> 元素的情况
-        tempElement = elm; tempText = Zepto(elm).parent().text();
-        Zepto(elm).parent().empty().append(tempElement).append(`<a href="${Zepto(tempElement).val()}" target="_blank">${tempText}</a>`)
-          .append(`<span class="zPlayButton" data-url='${Zepto(tempElement).val()}'>▶</span>`);
-      }
+        Zepto(elm).after(`<span class="zPlayButton" data-url='${Zepto(elm).val()}'>▶</span>`);
     });
     // 元素全屏
     function fullScreen(elm) {
