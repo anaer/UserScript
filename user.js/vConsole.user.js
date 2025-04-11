@@ -13,12 +13,7 @@
   "use strict";
 
   // 检测是否已存在 vConsole
-  if (window.VCONSOLE_LOADED || typeof VConsole !== "undefined") {
-    if (!window.vueVconsoleDevtools) {
-      loadVConsoleResources();
-    }
-    return;
-  }
+  if (window.VCONSOLE_LOADED || typeof VConsole !== "undefined") return;
 
   window.VCONSOLE_LOADED = true;
 
@@ -37,18 +32,6 @@
     document.body.appendChild(script);
   }
 
-  /**
-   * 加载 vconsole-resources 插件
-   */
-  function loadVConsoleResources() {
-    const pluginUrl =
-      "https://fastly.jsdelivr.net/gh/WechatFE/vConsole-resources@master/dist/vconsole-resources.min.js";
-
-    loadScript(pluginUrl, () => {
-        console.log("vConsole resources loaded.");
-    });
-  }
-
   // 加载 vConsole 主脚本
   const vConsoleUrl =
     "https://cdn.jsdelivr.net/npm/vconsole@latest/dist/vconsole.min.js";
@@ -59,12 +42,12 @@
       const vConsole = new VConsole({
         theme: "dark", // 主题色：dark/light
         defaultPlugins: ["system", "network", "element", "storage"], // 内置插件
+        enablePersistent: true, // 是否开启持久化存储
+        maxLogNumber: 1000, // 最多保存的日志数量
         onReady() {
           console.log("vConsole is ready.");
         },
       });
-
-      loadVConsoleResources(vConsole);
 
       // 错误捕获增强
       const originalConsoleError = console.error;
