@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增强 - 高速下载
 // @name:en      Github Enhancement - High Speed Download
-// @version      25.427.1727
+// @version      25.507.1116
 // @author       X.I.U
 // @description  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件、项目列表单文件快捷下载 (☁)
@@ -45,6 +45,15 @@
       ['https://slink.ltd/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [知了小站] 提供'],
       ['https://www.ghproxy.cc/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii] 提供'],
       ['https://www.ghproxy.cn/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii] 提供'],
+      ['https://gh.api.99988866.xyz/https://github.com', '网络', ''],
+      ['https://gh.llkk.cc/https://github.com', '网络', ''],
+      ['https://ghproxy.imciel.com/https://github.com', '网络', ''],
+      ['https://ghproxy.monkeyray.net/https://github.com', '网络', ''],
+      ['https://ghproxy.net/https://github.com', '网络', ''],
+      ['https://github.moeyy.xyz/https://github.com', '网络', ''],
+      ['https://gitproxy.click/https://github.com', '网络', ''],
+      ['https://goppx.com/https://github.com', '网络', ''],
+      ['https://hub.gitmirror.com/https://github.com', '网络', ''],
     //   ['https://cf.ghproxy.cc/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [@yionchiii] 提供'],
     //   ['https://down.sciproxy.com/github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [sciproxy.com] 提供'],
     //   ['https://gh.900110.xyz/https://github.com', '网络', ''],
